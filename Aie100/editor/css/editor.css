@@ -1,0 +1,110 @@
+﻿body {
+}
+
+ .aie_editor
+{
+    display:none;
+}
+        
+.aie_editor_head 
+{
+    background-color: #ADC3E8;
+    padding:5px;
+}
+.aie_editor_head select
+{
+    margin:0px 2px 0px 0px;
+}
+.aie_editor_head img
+{
+    border:1px solid #ADC3E8;	
+    margin:0px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+        
+.aie_editor_head img:hover
+{
+    border:1px solid #000;	
+}
+        
+.aie_editor_iframe
+{
+    width:99.9%;
+    border:1px solid #ADC3E8;	
+}
+.aie_editor_mode
+{
+    background-color: #ADC3E8;
+    padding:5px;
+    color:Blue;
+}
+.aie_editor_mode span
+{
+    padding:2px;
+    font-size:12px;
+}
+        
+.aie_editor_mode span:hover
+{
+    cursor:pointer;
+    background-color:Gray;
+    color:#fff;
+}
+
+.aie_editor_finish{
+    background-color:rgb(227, 239, 245);text-align:right;padding-right:5px;display:none;
+}
+.aie_editor_finish .finish_action{
+    color:rgb(85,26,139);
+    cursor:pointer;
+    text-decoration:underline
+}	
+.aie_editor_finish .cancel_action{
+    color:rgb(85,26,139);
+    cursor:pointer;
+    text-decoration:underline;
+    margin-left:5px;
+}	
+    
+    .emath_tabs
+    {
+    	margin-top:10px;
+    }
+	.emath_tabs td
+	{
+		vertical-align:middle;
+	}
+    
+    .emath_tab_ns_l
+    {
+        background: url(../../Images/custab_l.gif) no-repeat scroll 0 0 transparent;height: 27px; width: 4px; cursor: pointer;
+    }
+        
+    .emath_tab_ns_m
+    {
+        background: url(../../Images/custab_m.gif) repeat-x scroll 0 0 transparent;color: #005F9A; cursor: pointer; padding: 0 3px;
+    }
+        
+    .emath_tab_ns_r
+    {
+        background: url(../../Images/custab_r.gif) no-repeat scroll 0 0 transparent;height: 27px; width: 4px; cursor: pointer;	
+    }
+        
+        
+    .emath_tab_s_l
+    {
+        background: url(../../Images/custab_l_s.gif) no-repeat scroll 0 0 transparent;height: 27px; width: 4px; cursor: pointer;
+    }
+        
+    .emath_tab_s_m
+    {
+        background: url(../../Images/custab_m_s.gif) repeat-x scroll 0 0 transparent;color: red; cursor: pointer; padding: 0 3px;
+    }
+        
+    .emath_tab_s_r
+    {
+        background: url(../../Images/custab_r_s.gif) no-repeat scroll 0 0 transparent;height: 27px; width: 4px; cursor: pointer;	
+    }
+    
+   

@@ -1,0 +1,50 @@
+﻿    .errquestions{
+        border:1px solid #d4d4d4
+    }
+
+    .errquestions .toolbar{
+        padding:12px 35px;
+        background-color:rgb(42,140,37);
+        color:#fff;
+    }
+
+    .errquestions .errquestionsinfo{
+        padding:5px 5px 5px 6px;
+    }
+    .errquestions .errquestionsinfo table.questioninfo{
+        width:100%;
+    }
+
+    .errquestions .errquestionsinfo table.questioninfo tr{
+        line-height:26px;
+    }
+
+    .errquestions .errquestionsinfo table.questioninfo tr:hover{
+        cursor:pointer;
+        background-color:rgb(235,255,234)
+    }
+
+    .errquestions .errquestionsinfo table.questioninfo td.td{
+        vertical-align:top;
+        border-bottom:1px dotted rgb(0, 255, 33)
+    }
+
+    .errquestions .errquestionsinfo table.questioninfo td.bianhao{
+        width:40px;
+        text-align:center;
+    }
+    .errquestions .errquestionslist div.pagination{
+        text-align:center;
+        padding:5px 0px 0px;
+    }
+
+    .errquestions .viewbydate{
+        border:1px solid #fff;
+        padding:2px 5px;
+        cursor:pointer;
+        font-size:11px;
+    }
+
+    .errquestions span.viewbydate:hover{
+        background-color:rgb(255, 216, 0)
+    }

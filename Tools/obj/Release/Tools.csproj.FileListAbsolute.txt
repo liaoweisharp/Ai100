@@ -1,0 +1,8 @@
+D:\myproject\aie100WebService\Tools\bin\Release\Tools.dll
+D:\myproject\aie100WebService\Tools\bin\Release\Tools.pdb
+D:\myproject\aie100WebService\Tools\obj\Release\Tools.dll
+D:\myproject\aie100WebService\Tools\obj\Release\Tools.pdb
+D:\Project\Aie100New\Tools\bin\Release\Tools.dll
+D:\Project\Aie100New\Tools\bin\Release\Tools.pdb
+D:\Project\Aie100New\Tools\obj\Release\Tools.dll
+D:\Project\Aie100New\Tools\obj\Release\Tools.pdb

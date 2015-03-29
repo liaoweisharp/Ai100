@@ -1,0 +1,196 @@
+﻿/*input{
+    border:0px;
+}*/
+
+.correctingpapers{
+
+    margin:0px auto;
+
+}
+
+.correctingpapers .head{
+    padding:10px 0;
+    text-align:center;
+    background-color:rgb(135,178,33);
+    line-height:35px;
+    color:#fff;
+    top:0px;
+     position:fixed
+}
+
+.correctingpapers .head .title{
+    font-size:30px;
+    overflow: hidden; 
+    height: 35px;
+}
+
+.correctingpapers .head .tc_button{
+    border: 0px;
+    /*background: url(../../Images/login_buthhh.png) no-repeat 0 0;*/
+    background-color:rgb(231,232,155);
+    cursor:pointer;
+    height: 30px;
+    width: 75px;
+    font-weight: bold;
+    color: #444444;
+}
+
+.correctingpapers .head .tc_button:hover{
+   background-color:rgb(231,232,215);
+}
+
+.correctingpapers .head .toolbar{
+    width:335px;
+    margin:5px auto;
+}
+
+
+.correctingpapers .toolbtn{
+    width:90px;
+    margin:0px 16px;
+}
+
+.correctingpapers .questions{
+    padding:5px;
+    height:100%;
+    line-height:25px;
+    /*width:750px;*/
+}
+
+.correctingpapers .questions div.question{
+   /*border: 1px solid rgb(231, 232, 155);*/
+   border: 1px dotted #888;
+    margin-bottom: 5px;
+    padding: 5px;
+    /*width: 1000px;*/
+}
+
+.correctingpapers .right_area{
+    width:250px;
+    float:right;
+    padding:5px;
+    background-color:rgb(215,232,200);
+}
+
+.correctingpapers .right_area .remaintime{
+    text-align:center;
+}
+.correctingpapers .right_area .remaintime .timer{
+    border:1px solid #888;
+    padding:5px 10px;
+    width:auto;
+    margin:0px auto;
+    display:inline-block;
+    background-color:rgb(231,232,155);
+    margin:5px;
+}
+
+.correctingpapers .right_area .mark{
+    text-align:center;
+    margin:5px
+}
+
+.correctingpapers .right_area .mark_content{
+    display:inline-block;
+}
+
+.correctingpapers  .mark_bg_finished
+{
+    background: rgb(148, 188, 57);
+    border:1px solid rgb(0,128,0);
+    width:16px;
+    height:16px;
+    margin:0px auto;
+}
+        
+.correctingpapers .mark_bg_marked
+{
+    background: rgb(255,255,153);
+    border:1px solid rgb(0,128,0);
+    width:16px;
+    height:16px;
+    margin:0px auto;
+}
+        
+.correctingpapers .mark_bg_current
+{
+    background-color: rgb(59,209,249);
+    border:1px solid rgb(0,128,0);
+    width:16px;
+    height:16px;
+    margin:0px auto;
+}
+.correctingpapers .mark_bg_unfinished
+{
+    background: #fff;
+    border:1px solid rgb(0,128,0);
+    width:16px;
+    height:16px;
+    margin:0px auto;
+}
+
+/*.correctingpapers .zg_tester_answer{
+    border:2px outset #888;
+}*/
+
+
+.correctingpapers .zg_tester_answer{
+    border:1px outset #888;
+    margin-bottom:5px;
+    padding:5px
+
+}
+
+/*.correctingpapers .zg_tester_answer:hover{
+    background-color:rgb(227, 239, 245);
+    cursor:text;
+   
+}*/
+
+
+
+.aie_editor_mode {
+    display:none
+}
+
+.correctingpapers .correct_answerinfo{
+    background-color:rgb(227, 239, 245);
+    padding:5px;
+}
+
+
+.correctingpapers .correct_answerinfo .pfen{
+    margin-left:110px;
+    
+}
+
+.correctingpapers .correct_answerinfo label{
+    cursor:pointer
+}
+
+.correctingpapers .correct_answerinfo input.score{
+    width:50px;
+    text-align:center;
+}
+
+.correctingpapers .update_score_button{
+    background-color: #E6E6E6;
+    border: 1px outset #888888;
+    display: inline-block;
+    line-height: 22px;
+    margin-left: 10px;
+    text-align: center;
+    width: 70px;
+}
+
+.correctingpapers .update_score_button:hover {
+    background-color: rgb(227,240,252);
+    cursor:pointer;
+}
+
+.correctingpapers .to_next_question{
+    margin-left:10px;
+    color:blue;
+    text-decoration:underline;
+    cursor:pointer;
+}

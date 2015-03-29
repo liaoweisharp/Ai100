@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<functions>
+  <nav id="mf_institute" title="学院">
+    <nav id="m_setInstitute" title="学院管理" target="cms_instituteinfo" />
+    <nav id="m_institutebook" title="学院的书" target="cms_institutebook" />
+    <nav id="m_instituteuserbook" title="学院教师的书" target="cms_instituteuserbook" />
+    <nav id="m_instituteusers" title="学院教师" target="cms_instituteusers" />
+  </nav>
+  <nav id="mf_Book" title="书">
+    <nav id="m_BookInfo" title="书管理" target="cms_bookinfo" />
+    <nav id="m_CustomBookManage" title="定制书管理" target="cms_bookinfo" />
+  </nav>
+  <nav id="mf_BookContent" title="内容">
+    <nav id="m_BookStructure" title="书结构管理" target="cms_bookstructure" />
+    <nav id="m_KnowledgeRelation" title="知识点关系管理" target="cms_knowledgepointrelation" />
+    <nav id="m_StudyReference" title="学习资源管理" target="cms_studyresource">
+      <key id="sr_1" access="1" title="系统管理" />
+      <key id="sr_2" access="2" title="系统操作" />
+      <key id="sr_3" access="3" title="系统浏览" />
+      <key id="sr_4" access="4" title="管理" />
+      <key id="sr_5" access="5" title="操作" />
+      <key id="sr_6" access="6" title="浏览" />
+    </nav>
+    <nav id="m_CustomBook" title="定制书" target="cms_custombook" />
+    <nav id="m_QuestionManage" title="题管理" target="cms_questionmanage">
+      <key id="qm_1" access="1" title="系统管理" />
+      <key id="qm_2" access="2" title="系统操作" />
+      <key id="qm_3" access="3" title="系统浏览" />
+      <key id="qm_4" access="4" title="管理" />
+      <key id="qm_5" access="5" title="操作" />
+      <key id="qm_6" access="6" title="浏览" />
+    </nav>
+    <nav id="m_TestImport" title="导入试卷" target="cms_importtest" />
+    <nav id="m_QuestionKnowledge" title="题与知识点关系" target="cms_questionknowledge">
+      <key id="qk_1" access="1" title="系统管理" />
+      <key id="qk_2" access="2" title="系统操作" />
+      <key id="qk_3" access="3" title="系统浏览" />
+      <key id="qk_4" access="4" title="管理" />
+      <key id="qk_5" access="5" title="操作" />
+      <key id="qk_6" access="6" title="浏览" />
+    </nav>
+    <nav id="m_TestManage" title="试卷管理" target="cms_testmanage" />
+    <nav id="m_TestModels" title="试卷模板" target="cms_testmodels" />
+  </nav>
+  <nav id="mf_Settings" title="设置">
+    <nav id="m_StudyReferenceType" title="学习资料类型" target="cms_studyreferencetype" />
+    <nav id="m_TestQuestionTypeManage" title="考试题型" target="cms_testquestiontypemanage" />
+    <nav id="m_Gradation" title="阶段" target="cms_gradation" />
+    <nav id="m_Discipline" title="学科类别" target="cms_discipline" />
+    <nav id="m_Subject" title="学科" target="cms_subject" />
+    <nav id="m_Publisher" title="出版社" target="cms_publisher" />
+  </nav>
+  <nav id="mf_UserManage" title="用户管理">
+    <nav id="m_UserPermissionManagement" title="用户权限管理" target="cms_permission" />
+    <nav id="m_InstituteAdmin" title="学院用户管理" target="cms_instituteadmin" />
+  </nav>
+</functions>

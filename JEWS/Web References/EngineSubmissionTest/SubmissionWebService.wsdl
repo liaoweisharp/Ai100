@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:ns2="http://wrapper.webservice.acepherics.com" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://webservice.acepherics.com" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://domain.acepherics.com" targetNamespace="http://webservice.acepherics.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://domain.acepherics.com">
+      <xsd:complexType name="UserExtend">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="adminRole" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="bookId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="courseId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="identityId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="instituteId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="isbn" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="loginState" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="pointingBookId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pointingIsbn" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="roleId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="studyFlag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="systemId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservice.acepherics.com">
+      <xsd:element name="getCorreceNumByTestResult">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCorreceNumByTestResultResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOnlineImproveTest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns2:TestResultWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOnlineImproveTestResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOnlineTestGrade">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns2:TestResultWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOnlineTestGradeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:TestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOfflineQuestions">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOfflineQuestionsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getQuestionCorrectFlagByTestResultId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getQuestionCorrectFlagByTestResultIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="editTestResultQuestionScore">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in5" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in6" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="editTestResultQuestionScoreResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTestResultQuestionList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTestResultQuestionListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="saveTesterAnswersResult">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns2:TestResultWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="saveTesterAnswersResultResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:TestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateTestResult">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateTestResultResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOnlineQuestions">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOnlineQuestionsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOnlineImproveTestGrade">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns2:TestResultWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOnlineImproveTestGradeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:TestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelSaveTestResutl">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelSaveTestResutlResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getQuestionCorrectFlag">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getQuestionCorrectFlagResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitTesterAnswersResult">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns2:TestResultWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitTesterAnswersResultResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:TestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOnlineTest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns2:TestResultWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns2:ArrayOfTestResultQuestionWrapper" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="submitOnlineTestResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://wrapper.webservice.acepherics.com">
+      <xsd:complexType name="TestResultWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="adjustScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="answeredBase" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="assignmentContentId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="assignmentId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="attemptNumber" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cheatFlag" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveHistory" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveNum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveScoreFlag" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveTotalScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveType" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improvedScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="kpScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="roleId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="scoreFlag" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="statusFlag" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="submissionType" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="submittedDate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="systemId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="testId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="totalScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="type" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="useTime" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTestResultQuestionWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="TestResultQuestionWrapper" nillable="true" type="ns2:TestResultQuestionWrapper" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TestResultQuestionWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="TScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="correctFlag" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveNum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="independence" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pointingLoId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="qpvSeedId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="questionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="score" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="systemId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="testId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="testerAnswersContent" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getQuestionCorrectFlagResponse">
+    <wsdl:part name="parameters" element="tns:getQuestionCorrectFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitOfflineQuestionsResponse">
+    <wsdl:part name="parameters" element="tns:submitOfflineQuestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitOfflineQuestionsRequest">
+    <wsdl:part name="parameters" element="tns:submitOfflineQuestions" />
+  </wsdl:message>
+  <wsdl:message name="getCorreceNumByTestResultResponse">
+    <wsdl:part name="parameters" element="tns:getCorreceNumByTestResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateTestResultResponse">
+    <wsdl:part name="parameters" element="tns:updateTestResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitOnlineTestRequest">
+    <wsdl:part name="parameters" element="tns:submitOnlineTest" />
+  </wsdl:message>
+  <wsdl:message name="submitOnlineImproveTestRequest">
+    <wsdl:part name="parameters" element="tns:submitOnlineImproveTest" />
+  </wsdl:message>
+  <wsdl:message name="submitTesterAnswersResultRequest">
+    <wsdl:part name="parameters" element="tns:submitTesterAnswersResult" />
+  </wsdl:message>
+  <wsdl:message name="saveTesterAnswersResultResponse">
+    <wsdl:part name="parameters" element="tns:saveTesterAnswersResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="getQuestionCorrectFlagRequest">
+    <wsdl:part name="parameters" element="tns:getQuestionCorrectFlag" />
+  </wsdl:message>
+  <wsdl:message name="getCorreceNumByTestResultRequest">
+    <wsdl:part name="parameters" element="tns:getCorreceNumByTestResult" />
+  </wsdl:message>
+  <wsdl:message name="submitOnlineQuestionsResponse">
+    <wsdl:part name="parameters" element="tns:submitOnlineQuestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="editTestResultQuestionScoreResponse">
+    <wsdl:part name="parameters" element="tns:editTestResultQuestionScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="getQuestionCorrectFlagByTestResultIdResponse">
+    <wsdl:part name="parameters" element="tns:getQuestionCorrectFlagByTestResultIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitTesterAnswersResultResponse">
+    <wsdl:part name="parameters" element="tns:submitTesterAnswersResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitOnlineTestResponse">
+    <wsdl:part name="parameters" element="tns:submitOnlineTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelSaveTestResutlResponse">
+    <wsdl:part name="parameters" element="tns:cancelSaveTestResutlResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestResultQuestionListResponse">
+    <wsdl:part name="parameters" element="tns:getTestResultQuestionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestResultQuestionListRequest">
+    <wsdl:part name="parameters" element="tns:getTestResultQuestionList" />
+  </wsdl:message>
+  <wsdl:message name="submitOnlineTestGradeRequest">
+    <wsdl:part name="parameters" element="tns:submitOnlineTestGrade" />
+  </wsdl:message>
+  <wsdl:message name="updateTestResultRequest">
+    <wsdl:part name="parameters" element="tns:updateTestResult" />
+  </wsdl:message>
+  <wsdl:message name="saveTesterAnswersResultRequest">
+    <wsdl:part name="parameters" element="tns:saveTesterAnswersResult" />
+  </wsdl:message>
+  <wsdl:message name="submitOnlineImproveTestGradeRequest">
+    <wsdl:part name="parameters" element="tns:submitOnlineImproveTestGrade" />
+  </wsdl:message>
+  <wsdl:message name="submitOnlineTestGradeResponse">
+    <wsdl:part name="parameters" element="tns:submitOnlineTestGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getQuestionCorrectFlagByTestResultIdRequest">
+    <wsdl:part name="parameters" element="tns:getQuestionCorrectFlagByTestResultId" />
+  </wsdl:message>
+  <wsdl:message name="submitOnlineQuestionsRequest">
+    <wsdl:part name="parameters" element="tns:submitOnlineQuestions" />
+  </wsdl:message>
+  <wsdl:message name="submitOnlineImproveTestGradeResponse">
+    <wsdl:part name="parameters" element="tns:submitOnlineImproveTestGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="editTestResultQuestionScoreRequest">
+    <wsdl:part name="parameters" element="tns:editTestResultQuestionScore" />
+  </wsdl:message>
+  <wsdl:message name="cancelSaveTestResutlRequest">
+    <wsdl:part name="parameters" element="tns:cancelSaveTestResutl" />
+  </wsdl:message>
+  <wsdl:message name="submitOnlineImproveTestResponse">
+    <wsdl:part name="parameters" element="tns:submitOnlineImproveTestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SubmissionWebServicePortType">
+    <wsdl:operation name="getCorreceNumByTestResult">
+      <wsdl:input name="getCorreceNumByTestResultRequest" message="tns:getCorreceNumByTestResultRequest" />
+      <wsdl:output name="getCorreceNumByTestResultResponse" message="tns:getCorreceNumByTestResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="submitOnlineImproveTest">
+      <wsdl:input name="submitOnlineImproveTestRequest" message="tns:submitOnlineImproveTestRequest" />
+      <wsdl:output name="submitOnlineImproveTestResponse" message="tns:submitOnlineImproveTestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="submitOnlineTestGrade">
+      <wsdl:input name="submitOnlineTestGradeRequest" message="tns:submitOnlineTestGradeRequest" />
+      <wsdl:output name="submitOnlineTestGradeResponse" message="tns:submitOnlineTestGradeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="submitOfflineQuestions">
+      <wsdl:input name="submitOfflineQuestionsRequest" message="tns:submitOfflineQuestionsRequest" />
+      <wsdl:output name="submitOfflineQuestionsResponse" message="tns:submitOfflineQuestionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionCorrectFlagByTestResultId">
+      <wsdl:input name="getQuestionCorrectFlagByTestResultIdRequest" message="tns:getQuestionCorrectFlagByTestResultIdRequest" />
+      <wsdl:output name="getQuestionCorrectFlagByTestResultIdResponse" message="tns:getQuestionCorrectFlagByTestResultIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="editTestResultQuestionScore">
+      <wsdl:input name="editTestResultQuestionScoreRequest" message="tns:editTestResultQuestionScoreRequest" />
+      <wsdl:output name="editTestResultQuestionScoreResponse" message="tns:editTestResultQuestionScoreResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTestResultQuestionList">
+      <wsdl:input name="getTestResultQuestionListRequest" message="tns:getTestResultQuestionListRequest" />
+      <wsdl:output name="getTestResultQuestionListResponse" message="tns:getTestResultQuestionListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="saveTesterAnswersResult">
+      <wsdl:input name="saveTesterAnswersResultRequest" message="tns:saveTesterAnswersResultRequest" />
+      <wsdl:output name="saveTesterAnswersResultResponse" message="tns:saveTesterAnswersResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateTestResult">
+      <wsdl:input name="updateTestResultRequest" message="tns:updateTestResultRequest" />
+      <wsdl:output name="updateTestResultResponse" message="tns:updateTestResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="submitOnlineQuestions">
+      <wsdl:input name="submitOnlineQuestionsRequest" message="tns:submitOnlineQuestionsRequest" />
+      <wsdl:output name="submitOnlineQuestionsResponse" message="tns:submitOnlineQuestionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="submitOnlineImproveTestGrade">
+      <wsdl:input name="submitOnlineImproveTestGradeRequest" message="tns:submitOnlineImproveTestGradeRequest" />
+      <wsdl:output name="submitOnlineImproveTestGradeResponse" message="tns:submitOnlineImproveTestGradeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelSaveTestResutl">
+      <wsdl:input name="cancelSaveTestResutlRequest" message="tns:cancelSaveTestResutlRequest" />
+      <wsdl:output name="cancelSaveTestResutlResponse" message="tns:cancelSaveTestResutlResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionCorrectFlag">
+      <wsdl:input name="getQuestionCorrectFlagRequest" message="tns:getQuestionCorrectFlagRequest" />
+      <wsdl:output name="getQuestionCorrectFlagResponse" message="tns:getQuestionCorrectFlagResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="submitTesterAnswersResult">
+      <wsdl:input name="submitTesterAnswersResultRequest" message="tns:submitTesterAnswersResultRequest" />
+      <wsdl:output name="submitTesterAnswersResultResponse" message="tns:submitTesterAnswersResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="submitOnlineTest">
+      <wsdl:input name="submitOnlineTestRequest" message="tns:submitOnlineTestRequest" />
+      <wsdl:output name="submitOnlineTestResponse" message="tns:submitOnlineTestResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SubmissionWebServiceHttpBinding" type="tns:SubmissionWebServicePortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCorreceNumByTestResult">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCorreceNumByTestResultRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCorreceNumByTestResultResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitOnlineImproveTest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="submitOnlineImproveTestRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="submitOnlineImproveTestResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitOnlineTestGrade">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="submitOnlineTestGradeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="submitOnlineTestGradeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitOfflineQuestions">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="submitOfflineQuestionsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="submitOfflineQuestionsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionCorrectFlagByTestResultId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getQuestionCorrectFlagByTestResultIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getQuestionCorrectFlagByTestResultIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editTestResultQuestionScore">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="editTestResultQuestionScoreRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="editTestResultQuestionScoreResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTestResultQuestionList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTestResultQuestionListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTestResultQuestionListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTesterAnswersResult">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="saveTesterAnswersResultRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="saveTesterAnswersResultResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTestResult">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateTestResultRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateTestResultResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitOnlineQuestions">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="submitOnlineQuestionsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="submitOnlineQuestionsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitOnlineImproveTestGrade">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="submitOnlineImproveTestGradeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="submitOnlineImproveTestGradeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelSaveTestResutl">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelSaveTestResutlRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelSaveTestResutlResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionCorrectFlag">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getQuestionCorrectFlagRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getQuestionCorrectFlagResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitTesterAnswersResult">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="submitTesterAnswersResultRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="submitTesterAnswersResultResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitOnlineTest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="submitOnlineTestRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="submitOnlineTestResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SubmissionWebService">
+    <wsdl:port name="SubmissionWebServiceHttpPort" binding="tns:SubmissionWebServiceHttpBinding">
+      <wsdlsoap:address location="http://192.168.0.188:8080/acepherics/service/SubmissionWebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

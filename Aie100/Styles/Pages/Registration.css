@@ -1,0 +1,170 @@
+﻿input
+{
+    border: 1px solid #D4D4D8;
+    color: #000;
+    font-size: 14px;
+    height: 22px;
+    line-height: 22px;
+    padding: 5px 5px;
+    width: 270px;
+}
+.left
+{
+    margin-top: 5px;
+    float: left;
+    margin-right: 10px;
+    text-align: right;
+    width: 150px;
+}
+
+.conbox div
+{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+div b
+{
+    color: #CC0000;
+    padding-right: 6px;
+}
+legend em
+{
+    color: #47AA01;
+    font-size: 12px;
+    font-style: normal;
+    padding-left: 40px;
+}
+._titles
+{
+    color: Green;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 3px;
+}
+#rb_Instructor
+{
+    width: 10px;
+    border: none;
+    margin: 0;
+    height: auto;
+}
+#rb_Student
+{
+    width: 10px;
+    border: none;
+    margin: 0;
+    height: auto;
+}
+.lb1
+{
+    padding-right: 40px;
+    font-size: 12px;
+    text-align: center;
+    float: none;
+    width: 40px;
+}
+.selects
+{
+    border: 1px solid #D4D4D8;
+    color: Black;
+    font-size: 14px;
+    height: 30px;
+    line-height: 22px;
+    width: 282px;
+    padding: 5px;
+}
+legend
+{
+    background: url("../../Images/bg.gif") repeat-x scroll 0 0 transparent;
+    font-size: 14px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+    width: 670px;
+}
+fieldset
+{
+    border: none;
+    margin-left: 150px;
+}
+a:visited, a:link
+{
+    color: Green;
+    text-decoration: underline;
+}
+a:hover
+{
+    color: Red;
+    text-decoration: underline;
+}
+.userRegs
+{
+    cursor: pointer;
+    margin-left: 160px;
+    /*background: url("../../Images/login_buth.png") no-repeat scroll 0 0 transparent;*/
+    background-color:#ffa101;
+    color: #fff;
+    height: 31px;
+    /*line-height: 31px;*/
+    padding: 0;
+    text-align: center;
+    width: 89px;
+    text-decoration: none;
+    font-size: 12px;
+    border:0px;
+}
+#argee
+{
+    height: auto;
+    line-height: normal;
+    border: none;
+    padding: 0;
+    width: 18px;
+}
+#changeimage
+{
+    cursor: pointer;
+}
+.hides
+{
+    display: none;
+}
+.tip
+{
+    font-size: 12px;
+    color: ButtonShadow;
+    display: none;
+}
+#User_Name, #validatorImgcode, #phone
+{
+    ime-mode: disabled;
+}
+.reds
+{
+    color: Red;
+}
+
+.titleMin
+{
+    margin-left: 20px;
+    color: #49A0BA;
+    font-size: 14px;
+    font-weight: bold;
+}
+p
+{
+    color: #666666;
+    line-height: 30px;
+    padding: 0;
+    font-size: 13px;
+    margin: 0 20px 0 35px;
+}
+.article
+{
+    color: #666666;
+    line-height: 30px;
+    padding: 0;
+    font-size: 12px;
+    margin: 0 20px 0 50px;
+}

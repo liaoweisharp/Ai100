@@ -1,0 +1,340 @@
+﻿.tlcenter{
+    border:1px solid #d4d4d4
+}
+
+.tlcenter .toolbar{
+    padding:12px 35px;
+    background-color:rgb(42,140,37);
+    color:#fff;
+}
+
+.tlcenter .tlcenterinfo{
+    padding:5px 5px 5px 6px;
+ 
+}
+
+.tlcenter .tree_area{
+    border:1px solid #d4d4d4;
+    /*width:280px;*/
+    padding:5px;
+}
+.hid {
+    display:none;
+}
+
+.tlcenter .asmt_area{
+    /*width:713px;*/
+    /*padding:5px 0px*/
+}
+
+.tlcenter .tb_asmt{
+    border-collapse:collapse;
+    width:100%;
+    text-align:center;
+    border:1px solid rgb(174,174,174);
+    line-height:23px;
+}
+
+.tlcenter .tb_asmt .tr:hover{
+    background-color:rgb(230,230,230);
+
+}
+
+.tlcenter .tb_asmt .tr0{
+     background-color:rgb(41,115,149);
+    color:#fff;
+    line-height:25px;
+}
+
+.tlcenter .tb_asmt th,td{
+    border:1px solid rgb(174,174,174);
+}
+
+.tlcenter .tb_asmt tr td.action img{
+    cursor:pointer
+}
+
+.tlcenter .tb_asmt tr.tr td span.status{
+    cursor:pointer;
+    color:rgb(0,102,204)
+}
+
+.tlcenter div.asmtztxl span.status:hover{
+    text-decoration:underline
+}
+
+.tlcenter div.asmtztxl span.status{
+    cursor:pointer;
+    color:rgb(0,102,204)
+}
+
+.tlcenter .tb_asmt tr.tr td span.status:hover{
+    text-decoration:underline
+}
+
+.tlcenter div.reports{
+    padding:5px;font-size:12px;color:#fff;margin:0px auto
+}
+.tlcenter div.reports img{
+    cursor:pointer;vertical-align:middle;margin-right:3px;
+}
+.tlcenter div.reports div.xxreports{
+    float:left;
+    background-color:rgb(9, 169, 131);
+    padding:2px 5px;
+    border:1px solid #fff;
+}
+
+.tlcenter div.reports div.xxreports:hover{
+    background-color:rgb(191, 135, 61);
+    cursor:pointer
+}
+
+/*.tlcenter div.reports div.ztreports:hover{
+    background-color:rgb(191, 135, 61);
+    cursor:pointer
+}
+
+.tlcenter div.reports div.ztreports{
+    float:right;background-color:rgb(9, 169, 131);padding:2px 5px
+}*/
+
+.tlcenter .tb_asmt div.action{
+    padding:5px;
+    font-size:12px;
+    color:#fff;
+    display:none;
+    cursor:pointer
+}
+.tlcenter .tb_asmt div.action img{
+    cursor:pointer;vertical-align:middle;margin-right:3px;
+}
+
+.tlcenter .tb_asmt div.action div.action_item{
+    background-color:rgb(112, 144, 208);
+    padding:2px 5px;
+    width:50px;
+}
+
+.tlcenter .tb_asmt div.action_menu{
+    padding:5px;
+    font-size:12px;
+    color:#fff;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:10;
+    display:none;
+}
+.tlcenter .tb_asmt div.action_menu img{
+    cursor:pointer;vertical-align:middle;margin-right:3px;
+}
+
+.tlcenter .tb_asmt div.action_menu div.action_menu_item{
+    background-color:rgb(191, 135, 61);
+    padding:2px 5px;
+    width:50px;
+}
+.tlcenter .tb_asmt div.action_menu div.action_menu_item:hover{
+    background-color:rgb(112, 144, 208);
+    cursor:pointer
+}
+
+
+
+.tlcenter .tab_item{
+    background-color: #FE9901;
+    border: 1px solid #FFFFFF;
+    float: left;
+    padding: 2px 8px;
+    text-align: center;
+    border-bottom:none
+}
+
+.tlcenter .tab_item:hover{
+    background-color:rgb(255,200,100);
+    cursor:pointer
+}
+
+.tlcenter .carea{
+    margin:5px 0px;
+    border:1px solid rgb(214,214,214);
+    padding:5px;
+}
+
+.tlcenter .carea .carea_title{
+    /*background-color:rgb(41,115,149);
+    font-weight:bold;
+    text-align:center;
+    padding:5px;
+    color:#fff;*/
+    width:150px;
+    text-align:center
+}
+.tlcenter .carea .carea_title img{
+    width:100px;
+    height:100px;
+}
+.tlcenter .carea .carea_title:hover{
+    /*cursor:pointer;
+    background-color:rgb(41,200,149);*/
+}
+
+.tlcenter .carea .carea_des{
+    /*padding:5px;
+    border:1px dotted rgb(41,115,149);
+    border-top:none*/
+    color:rgb(41,115,149);
+    width:550px;
+}
+
+.tlcenter .linfo{
+    margin-top:10px;
+}
+
+.tlcenter .linfo table{
+    margin:0px auto
+}
+
+.tlcenter .linfo table td{
+    vertical-align:top;
+}
+
+.tlcenter .linfo table td.td1 {
+    background-color:rgb(47,151,138)   
+}
+
+.tlcenter .linfo table td.td2 {
+    background-color:rgb(112,144,208)    
+}
+.tlcenter .linfo table td.td3 {
+    background-color:rgb(218,188,204)    
+}
+.tlcenter .linfo table td.td4 {
+    background-color:rgb(229,134,134)
+}
+
+.tlcenter .linfo table td.td1:hover{
+    background-color:rgb(242,161,69)
+}
+
+.tlcenter .linfo table td.td2:hover{
+    background-color:rgb(238,196,36)
+}
+
+.tlcenter .linfo table td.td3:hover{
+    background-color:rgb(59,99,239)
+}
+
+.tlcenter .linfo table td.td4:hover{
+    background-color:rgb(139,179,90)
+}
+
+.tlcenter .linfo table td div.litem img{
+    cursor:pointer
+}
+.tlcenter .linfo table td div.litem div.ltitle{
+    text-align:center;
+    font-weight:bold;
+    color:#fff;
+}
+
+#master_litlcenter{
+    background-color:rgb(0,128,0);
+}
+
+div.pagination{
+    margin: 10px 10px 2px; text-align: center;
+}
+
+/*function getKnowlegeStatusPieChartColorForMap() {
+    //依次为:Excellent,  Good,    Fair,      Weak, Inadequate, Not Assessed
+    /// return [0x33aa00,0x99cc33,0xccff99,0xffff66,0xff6633,0x808080];
+    return {
+        Excellent_Color: 0x33aa00,
+        Good_Color: 0x99cc33,
+        Fair_Color: 0xccff99,
+        Weak_Color: 0xffff66,
+        Inadequate_Color: 0xff6633,
+        NotAssessed_Color: 0xcccccc
+    };
+}*/
+
+#divTreeView span.status_0{
+
+    vertical-align:middle;
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background-color:#888;
+    margin-right:2px;
+}
+
+#divTreeView span.status_5{
+
+    vertical-align:middle;
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background-color:rgb(5,122,5);
+    margin-right:2px;
+}
+
+#divTreeView span.status_4{
+
+    vertical-align:middle;
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background-color:rgb(122,180,22);
+    margin-right:2px;
+}
+
+#divTreeView span.status_3{
+
+    vertical-align:middle;
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background-color:rgb(179,194,24);
+    margin-right:2px;
+}
+
+#divTreeView span.status_2{
+
+    vertical-align:middle;
+    display:inline-block;
+    width:10px;
+    height:12px;
+    background-color:rgb(255,151,1);
+    margin-right:2px;
+}
+
+#divTreeView span.status_1{
+
+    vertical-align:middle;
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background-color:rgb(255,78,0);
+    margin-right:2px;
+}
+
+
+.creteAssinmentbt {
+    background-color: #09A983;
+    background-image: url("../../Images/icon_zujuan.png");
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 35px;
+    width: 100px;color:white;
+    padding:5px;
+      
+}
+
+.creteAssinmentbt:hover {
+        background-color: #09A933;    
+        cursor:pointer; 
+}

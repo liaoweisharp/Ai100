@@ -1,0 +1,96 @@
+﻿#dvTestQuesType {
+    margin: 8px 1px;
+    float: left;
+}
+
+    #dvTestQuesType ul {
+        float: left;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        font-size: 10pt;
+    }
+
+        #dvTestQuesType ul li {
+            float: left;
+            border: 1px solid #707070;
+            background-color: #dedede;
+            margin-right: 10px;
+            padding: 3px 8px;
+            cursor: default;
+        }
+
+            #dvTestQuesType ul li.selected {
+                float: left;
+                border: 1px solid #26a0da;
+                background-color: #a6f4ff;
+                margin-right: 10px;
+                padding: 3px 8px;
+                cursor: default;
+            }
+
+.highlight {
+    background-color: #f3f8fe;
+}
+
+.selectrow {
+    background-color: #e2f6cf;
+    border:1px solid #ddd;
+}
+
+.tbQuestionList {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .tbQuestionList tr {
+    }
+
+    .tbQuestionList td {
+        padding: 10px 0;
+        vertical-align: top;
+    }
+
+        .tbQuestionList td.oper {
+            width: 50px;
+            text-align: center;
+        }
+
+        .tbQuestionList td.num {
+            width: 75px;
+        }
+
+        .tbQuestionList td.content {
+        }
+
+
+.tbLoQuestionList {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .tbLoQuestionList tr {
+    }
+
+    .tbLoQuestionList td {
+        padding: 8px 0;
+    }
+
+        .tbLoQuestionList td.expander {
+            cursor: pointer;
+        }
+
+.lackQuesTip {
+    color: #f00;
+}
+
+.actionParentMenu div {
+    line-height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+    .actionParentMenu div:hover {
+        background-color: #3399ff;
+        color: #fff;
+    }

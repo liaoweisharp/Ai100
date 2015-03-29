@@ -1,0 +1,4 @@
+D:\Project\Aie100New\Wbm.QzoneV2API\bin\Release\Wbm.QzoneV2API.dll
+D:\Project\Aie100New\Wbm.QzoneV2API\bin\Release\Wbm.QzoneV2API.pdb
+D:\Project\Aie100New\Wbm.QzoneV2API\obj\Release\Wbm.QzoneV2API.dll
+D:\Project\Aie100New\Wbm.QzoneV2API\obj\Release\Wbm.QzoneV2API.pdb

@@ -1,0 +1,14 @@
+D:\myproject\aie100WebService\AieLibrary\bin\Release\AieLibrary.dll
+D:\myproject\aie100WebService\AieLibrary\bin\Release\AieLibrary.pdb
+D:\myproject\aie100WebService\AieLibrary\bin\Release\DTO.dll
+D:\myproject\aie100WebService\AieLibrary\bin\Release\JEWS.dll
+D:\myproject\aie100WebService\AieLibrary\bin\Release\DTO.pdb
+D:\myproject\aie100WebService\AieLibrary\bin\Release\JEWS.pdb
+D:\myproject\aie100WebService\AieLibrary\obj\Release\AieLibrary.csprojResolveAssemblyReference.cache
+D:\myproject\aie100WebService\AieLibrary\obj\Release\AieLibrary.dll
+D:\myproject\aie100WebService\AieLibrary\obj\Release\AieLibrary.pdb
+D:\Project\Aie100New\AieLibrary\bin\Release\AieLibrary.dll
+D:\Project\Aie100New\AieLibrary\bin\Release\AieLibrary.pdb
+D:\Project\Aie100New\AieLibrary\obj\Release\AieLibrary.csprojResolveAssemblyReference.cache
+D:\Project\Aie100New\AieLibrary\obj\Release\AieLibrary.dll
+D:\Project\Aie100New\AieLibrary\obj\Release\AieLibrary.pdb

@@ -1,0 +1,93 @@
+﻿.gridviewblue .titlerow
+{
+	background-color:#abc5e7;
+	text-align:left;
+}
+.gridviewblue .titlerow th
+{
+	color:#526b84;
+	font-size:10pt;
+	padding:5px;
+	font-weight:bold;
+	vertical-align:top;
+}
+.gridviewblue .titlerow label
+{
+	font-size:8pt;
+	padding:5px;
+	font-weight:bold;
+	vertical-align:top;
+}
+.gridviewblue .titlerow th div div
+{
+	font-size:8pt;
+	font-weight:bold;
+	vertical-align:top;	
+}
+.gridviewblue .oddrow
+{
+	text-align:left;
+	
+}
+.gridviewblue .oddrow td
+{
+	
+	font-size:8pt;
+	padding:5px;
+	vertical-align:top;
+}
+.gridviewblue .oddrow td a
+{
+	text-decoration:none;
+}
+
+.gridviewblue .oddrow1 td a
+{
+	text-decoration:none;
+}
+
+.gridviewblue .evenrow
+{
+	text-align:left;
+}
+.gridviewblue .evenrow td
+{
+	background-color:#f3f8fe;
+	padding:5px;
+	font-size:8pt;
+	vertical-align:top;
+}
+.gridviewblue .evenrow td a
+{
+	text-decoration:none;
+}
+
+.disabledDIV
+{
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:Gray;
+	filter:alpha(opacity=30);
+	-moz-opacity:0.3;
+	opacity:0.3;
+	z-index:10;	
+}
+
+.transparentDIV
+{
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:Gray;
+	filter:alpha(opacity=30);
+	-moz-opacity:0;
+	opacity:0;
+	z-index:10;	
+}

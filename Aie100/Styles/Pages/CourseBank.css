@@ -1,0 +1,175 @@
+﻿.coursebank{
+    border:1px solid #d4d4d4
+}
+
+.coursebank .toolbar{
+    padding:12px 10px;
+    background-color:rgb(42,140,37);
+}
+
+.coursebank .toolbar input{
+        width:200px;
+    }
+.coursebank .toolbar img{
+    height:21px;
+    vertical-align:top;
+    cursor:pointer
+}
+
+.coursebank .toolbar .search_tip{
+    margin-left:-200px;
+    position:absolute;
+    color:#808080
+}
+
+.coursebank .toolbar .sp_coursebank{
+    color:#fff;
+    margin-left:20px;
+    cursor:pointer
+}
+
+
+.coursebank .toolbar .sp_coursebank img{
+    height:16px; 
+    vertical-align:middle;
+    margin-left:5px;
+}
+
+.coursebank .course_type{
+    position:absolute;
+    margin:0px;
+    background-color:#1B88C9;
+    width:1024px;
+    display:none;
+    z-index:100;
+}
+
+.coursebank .course_type ul{
+    background-color:#0A6091;
+    margin:0px;
+    width:140px;
+    list-style-type:none;
+    line-height:45px;
+    padding:8px 0px 8px 8px ;
+    float:left;
+    color:#fff
+}
+
+.coursebank .course_type ul li{
+    padding-right: 40px;
+    text-align: right;
+}
+
+.coursebank .course_type ul li:hover{
+    background-color:#297395;
+    cursor:pointer
+}
+
+.coursebank .course_type .course_type_details{
+    display:none;
+    float:left;
+    padding:5px;
+}
+
+.coursebank .course_list{
+    padding:5px 5px 5px 6px;
+ 
+}
+
+/*.coursebank .start{
+    text-align:center;
+}
+.coursebank .start div
+{
+    background: #FFA101;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFA101), to(#FF7F00));
+    background: -webkit-linear-gradient(#FFA101, #FF7F00);
+    background: -moz-linear-gradient(#FFA101, #FF7F00);
+    background: -ms-linear-gradient(#FFA101, #FF7F00);
+    background: -o-linear-gradient(#FFA101, #FF7F00);
+    background: linear-gradient(#FFA101, #FF7F00);
+    cursor: pointer;
+    line-height: 30px;
+    color:#fff;
+}
+
+.coursebank .start div:hover
+{
+    background: #FF7F00;
+    background: -webkit-gradient(linear, 0 0, 0 bottom,from(#FF7F00),to(#FFA101));
+    background: -webkit-linear-gradient(#FF7F00,#FFA101);
+    background: -moz-linear-gradient(#FF7F00,#FFA101);
+    background: -ms-linear-gradient(#FF7F00,#FFA101);
+    background: -o-linear-gradient(#FF7F00,#FFA101);
+    background: linear-gradient(#FF7F00,#FFA101);
+}*/
+
+.coursebank .course_item{
+    border: 1px solid #d4d4d4;
+    width: 156px; 
+    height: 250px;
+    margin: 5px;
+}
+
+.coursebank .course_item .course_book{
+    height: 200px;
+    position:relative
+}
+
+.coursebank .course_item .course_yytm{
+    background-color: rgb(0, 0, 0);
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    opacity:0.6;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    position: absolute;
+    bottom: 6px;
+    color: #fff;
+    width: 143px;
+    left:6px;
+
+}
+
+.coursebank .course_item .course_name{
+}
+
+.coursebank .course_item .course_name span{
+    display: inline-block;
+    margin: 5px;
+}
+
+.coursebank .course_item .course_details{
+    height:188px;
+    cursor:pointer;
+    font-size:18px;
+    display:none;
+}
+
+.coursebank .course_item .course_details span{
+    margin:50% 22%;
+    position:absolute;
+}
+
+.coursebank .course_item .course_book .course_bookimg{
+    width:143px;
+    height:188px;
+    margin:5px 6px
+}
+
+.coursebank .nodata{
+    padding-left:5px;
+    color:gray;
+}
+
+.coursebank .lihover{
+    background-color:rgb(27, 126, 180);
+}
+
+.coursebank .studybtn{
+    width:110px;
+    margin:5px auto 0px auto;
+}
+
+#master_liCourseBank{
+    background-color:rgb(0,128,0);
+}

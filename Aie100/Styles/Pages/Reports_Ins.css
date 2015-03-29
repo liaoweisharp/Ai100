@@ -1,0 +1,76 @@
+﻿.assignmentTitleDiv {
+
+    background-color:#2A8C25;
+    padding:12px 35px;
+
+}
+.assignmentTitle {
+    /*background-image:url(../../Images/triangle.png);*/
+    background-repeat:no-repeat;
+    background-size:16px;
+    background-position:center left;
+    color:white;
+    /*padding-left:25px;*/
+}
+.usersRp {
+    
+}
+
+.tb_rp {
+    border: 1px solid #AEAEAE;
+    border-collapse: collapse;
+    line-height: 23px;
+    text-align: center;
+    width: 100%;
+}
+    .tb_rp .header {
+         background-color: #297395;
+    color: #FFFFFF;
+    line-height: 25px;
+    }
+    .tb_rp td {
+        border: 1px solid #AEAEAE;
+    }
+    .tb_rp td span.status{
+    cursor:pointer;
+    color:rgb(0,102,204)
+}
+
+    .tb_rp td span.status:hover{
+    text-decoration:underline
+   }
+.bg1 {
+     background-color:rgb(230,230,230);
+}
+.fo {
+    padding-left:5px;
+    color:green;
+}
+.dow {
+    background-color: #297395;
+    background-image: url("../../Images/excel.png");
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    text-indent: 28px;
+    width: 65px;
+     opacity:0.7;
+}
+    .dow:hover {
+        opacity:1;
+        color:white;
+        cursor:pointer;
+    }
+.usersRp2 {
+    clear:both;
+}
+.order{
+    text-decoration:underline;
+}
+.order:hover{
+    background-color:#579bbb;
+    cursor:pointer;
+}

@@ -1,0 +1,32 @@
+﻿body {
+    font-family: 宋体;
+    font-size: 14px;
+}
+
+
+#pageLoader {
+    text-align: center;
+    margin-top: 15%;
+}
+
+#maintitle {
+    font-family: 黑体;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#subtitle {
+    font-family: 黑体;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.ques_group_desc {
+    font-family: 宋体;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 30px 10px;
+}

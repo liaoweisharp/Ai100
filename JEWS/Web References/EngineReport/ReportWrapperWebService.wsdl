@@ -1,0 +1,1558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:ns2="http://wrapper.webservice.acepherics.com" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://webservice.acepherics.com" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://domain.acepherics.com" targetNamespace="http://webservice.acepherics.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://domain.acepherics.com">
+      <xsd:complexType name="UserExtend">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="adminRole" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="bookId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="courseId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="identityId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="instituteId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="isbn" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="loginState" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="pointingBookId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pointingIsbn" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="roleId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="studyFlag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="systemId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservice.acepherics.com">
+      <xsd:element name="testResulNormalByUserAssignment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulNormalByUserAssignmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:TestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getTestResultImpoveScore">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTestResultImpoveScoreResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultByAssignmentIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultByAssignmentIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesOfLoList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesOfLoListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfKnowledgeGradesWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultById">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultByIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:TestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulNormalBySectionAssignment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulNormalBySectionAssignmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulNormalBySection">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulNormalBySectionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesByTypeList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesByTypeListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfKnowledgeGradesWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateUsersOfLoIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="anyType2anyTypeMap">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="entry">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="key" type="xsd:anyType" />
+                <xsd:element minOccurs="0" maxOccurs="1" name="value" type="xsd:anyType" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getKnowledgeStateUsersOfLoIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:anyType2anyTypeMap" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStudyStateDetail">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStudyStateDetailResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfKnowledgeStudyStateDetailWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulNormalByUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulNormalByUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesOfStructureList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesOfStructureListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfKnowledgeGradesWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStudyStateDetailForStructure">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStudyStateDetailForStructureResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfKnowledgeStudyStateDetailWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="isWeakKnowledge">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="isWeakKnowledgeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesNoKpOfISBN">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesNoKpOfISBNResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfKnowledgeGradesWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getNormalKnowledgeStateDetailOfISBN">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getNormalKnowledgeStateDetailOfISBNResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:anyType2anyTypeMap" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesOfISBN">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesOfISBNResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfKnowledgeGradesWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loIdsDrillByIsbn">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loIdsDrillByIsbnResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateUserslOfISBN">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateUserslOfISBNResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:anyType2anyTypeMap" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateUsersOfTests">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateUsersOfTestsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:anyType2anyTypeMap" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getNormalKnowledgeStateDetailOfStructure">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getNormalKnowledgeStateDetailOfStructureResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:anyType2anyTypeMap" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateDetailOfTests">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateDetailOfTestsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:anyType2anyTypeMap" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateDetailOfLoIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateDetailOfLoIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:anyType2anyTypeMap" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulByReporSectionAssignment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulByReporSectionAssignmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultOtherByAssignment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultOtherByAssignmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loIdsLearningPath">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loIdsLearningPathResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testHistoryHtByPointingLo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testHistoryHtByPointingLoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:anyType2anyTypeMap" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultByAssignment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultByAssignmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:TestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesOfSource">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesOfSourceResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfKnowledgeGradesWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIsTest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIsTestResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulByMarkingSectionAssignment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResulByMarkingSectionAssignmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loIdsDrillByStructureId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loIdsDrillByStructureIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLoMapWrapper">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLoMapWrapperResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfLoMapWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getEfficiencyEvaluations">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getEfficiencyEvaluationsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfEfficiencyEvaluationWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateUsersOfStructure">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKnowledgeStateUsersOfStructureResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:anyType2anyTypeMap" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesByQuestionId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="knowledgeGradesByQuestionIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfKnowledgeGradesWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultOtherMarkingByAssignment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultOtherMarkingByAssignmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loIdsByTest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loIdsByTestResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultOtherReportByAssignment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testResultOtherReportByAssignmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns2:ArrayOfTestResultWrapper" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://wrapper.webservice.acepherics.com">
+      <xsd:complexType name="TestResultWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="adjustScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="answeredBase" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="assignmentContentId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="assignmentId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="attemptNumber" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cheatFlag" nillable="true" type="xsd:boolean" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveHistory" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveNum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveScoreFlag" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveTotalScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improveType" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improvedScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="kpScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="roleId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="scoreFlag" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="statusFlag" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="submissionType" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="submittedDate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="systemId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="testId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="totalScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="type" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="useTime" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTestResultWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="TestResultWrapper" nillable="true" type="ns2:TestResultWrapper" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfKnowledgeGradesWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="KnowledgeGradesWrapper" nillable="true" type="ns2:KnowledgeGradesWrapper" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="KnowledgeGradesWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="cApplicationScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cCorrectOlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cCorrectPlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cCountOlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cCountPlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cLearnScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="classKnowledgeScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="description" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="exampleQuestionFlag" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="itemId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="itemName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="itemType" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="lastUpdate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="loType" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pApplicationScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pCorrectOlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pCorrectPlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pCountOlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pCountPlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pLearnScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="parentId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="personalKnowledgeScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pointingLoId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="probability" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="structureId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="structureLevel" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="structureType" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="unit" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfKnowledgeStudyStateDetailWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="KnowledgeStudyStateDetailWrapper" nillable="true" type="ns2:KnowledgeStudyStateDetailWrapper" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="KnowledgeStudyStateDetailWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="excellentP" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="fairP" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="goodP" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="inadequateP" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="notAssessedP" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="personalKnowledgeScore" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="weakP" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfLoMapWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="LoMapWrapper" nillable="true" type="ns2:LoMapWrapper" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="LoMapWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="layer" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="layerCount" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="layerNum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sinkLo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfEfficiencyEvaluationWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="EfficiencyEvaluationWrapper" nillable="true" type="ns2:EfficiencyEvaluationWrapper" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EfficiencyEvaluationWrapper">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="compEffice" nillable="true" type="xsd:double" />
+          <xsd:element minOccurs="0" name="compRate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="compScore" nillable="true" type="xsd:double" />
+          <xsd:element minOccurs="0" name="knowledgeLevel" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="studyEffice" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getKnowledgeStateDetailOfLoIdsResponse">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateDetailOfLoIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesOfISBNResponse">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesOfISBNResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateUsersOfTestsResponse">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateUsersOfTestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEfficiencyEvaluationsRequest">
+    <wsdl:part name="parameters" element="tns:getEfficiencyEvaluations" />
+  </wsdl:message>
+  <wsdl:message name="getEfficiencyEvaluationsResponse">
+    <wsdl:part name="parameters" element="tns:getEfficiencyEvaluationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStudyStateDetailForStructureRequest">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStudyStateDetailForStructure" />
+  </wsdl:message>
+  <wsdl:message name="loIdsLearningPathRequest">
+    <wsdl:part name="parameters" element="tns:loIdsLearningPath" />
+  </wsdl:message>
+  <wsdl:message name="loIdsDrillByIsbnRequest">
+    <wsdl:part name="parameters" element="tns:loIdsDrillByIsbn" />
+  </wsdl:message>
+  <wsdl:message name="userIsTestResponse">
+    <wsdl:part name="parameters" element="tns:userIsTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResultOtherByAssignmentRequest">
+    <wsdl:part name="parameters" element="tns:testResultOtherByAssignment" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesOfStructureListRequest">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesOfStructureList" />
+  </wsdl:message>
+  <wsdl:message name="testResulNormalBySectionRequest">
+    <wsdl:part name="parameters" element="tns:testResulNormalBySection" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesOfLoListRequest">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesOfLoList" />
+  </wsdl:message>
+  <wsdl:message name="userIsTestRequest">
+    <wsdl:part name="parameters" element="tns:userIsTest" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateUsersOfLoIdsRequest">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateUsersOfLoIds" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesOfSourceResponse">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesOfSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="loIdsByTestResponse">
+    <wsdl:part name="parameters" element="tns:loIdsByTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResulNormalBySectionResponse">
+    <wsdl:part name="parameters" element="tns:testResulNormalBySectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResulNormalBySectionAssignmentResponse">
+    <wsdl:part name="parameters" element="tns:testResulNormalBySectionAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResultByAssignmentResponse">
+    <wsdl:part name="parameters" element="tns:testResultByAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResulNormalByUserResponse">
+    <wsdl:part name="parameters" element="tns:testResulNormalByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="isWeakKnowledgeResponse">
+    <wsdl:part name="parameters" element="tns:isWeakKnowledgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStudyStateDetailRequest">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStudyStateDetail" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateUsersOfLoIdsResponse">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateUsersOfLoIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStudyStateDetailForStructureResponse">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStudyStateDetailForStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLoMapWrapperRequest">
+    <wsdl:part name="parameters" element="tns:getLoMapWrapper" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesByTypeListRequest">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesByTypeList" />
+  </wsdl:message>
+  <wsdl:message name="getNormalKnowledgeStateDetailOfISBNRequest">
+    <wsdl:part name="parameters" element="tns:getNormalKnowledgeStateDetailOfISBN" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesOfLoListResponse">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesOfLoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStudyStateDetailResponse">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStudyStateDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNormalKnowledgeStateDetailOfISBNResponse">
+    <wsdl:part name="parameters" element="tns:getNormalKnowledgeStateDetailOfISBNResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateUsersOfTestsRequest">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateUsersOfTests" />
+  </wsdl:message>
+  <wsdl:message name="loIdsByTestRequest">
+    <wsdl:part name="parameters" element="tns:loIdsByTest" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesByTypeListResponse">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesByTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateDetailOfTestsResponse">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateDetailOfTestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResulByReporSectionAssignmentRequest">
+    <wsdl:part name="parameters" element="tns:testResulByReporSectionAssignment" />
+  </wsdl:message>
+  <wsdl:message name="testResultOtherMarkingByAssignmentRequest">
+    <wsdl:part name="parameters" element="tns:testResultOtherMarkingByAssignment" />
+  </wsdl:message>
+  <wsdl:message name="testResultByAssignmentIdsResponse">
+    <wsdl:part name="parameters" element="tns:testResultByAssignmentIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesOfStructureListResponse">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesOfStructureListResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResulNormalBySectionAssignmentRequest">
+    <wsdl:part name="parameters" element="tns:testResulNormalBySectionAssignment" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateUsersOfStructureResponse">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateUsersOfStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResultByIdRequest">
+    <wsdl:part name="parameters" element="tns:testResultById" />
+  </wsdl:message>
+  <wsdl:message name="loIdsDrillByIsbnResponse">
+    <wsdl:part name="parameters" element="tns:loIdsDrillByIsbnResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResulNormalByUserAssignmentRequest">
+    <wsdl:part name="parameters" element="tns:testResulNormalByUserAssignment" />
+  </wsdl:message>
+  <wsdl:message name="testResulByMarkingSectionAssignmentRequest">
+    <wsdl:part name="parameters" element="tns:testResulByMarkingSectionAssignment" />
+  </wsdl:message>
+  <wsdl:message name="testHistoryHtByPointingLoRequest">
+    <wsdl:part name="parameters" element="tns:testHistoryHtByPointingLo" />
+  </wsdl:message>
+  <wsdl:message name="getTestResultImpoveScoreRequest">
+    <wsdl:part name="parameters" element="tns:getTestResultImpoveScore" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateUserslOfISBNRequest">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateUserslOfISBN" />
+  </wsdl:message>
+  <wsdl:message name="testResultOtherByAssignmentResponse">
+    <wsdl:part name="parameters" element="tns:testResultOtherByAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResultOtherMarkingByAssignmentResponse">
+    <wsdl:part name="parameters" element="tns:testResultOtherMarkingByAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="loIdsDrillByStructureIdRequest">
+    <wsdl:part name="parameters" element="tns:loIdsDrillByStructureId" />
+  </wsdl:message>
+  <wsdl:message name="testResultByIdResponse">
+    <wsdl:part name="parameters" element="tns:testResultByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestResultImpoveScoreResponse">
+    <wsdl:part name="parameters" element="tns:getTestResultImpoveScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResultOtherReportByAssignmentResponse">
+    <wsdl:part name="parameters" element="tns:testResultOtherReportByAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesByQuestionIdResponse">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesByQuestionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesByQuestionIdRequest">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesByQuestionId" />
+  </wsdl:message>
+  <wsdl:message name="loIdsLearningPathResponse">
+    <wsdl:part name="parameters" element="tns:loIdsLearningPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNormalKnowledgeStateDetailOfStructureResponse">
+    <wsdl:part name="parameters" element="tns:getNormalKnowledgeStateDetailOfStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateUsersOfStructureRequest">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateUsersOfStructure" />
+  </wsdl:message>
+  <wsdl:message name="testHistoryHtByPointingLoResponse">
+    <wsdl:part name="parameters" element="tns:testHistoryHtByPointingLoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLoMapWrapperResponse">
+    <wsdl:part name="parameters" element="tns:getLoMapWrapperResponse" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesOfISBNRequest">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesOfISBN" />
+  </wsdl:message>
+  <wsdl:message name="isWeakKnowledgeRequest">
+    <wsdl:part name="parameters" element="tns:isWeakKnowledge" />
+  </wsdl:message>
+  <wsdl:message name="testResulByMarkingSectionAssignmentResponse">
+    <wsdl:part name="parameters" element="tns:testResulByMarkingSectionAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesOfSourceRequest">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesOfSource" />
+  </wsdl:message>
+  <wsdl:message name="testResulNormalByUserAssignmentResponse">
+    <wsdl:part name="parameters" element="tns:testResulNormalByUserAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="testResultByAssignmentIdsRequest">
+    <wsdl:part name="parameters" element="tns:testResultByAssignmentIds" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesNoKpOfISBNRequest">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesNoKpOfISBN" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateDetailOfLoIdsRequest">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateDetailOfLoIds" />
+  </wsdl:message>
+  <wsdl:message name="testResulNormalByUserRequest">
+    <wsdl:part name="parameters" element="tns:testResulNormalByUser" />
+  </wsdl:message>
+  <wsdl:message name="testResultByAssignmentRequest">
+    <wsdl:part name="parameters" element="tns:testResultByAssignment" />
+  </wsdl:message>
+  <wsdl:message name="knowledgeGradesNoKpOfISBNResponse">
+    <wsdl:part name="parameters" element="tns:knowledgeGradesNoKpOfISBNResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateDetailOfTestsRequest">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateDetailOfTests" />
+  </wsdl:message>
+  <wsdl:message name="testResultOtherReportByAssignmentRequest">
+    <wsdl:part name="parameters" element="tns:testResultOtherReportByAssignment" />
+  </wsdl:message>
+  <wsdl:message name="testResulByReporSectionAssignmentResponse">
+    <wsdl:part name="parameters" element="tns:testResulByReporSectionAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNormalKnowledgeStateDetailOfStructureRequest">
+    <wsdl:part name="parameters" element="tns:getNormalKnowledgeStateDetailOfStructure" />
+  </wsdl:message>
+  <wsdl:message name="loIdsDrillByStructureIdResponse">
+    <wsdl:part name="parameters" element="tns:loIdsDrillByStructureIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKnowledgeStateUserslOfISBNResponse">
+    <wsdl:part name="parameters" element="tns:getKnowledgeStateUserslOfISBNResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ReportWrapperWebServicePortType">
+    <wsdl:operation name="testResulNormalByUserAssignment">
+      <wsdl:input name="testResulNormalByUserAssignmentRequest" message="tns:testResulNormalByUserAssignmentRequest" />
+      <wsdl:output name="testResulNormalByUserAssignmentResponse" message="tns:testResulNormalByUserAssignmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTestResultImpoveScore">
+      <wsdl:input name="getTestResultImpoveScoreRequest" message="tns:getTestResultImpoveScoreRequest" />
+      <wsdl:output name="getTestResultImpoveScoreResponse" message="tns:getTestResultImpoveScoreResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResultByAssignmentIds">
+      <wsdl:input name="testResultByAssignmentIdsRequest" message="tns:testResultByAssignmentIdsRequest" />
+      <wsdl:output name="testResultByAssignmentIdsResponse" message="tns:testResultByAssignmentIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesOfLoList">
+      <wsdl:input name="knowledgeGradesOfLoListRequest" message="tns:knowledgeGradesOfLoListRequest" />
+      <wsdl:output name="knowledgeGradesOfLoListResponse" message="tns:knowledgeGradesOfLoListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResultById">
+      <wsdl:input name="testResultByIdRequest" message="tns:testResultByIdRequest" />
+      <wsdl:output name="testResultByIdResponse" message="tns:testResultByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResulNormalBySectionAssignment">
+      <wsdl:input name="testResulNormalBySectionAssignmentRequest" message="tns:testResulNormalBySectionAssignmentRequest" />
+      <wsdl:output name="testResulNormalBySectionAssignmentResponse" message="tns:testResulNormalBySectionAssignmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResulNormalBySection">
+      <wsdl:input name="testResulNormalBySectionRequest" message="tns:testResulNormalBySectionRequest" />
+      <wsdl:output name="testResulNormalBySectionResponse" message="tns:testResulNormalBySectionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesByTypeList">
+      <wsdl:input name="knowledgeGradesByTypeListRequest" message="tns:knowledgeGradesByTypeListRequest" />
+      <wsdl:output name="knowledgeGradesByTypeListResponse" message="tns:knowledgeGradesByTypeListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateUsersOfLoIds">
+      <wsdl:input name="getKnowledgeStateUsersOfLoIdsRequest" message="tns:getKnowledgeStateUsersOfLoIdsRequest" />
+      <wsdl:output name="getKnowledgeStateUsersOfLoIdsResponse" message="tns:getKnowledgeStateUsersOfLoIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStudyStateDetail">
+      <wsdl:input name="getKnowledgeStudyStateDetailRequest" message="tns:getKnowledgeStudyStateDetailRequest" />
+      <wsdl:output name="getKnowledgeStudyStateDetailResponse" message="tns:getKnowledgeStudyStateDetailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResulNormalByUser">
+      <wsdl:input name="testResulNormalByUserRequest" message="tns:testResulNormalByUserRequest" />
+      <wsdl:output name="testResulNormalByUserResponse" message="tns:testResulNormalByUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesOfStructureList">
+      <wsdl:input name="knowledgeGradesOfStructureListRequest" message="tns:knowledgeGradesOfStructureListRequest" />
+      <wsdl:output name="knowledgeGradesOfStructureListResponse" message="tns:knowledgeGradesOfStructureListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStudyStateDetailForStructure">
+      <wsdl:input name="getKnowledgeStudyStateDetailForStructureRequest" message="tns:getKnowledgeStudyStateDetailForStructureRequest" />
+      <wsdl:output name="getKnowledgeStudyStateDetailForStructureResponse" message="tns:getKnowledgeStudyStateDetailForStructureResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="isWeakKnowledge">
+      <wsdl:input name="isWeakKnowledgeRequest" message="tns:isWeakKnowledgeRequest" />
+      <wsdl:output name="isWeakKnowledgeResponse" message="tns:isWeakKnowledgeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesNoKpOfISBN">
+      <wsdl:input name="knowledgeGradesNoKpOfISBNRequest" message="tns:knowledgeGradesNoKpOfISBNRequest" />
+      <wsdl:output name="knowledgeGradesNoKpOfISBNResponse" message="tns:knowledgeGradesNoKpOfISBNResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getNormalKnowledgeStateDetailOfISBN">
+      <wsdl:input name="getNormalKnowledgeStateDetailOfISBNRequest" message="tns:getNormalKnowledgeStateDetailOfISBNRequest" />
+      <wsdl:output name="getNormalKnowledgeStateDetailOfISBNResponse" message="tns:getNormalKnowledgeStateDetailOfISBNResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesOfISBN">
+      <wsdl:input name="knowledgeGradesOfISBNRequest" message="tns:knowledgeGradesOfISBNRequest" />
+      <wsdl:output name="knowledgeGradesOfISBNResponse" message="tns:knowledgeGradesOfISBNResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="loIdsDrillByIsbn">
+      <wsdl:input name="loIdsDrillByIsbnRequest" message="tns:loIdsDrillByIsbnRequest" />
+      <wsdl:output name="loIdsDrillByIsbnResponse" message="tns:loIdsDrillByIsbnResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateUserslOfISBN">
+      <wsdl:input name="getKnowledgeStateUserslOfISBNRequest" message="tns:getKnowledgeStateUserslOfISBNRequest" />
+      <wsdl:output name="getKnowledgeStateUserslOfISBNResponse" message="tns:getKnowledgeStateUserslOfISBNResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateUsersOfTests">
+      <wsdl:input name="getKnowledgeStateUsersOfTestsRequest" message="tns:getKnowledgeStateUsersOfTestsRequest" />
+      <wsdl:output name="getKnowledgeStateUsersOfTestsResponse" message="tns:getKnowledgeStateUsersOfTestsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getNormalKnowledgeStateDetailOfStructure">
+      <wsdl:input name="getNormalKnowledgeStateDetailOfStructureRequest" message="tns:getNormalKnowledgeStateDetailOfStructureRequest" />
+      <wsdl:output name="getNormalKnowledgeStateDetailOfStructureResponse" message="tns:getNormalKnowledgeStateDetailOfStructureResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateDetailOfTests">
+      <wsdl:input name="getKnowledgeStateDetailOfTestsRequest" message="tns:getKnowledgeStateDetailOfTestsRequest" />
+      <wsdl:output name="getKnowledgeStateDetailOfTestsResponse" message="tns:getKnowledgeStateDetailOfTestsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateDetailOfLoIds">
+      <wsdl:input name="getKnowledgeStateDetailOfLoIdsRequest" message="tns:getKnowledgeStateDetailOfLoIdsRequest" />
+      <wsdl:output name="getKnowledgeStateDetailOfLoIdsResponse" message="tns:getKnowledgeStateDetailOfLoIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResulByReporSectionAssignment">
+      <wsdl:input name="testResulByReporSectionAssignmentRequest" message="tns:testResulByReporSectionAssignmentRequest" />
+      <wsdl:output name="testResulByReporSectionAssignmentResponse" message="tns:testResulByReporSectionAssignmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResultOtherByAssignment">
+      <wsdl:input name="testResultOtherByAssignmentRequest" message="tns:testResultOtherByAssignmentRequest" />
+      <wsdl:output name="testResultOtherByAssignmentResponse" message="tns:testResultOtherByAssignmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="loIdsLearningPath">
+      <wsdl:input name="loIdsLearningPathRequest" message="tns:loIdsLearningPathRequest" />
+      <wsdl:output name="loIdsLearningPathResponse" message="tns:loIdsLearningPathResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testHistoryHtByPointingLo">
+      <wsdl:input name="testHistoryHtByPointingLoRequest" message="tns:testHistoryHtByPointingLoRequest" />
+      <wsdl:output name="testHistoryHtByPointingLoResponse" message="tns:testHistoryHtByPointingLoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResultByAssignment">
+      <wsdl:input name="testResultByAssignmentRequest" message="tns:testResultByAssignmentRequest" />
+      <wsdl:output name="testResultByAssignmentResponse" message="tns:testResultByAssignmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesOfSource">
+      <wsdl:input name="knowledgeGradesOfSourceRequest" message="tns:knowledgeGradesOfSourceRequest" />
+      <wsdl:output name="knowledgeGradesOfSourceResponse" message="tns:knowledgeGradesOfSourceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userIsTest">
+      <wsdl:input name="userIsTestRequest" message="tns:userIsTestRequest" />
+      <wsdl:output name="userIsTestResponse" message="tns:userIsTestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResulByMarkingSectionAssignment">
+      <wsdl:input name="testResulByMarkingSectionAssignmentRequest" message="tns:testResulByMarkingSectionAssignmentRequest" />
+      <wsdl:output name="testResulByMarkingSectionAssignmentResponse" message="tns:testResulByMarkingSectionAssignmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="loIdsDrillByStructureId">
+      <wsdl:input name="loIdsDrillByStructureIdRequest" message="tns:loIdsDrillByStructureIdRequest" />
+      <wsdl:output name="loIdsDrillByStructureIdResponse" message="tns:loIdsDrillByStructureIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getLoMapWrapper">
+      <wsdl:input name="getLoMapWrapperRequest" message="tns:getLoMapWrapperRequest" />
+      <wsdl:output name="getLoMapWrapperResponse" message="tns:getLoMapWrapperResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getEfficiencyEvaluations">
+      <wsdl:input name="getEfficiencyEvaluationsRequest" message="tns:getEfficiencyEvaluationsRequest" />
+      <wsdl:output name="getEfficiencyEvaluationsResponse" message="tns:getEfficiencyEvaluationsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateUsersOfStructure">
+      <wsdl:input name="getKnowledgeStateUsersOfStructureRequest" message="tns:getKnowledgeStateUsersOfStructureRequest" />
+      <wsdl:output name="getKnowledgeStateUsersOfStructureResponse" message="tns:getKnowledgeStateUsersOfStructureResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesByQuestionId">
+      <wsdl:input name="knowledgeGradesByQuestionIdRequest" message="tns:knowledgeGradesByQuestionIdRequest" />
+      <wsdl:output name="knowledgeGradesByQuestionIdResponse" message="tns:knowledgeGradesByQuestionIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResultOtherMarkingByAssignment">
+      <wsdl:input name="testResultOtherMarkingByAssignmentRequest" message="tns:testResultOtherMarkingByAssignmentRequest" />
+      <wsdl:output name="testResultOtherMarkingByAssignmentResponse" message="tns:testResultOtherMarkingByAssignmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="loIdsByTest">
+      <wsdl:input name="loIdsByTestRequest" message="tns:loIdsByTestRequest" />
+      <wsdl:output name="loIdsByTestResponse" message="tns:loIdsByTestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testResultOtherReportByAssignment">
+      <wsdl:input name="testResultOtherReportByAssignmentRequest" message="tns:testResultOtherReportByAssignmentRequest" />
+      <wsdl:output name="testResultOtherReportByAssignmentResponse" message="tns:testResultOtherReportByAssignmentResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReportWrapperWebServiceHttpBinding" type="tns:ReportWrapperWebServicePortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="testResulNormalByUserAssignment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResulNormalByUserAssignmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResulNormalByUserAssignmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTestResultImpoveScore">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTestResultImpoveScoreRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTestResultImpoveScoreResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResultByAssignmentIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResultByAssignmentIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResultByAssignmentIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesOfLoList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="knowledgeGradesOfLoListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="knowledgeGradesOfLoListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResultById">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResultByIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResultByIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResulNormalBySectionAssignment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResulNormalBySectionAssignmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResulNormalBySectionAssignmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResulNormalBySection">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResulNormalBySectionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResulNormalBySectionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesByTypeList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="knowledgeGradesByTypeListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="knowledgeGradesByTypeListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateUsersOfLoIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getKnowledgeStateUsersOfLoIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getKnowledgeStateUsersOfLoIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStudyStateDetail">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getKnowledgeStudyStateDetailRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getKnowledgeStudyStateDetailResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResulNormalByUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResulNormalByUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResulNormalByUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesOfStructureList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="knowledgeGradesOfStructureListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="knowledgeGradesOfStructureListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStudyStateDetailForStructure">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getKnowledgeStudyStateDetailForStructureRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getKnowledgeStudyStateDetailForStructureResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isWeakKnowledge">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="isWeakKnowledgeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="isWeakKnowledgeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesNoKpOfISBN">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="knowledgeGradesNoKpOfISBNRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="knowledgeGradesNoKpOfISBNResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNormalKnowledgeStateDetailOfISBN">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getNormalKnowledgeStateDetailOfISBNRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getNormalKnowledgeStateDetailOfISBNResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesOfISBN">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="knowledgeGradesOfISBNRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="knowledgeGradesOfISBNResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loIdsDrillByIsbn">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="loIdsDrillByIsbnRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loIdsDrillByIsbnResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateUserslOfISBN">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getKnowledgeStateUserslOfISBNRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getKnowledgeStateUserslOfISBNResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateUsersOfTests">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getKnowledgeStateUsersOfTestsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getKnowledgeStateUsersOfTestsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNormalKnowledgeStateDetailOfStructure">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getNormalKnowledgeStateDetailOfStructureRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getNormalKnowledgeStateDetailOfStructureResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateDetailOfTests">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getKnowledgeStateDetailOfTestsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getKnowledgeStateDetailOfTestsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateDetailOfLoIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getKnowledgeStateDetailOfLoIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getKnowledgeStateDetailOfLoIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResulByReporSectionAssignment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResulByReporSectionAssignmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResulByReporSectionAssignmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResultOtherByAssignment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResultOtherByAssignmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResultOtherByAssignmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loIdsLearningPath">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="loIdsLearningPathRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loIdsLearningPathResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testHistoryHtByPointingLo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testHistoryHtByPointingLoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testHistoryHtByPointingLoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResultByAssignment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResultByAssignmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResultByAssignmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesOfSource">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="knowledgeGradesOfSourceRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="knowledgeGradesOfSourceResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userIsTest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userIsTestRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userIsTestResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResulByMarkingSectionAssignment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResulByMarkingSectionAssignmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResulByMarkingSectionAssignmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loIdsDrillByStructureId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="loIdsDrillByStructureIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loIdsDrillByStructureIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoMapWrapper">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getLoMapWrapperRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getLoMapWrapperResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEfficiencyEvaluations">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getEfficiencyEvaluationsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getEfficiencyEvaluationsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKnowledgeStateUsersOfStructure">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getKnowledgeStateUsersOfStructureRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getKnowledgeStateUsersOfStructureResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="knowledgeGradesByQuestionId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="knowledgeGradesByQuestionIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="knowledgeGradesByQuestionIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResultOtherMarkingByAssignment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResultOtherMarkingByAssignmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResultOtherMarkingByAssignmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loIdsByTest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="loIdsByTestRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loIdsByTestResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testResultOtherReportByAssignment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testResultOtherReportByAssignmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testResultOtherReportByAssignmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReportWrapperWebService">
+    <wsdl:port name="ReportWrapperWebServiceHttpPort" binding="tns:ReportWrapperWebServiceHttpBinding">
+      <wsdlsoap:address location="http://192.168.0.188:8080/acepherics/service/ReportWrapperWebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

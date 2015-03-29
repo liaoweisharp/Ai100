@@ -1,0 +1,241 @@
+﻿*{
+  font-family:'Microsoft YaHei';
+ 
+}
+
+body.w1024{
+    width:1024px
+}
+
+body.w1240{
+    width:1240px
+}
+
+/*教学中心与学习中心*/
+
+body.w1024 .w_tree{
+   width:280px;
+}
+
+body.w1024 .w_asmt{
+    width:713px;
+}
+
+body.w1240 .w_tree{
+    width:300px;
+}
+
+body.w1240 .w_asmt{
+    width:910px;
+}
+
+
+/*考试*/
+body.w1024 .w_thead{
+    width:1024px
+}
+body.w1240 .w_thead{
+    width:1240px
+}
+
+
+body.w1024 .w_testcontent{
+    width:1024px
+}
+body.w1240 .w_testcontent{
+    width:1240px
+}
+
+
+body.w1024 .ml_timer{
+    margin-left:762px;
+}
+
+body.w1240 .ml_timer{
+    margin-left:977px;
+}
+
+body.w1024 .w_question{
+    width:725px
+}
+
+body.w1240 .w_question{
+    width:940px;
+    border-bottom:1px dotted #888;
+    margin-bottom:10px;
+}
+
+/*阅卷*/
+body.w1024 .w_cphead{
+    width:1024px
+}
+body.w1240 .w_cphead{
+    width:1240px
+}
+
+body.w1024 .w_correctingpapers{
+    width:1024px;
+}
+
+body.w1240 .w_correctingpapers{
+    width:1240px;
+}
+
+body.w1024 .w_qcontent{
+    width:750px;
+}
+
+body.w1240 .w_qcontent{
+    width:900px;
+}
+
+body.w1024 .w_answerdz{
+    width:495px;
+}
+
+body.w1240 .w_answerdz{
+    width:603px;
+}
+
+body.w1024 .w_cpcontent{
+    width:1012px;
+}
+
+body.w1240 .w_cpcontent{
+    width:1228px;
+}
+
+/*学习与训练*/
+
+body.w1024 .w_drillqinfo{
+    width:620px
+}
+
+body.w1240 .w_drillqinfo{
+    width:830px
+}
+
+
+/*整体报告*/
+body.w1024 .w_qdetail{
+    width: 930px;
+}
+
+body.w1240 .w_qdetail{
+    width: 1170px;
+}
+
+body{
+    font-size:13px;
+    margin:10px auto;
+    padding:0px;
+    color:#000;
+    /*color:rgb(95,72,121)*/
+}
+
+.button {
+    /*color:#fff;
+    background-color:rgb(131,191,70);
+    border:1px outset;
+    cursor:pointer;*/
+    background: linear-gradient(#FFA101, #FF7F00) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background-color:#FFA101;
+    color: #FFFFFF;
+   border: 1px outset;
+   padding:2px 8px;
+   cursor:pointer;
+   line-height:23px;
+}
+.button:hover{
+    background: rgb(255,151,1);
+    background-color:rgb(255,151,1)
+}
+
+.button2 {
+   background:rgb(9,169,131);
+   border:0;
+   padding:2px 8px;
+   cursor:pointer;
+   line-height:23px;
+   color:#fff;
+}
+
+.button2:hover{
+    background: rgb(11, 174, 135);
+    background-color:rgb(11, 174, 135)
+}
+
+ input[type="text"],textarea,select{
+    border:1px solid rgb(174,174,174);
+}
+
+ .f_l{
+     float:left
+ }
+
+ .f_r{
+     float:right
+ }
+
+ .c_b{
+    clear:both
+ }
+
+ .yj_yy{
+    border: 1px solid #696;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: #666 0px 0px 10px;
+    -moz-box-shadow: #666 0px 0px 10px;
+    box-shadow: #666 0px 0px 10px;
+    /*background: #EEFF99;*/
+
+    behavior: url(/PIE.htc);
+}
+
+  .yy{
+    border: 1px solid #696;
+    -webkit-box-shadow: #666 0px 0px 10px;
+    -moz-box-shadow: #666 0px 0px 10px;
+    box-shadow: #666 0px 0px 10px;
+    /*background: #EEFF99;*/
+
+    behavior: url(/PIE.htc);
+}
+  .btn{
+      text-align:center;
+  }
+ .btn div
+{
+    background: #FFA101;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFA101), to(#FF7F00));
+    background: -webkit-linear-gradient(#FFA101, #FF7F00);
+    background: -moz-linear-gradient(#FFA101, #FF7F00);
+    background: -ms-linear-gradient(#FFA101, #FF7F00);
+    background: -o-linear-gradient(#FFA101, #FF7F00);
+    background: linear-gradient(#FFA101, #FF7F00);
+    cursor: pointer;
+    line-height: 30px;
+    color:#fff;
+    padding:0px 5px;
+}
+
+ .btn div:hover
+{
+    background: #FF7F00;
+    background: -webkit-gradient(linear, 0 0, 0 bottom,from(#FF7F00),to(#FFA101));
+    background: -webkit-linear-gradient(#FF7F00,#FFA101);
+    background: -moz-linear-gradient(#FF7F00,#FFA101);
+    background: -ms-linear-gradient(#FF7F00,#FFA101);
+    background: -o-linear-gradient(#FF7F00,#FFA101);
+    background: linear-gradient(#FF7F00,#FFA101);
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline
+}

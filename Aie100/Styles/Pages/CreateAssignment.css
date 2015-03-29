@@ -1,0 +1,91 @@
+﻿.b_list { float:left; border:0px solid #ccc }
+.b_list ul { list-style:none;margin:0px;padding:0px; width:730px}
+.b_list ul li{ float:left;height:33px;line-height:33px; border:0 solid #ccc;}
+.b_list ul li.fname{width: 120px;text-align:right;}
+.b_list ul li.fcont{width: 240px;}
+.b_list li input[type="text"] { margin-left:12px; width:150px}
+.b_list li select{ margin-left:12px; width:154px}
+
+.selectrow { background-color: #e2f6cf;border:1px solid #ddd;}
+
+.group_title { border-bottom:1px solid #808080;font-weight:bold;width:650px;height:21px;clear:both;margin: 0 auto;}
+
+.tb_list { float:left; border:0px solid #ccc}
+.tb_list ul { list-style:none;margin:0px;padding:0px; width:565px}
+.tb_list ul li{ float:left;height:33px;line-height:33px; border:0px solid #ccc;}
+.tb_list ul li.fl{width: 250px; padding-left:52px;}
+.tb_list ul li.fr{width: 250px;}
+.tb_list li label{ margin-left:5px;}
+
+.cms_dialog
+{
+    float: left;
+    padding: 12px 0px;
+}
+.cms_dialog ul
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.cms_dialog ul li
+{
+    float: left;
+    list-style-type: none;
+    padding: 4px;
+}
+.cms_dialog ul li.fname
+{
+    width: 140px;
+    text-align: right;
+}
+.cms_dialog ul li.inp
+{
+    width: 350px;
+}
+
+.cms_datatable
+{
+    width: 100%;
+    border-collapse: collapse;
+    border-width: 0px;
+}
+
+.cms_datatable th
+{
+    border-width: 0px;
+    background-color: #e3f6ff;
+    height: 25px;
+    padding: 0px 5px;
+    text-align: left;
+    font-size: 11pt;
+}
+
+.cms_datatable td
+{
+    border-width: 0px;
+    height: 28px;
+    padding: 0px 5px;
+    font-size: 11pt;
+}
+
+.cms_datatable tr.lightblue
+{
+    background-color: #f3f8fe;
+}
+
+.cms_datatable tr.hover
+{
+    background-color: #f4f4f4;
+}
+
+.cms_datatable tr.nodata
+{
+    color: #7d7d7d;
+    text-align: center;
+}
+
+.cms_datatable td.operate img
+{
+    cursor: pointer;
+}

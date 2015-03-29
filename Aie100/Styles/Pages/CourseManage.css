@@ -1,0 +1,49 @@
+﻿
+
+.coursemanage{
+    /*width:1024px;
+    margin:0px auto;*/
+}
+
+.coursemanage .step0{
+    line-height:35px;border:1px solid #dddddd;border-top:none;
+}
+
+.coursemanage .step0 .div {
+    text-align:justify;
+    width:350px;
+    margin:0px auto;
+    padding:20px 0px;
+}
+
+.coursemanage .step0 span{
+    width:60px;text-align:right;display:inline-block;
+}
+
+.coursemanage .step1 {
+    line-height:35px;border:1px solid #dddddd;border-top:none;display:none;
+}
+
+.coursemanage .step1 .div {
+    text-align:justify;
+    width:765px;
+    margin:0px auto;
+    padding:20px 0px;
+}
+
+.coursemanage .buttons{
+    /*padding:10px 0px 10px 545px;*/
+    padding:10px;
+    text-align:center;
+}
+
+.coursemanage .buttons input{
+    margin-left:10px;
+    padding:0px 10px;
+    /*color:rgb(113,120,125);
+    background-color:rgb(197,169,129);
+    padding:5px 10px;
+    border:1px outset;
+    cursor:pointer*/
+}
+

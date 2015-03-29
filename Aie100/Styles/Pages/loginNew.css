@@ -1,0 +1,231 @@
+﻿body
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    font: 12px "宋体" , "Arial Narrow" ,HELVETICA;
+    margin: 0px;
+}
+#menu
+{
+    margin: 20px auto;
+    height: 40px;
+    width: 1000px;
+}
+#menu_left
+{
+    width: 500px;
+    float: left;
+}
+#menu_right
+{
+    line-height: 30px;
+    text-align: right;
+    float: right;
+    width: 500px;
+}
+#aboutUs, #connectionUs
+{
+    margin-right: 15px;
+    font-size: 14px;
+    color: #a7a2a8;
+}
+#focus
+{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #2a8c25;
+    height: 450px;
+}
+.focusContent
+{
+    height:450px;
+    width: 1000px;
+    margin: 0 auto;    
+    background-color: #2a8c25;
+}
+#focusPicture
+{
+    margin: 0px auto;
+    width: 700px;
+    height: 390px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+#focusPicture .cd
+{
+    height: 15px;
+    overflow: hidden;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    z-index: 1;
+}
+#focusPicture .cd ul
+{
+    overflow: hidden;
+    zoom: 1;
+    float: left;
+}
+#focusPicture .cd li
+{
+    float: left;
+    margin-right: 20px;
+    width: 16px;
+    height: 18px;
+    text-align: center;
+    cursor: pointer;
+    background-image: url(../../Images/Login/unPickOn.png);
+}
+#focusPicture .cd li.on
+{
+    background-image: url(../../Images/Login/PickOn.png);
+}
+.landing-form
+{
+    margin-top: 50px;
+    position: relative;
+    width: 280px;
+    padding: 25px 8px;
+    float: right;
+}
+
+.right, input[type="button"]
+{
+    float: right;
+}
+.link-wrapper
+{
+    margin-top: 13px;
+}
+.link-wrapper a
+{
+    color: White;
+}
+input[type="text"], input[type="password"]
+{
+    -webkit-appearance: none;
+    appearance: none;
+    border: solid 1px #e6e6e6;
+    height: 22px;
+    width: 250px;
+    line-height: 22px;
+    padding: 5px 15px;
+    font-size: 14px;
+    color: #555;
+}
+input[type="button"]
+{
+    -webkit-appearance: none;
+    font-size: 13px;
+    color: white;
+    border: 1px solid #0092B1;
+    padding: 7px 12px;
+    margin: 15px 0 0 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    cursor: pointer;
+    background-color: #0091b2;
+}
+input[type="button"]:hover
+{
+    background-color: #00a9c7;
+}
+.forgot-password
+{
+    margin-top: 26px;
+}
+#otherLogin
+{
+    border-top: 1px dotted White;
+    margin-top: 30px;
+}
+#otherLogin span
+{
+    color: White;
+    display: block;
+    padding-top: 10px;
+}
+#otherLogin div
+{
+    width: 140px;
+    float: left;
+    padding-top: 10px;
+}
+#superiorityContent
+{
+    clear: both;
+    margin: 40px auto;
+    width: 1000px;
+}
+#superiorityContent div
+{
+    float: left;
+    width: 180px;
+    height: 115px;
+    margin: 0px 10px;
+    color: White;
+    font-size: 16px;
+    cursor: pointer;
+}
+#superiorityContent span
+{
+    padding: 80px 55px;
+    display: block;
+}
+#first
+{
+    background-image: url(../../Images/Login/superi1.png);
+}
+#second
+{
+    background-image: url(../../Images/Login/superi2.png);
+}
+#third
+{
+    background-image: url(../../Images/Login/superi3.png);
+}
+#fourth
+{
+    background-image: url(../../Images/Login/superi4.png);
+}
+#fifth
+{
+    background-image: url(../../Images/Login/superi5.png);
+}
+#copyright
+{
+    clear: both;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    margin-top: 200px;
+}
+#focusPicture .bdd
+{
+    position: relative;
+    height: 100%;
+    z-index: 0;
+}
+.bdd img
+{
+    width: 690px;
+    height: 390px;
+}
+#about{ display:none}
+.smwzbox{width:700px; float:left; margin-top:10px;}
+.smwzbox ul{ width:700px; float:left; margin:6px 20px;}
+.smwzbox ul li{ float:left;}
+.smwzbox ul li p{ float:left; width:540px; font-size:12px; list-style:none; margin:0; padding:0; line-height:18px;}
+.smwzbox h1{font-size:14px; color:#390; font-weight:bold; line-height:30px; float:left; width:540px; list-style:none; margin:0; padding:0;}
+.smwzbox .ico_mg{float:left; width:90px;}
+.smwzbox .texc{width:540px; float:left; padding-top:10px; padding-left:10px; color:#444444;}
+.p1 font {
+    color: #339900;
+    font-weight: bold;
+    padding-right: 3px;
+}
+.p1
+{
+    margin-top:10px;
+    }

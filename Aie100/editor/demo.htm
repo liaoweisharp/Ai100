@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="../Scripts/jquery-1.6.1.min.js?version=1127"></script>
+    <script type="text/javascript" src="../Scripts/jquery.ajax.js?version=1127"></script>
+    <script src="../CMS/Scripts/JsUploadImage.js?version=1127"></script>
+    <script src="../Scripts/CommFunction/PopTip.js?version=1127" type="text/javascript"></script>
+<!--    <link href="css/editor.css?version=1127" rel="stylesheet" type="text/css" />-->
+    <script src="scripts/editor.js?version=1127" type="text/javascript"></script>
+    <script src="../Scripts/JQuery/plugins/showLoading/js/jquery.showLoading.js?version=1127" type="text/javascript"></script>
+  <!--  <script src="scripts/extend.js?version=1127" type="text/javascript"></script>-->
+    <link href="../Plugins/jBox/Skins/Default/jbox.css?version=1127" rel="stylesheet" />
+    <script type="text/javascript" src="../Plugins/jBox/jquery.jBox-2.3.min.js?version=1127"></script>
+<!--    <link href="../Styles/JQuery/uploadify.css?version=1127" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/JQuery/plugins/jquery.uploadify.v2.1.4.min.js?version=1127" type="text/javascript"></script>
+    <script src="../Scripts/JQuery/plugins/swfobject.js?version=1127" type="text/javascript"></script>-->
+    <script type="text/javascript">
+        $(function () {
+            var editor = new emath_editor();
+            //    editor.head_container = "header";
+            editor.show_mode = "latex";
+            editor.edit_container = "header_content";
+            editor.upload_path = "../Uploads/" + "ceshi";
+            //editor.html("9999");
+            $("#Button1").click(function () {
+                editor.hide();
+                editor.edit_container = "header_content";
+                editor.show();
+                editor.jsUploadImage();
+            
+            });
+
+            $("#Button2").click(function () {
+                editor.hide();
+            });
+
+            $("#Button3").click(function () {
+                alert(editor.html())
+            });
+
+            $("#Div2").click(function () {
+                editor.hide();
+                editor.edit_container = "Div2";
+                editor.show();
+                editor.jsUploadImage();
+                
+            });
+
+
+
+
+            //    var editor1 = new emath_editor();
+            //    //editor.head_container = "header";
+            //    editor1.show_mode = "latex";
+            //    editor1.edit_container = "Div1";
+            //    //    editor.edit_width = "510";
+            //    editor1.edit_content = "<span>ffffff</span>";
+            //    editor1.show();
+        })
+    </script>
+</head>
+<body>
+    <form id="form1">
+    <div id="header">
+    </div>
+    <div id="header_content" style="border: 1px solid red;">
+    </div>
+    <div id="Div1" style="margin-top: 10px;">
+    </div>
+    <input id="Button1" type="button" value="showButton1" /><input id="Button2" type="button"
+        value="hideButton2" /><input id="Button3" type="button" value="htmlButton3" />
+    <div id="Div2" style="margin-top: 10px; border: 1px solid gray;">6+8</div>
+    <div id="aaa"></div>
+    </form>
+</body>
+</html>

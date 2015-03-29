@@ -1,0 +1,92 @@
+﻿.info_title
+{
+    width:100%;
+    border-bottom:solid 1px #C8DCC1;
+    color:#27446E;
+}
+.info_tool
+{
+   border-bottom:solid 1px #C8DCC1;
+   background-color:#D3DEEF;
+   background-image: url(../../CMS/Images/wunderbar_rest.gif);
+    background-repeat: repeat-x;
+}/*#C7C4D5*/
+
+.info_tool_inner
+{
+    margin-top:-14px;
+    margin-bottom:5px;    
+}
+
+.info_op
+{
+  position:absolute;
+  margin-top:5px;
+  width:600px;
+  background-color:#ECECEC;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#999999,direction=135,strength=6);    
+}
+
+.info_op_tool
+{
+   border-top:solid 1px #C8DCC1;
+   text-align:right;
+   margin-top:5px;
+}
+
+.info_show
+{
+    margin-top:5px;
+    border:solid 1px #C8DCC1;
+}
+
+/*CMS样式表*/
+.accordionHeader
+{
+    border: 1px solid #C8DCC1;
+    color: #27446E;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 0px;
+    margin-top: 5px;
+    cursor: pointer;
+    background-image: url(../../CMS/Images/wunderbar_rest.gif);
+    background-repeat: repeat-x;
+}
+
+.accordionContent
+{
+    background-color: #D3DEEF;
+    border: 1px solid #C8DCC1;
+    border-top: none;
+    padding: 5px;
+    padding-top: 10px;
+    color:#27446E;
+    font-size: 12px;
+    overflow:hidden;
+}
+
+.accordionMouseOver
+{
+    background-image:url(../../CMS/Images/wunderbar_hover.gif);
+    background-repeat: repeat-x;
+}
+
+.accordionMouseClick
+{
+    background-image: url(../../CMS/Images/wunderbar_sel.gif);
+    background-repeat: repeat-x;
+}
+
+.accordionSubMenuClick
+{
+    background-color:#FEE6A0;
+}
+
+._btn {
+	border: 1px solid #002d96;
+	 background-repeat:repeat-x;
+	 cursor:pointer;
+	 background-image:url(../../CMS/Images/wunderbar_rest.gif);
+}

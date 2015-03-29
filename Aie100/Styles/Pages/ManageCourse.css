@@ -1,0 +1,197 @@
+﻿.managecourse{
+    border:1px solid #d4d4d4
+}
+
+.managecourse .toolbar{
+    padding:12px 10px;
+    background-color:rgb(42,140,37);
+}
+
+.managecourse .toolbar input{
+        width:200px;
+    }
+.managecourse .toolbar img{
+    height:21px;
+    vertical-align:top;
+    cursor:pointer
+}
+
+.managecourse .toolbar .search_tip{
+    margin-left:-200px;
+    position:absolute;
+    color:#808080
+}
+
+.managecourse .toolbar .sp_coursebank{
+    color:#fff;
+    margin-left:20px;
+    cursor:pointer
+}
+
+
+.managecourse .toolbar .sp_coursebank img{
+    height:16px; 
+    vertical-align:middle;
+    margin-left:5px;
+}
+
+.managecourse .course_type{
+    position:absolute;
+    margin:0px;
+    background-color:#1B88C9;
+    width:1024px;
+    display:none;
+    z-index:100;
+}
+
+.managecourse .course_type ul{
+    background-color:#0A6091;
+    margin:0px;
+    width:140px;
+    list-style-type:none;
+    line-height:45px;
+    padding:8px 0px 8px 8px ;
+    float:left;
+    color:#fff
+}
+
+.managecourse .course_type ul li{
+    padding-right: 40px;
+    text-align: right;
+}
+
+.managecourse .course_type ul li:hover{
+    background-color:#297395;
+    cursor:pointer
+}
+
+.managecourse .course_type .course_type_details{
+    display:none;
+    float:left;
+    padding:5px;
+}
+
+.managecourse .course_list{
+    padding:5px 5px 5px 6px;
+ 
+}
+
+/*.managecourse .start{
+    text-align:center;
+}
+.managecourse .start div
+{
+    background: #FFA101;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFA101), to(#FF7F00));
+    background: -webkit-linear-gradient(#FFA101, #FF7F00);
+    background: -moz-linear-gradient(#FFA101, #FF7F00);
+    background: -ms-linear-gradient(#FFA101, #FF7F00);
+    background: -o-linear-gradient(#FFA101, #FF7F00);
+    background: linear-gradient(#FFA101, #FF7F00);
+    cursor: pointer;
+    line-height: 30px;
+    color:#fff;
+}
+
+.managecourse .start div:hover
+{
+    background: #FF7F00;
+    background: -webkit-gradient(linear, 0 0, 0 bottom,from(#FF7F00),to(#FFA101));
+    background: -webkit-linear-gradient(#FF7F00,#FFA101);
+    background: -moz-linear-gradient(#FF7F00,#FFA101);
+    background: -ms-linear-gradient(#FF7F00,#FFA101);
+    background: -o-linear-gradient(#FF7F00,#FFA101);
+    background: linear-gradient(#FF7F00,#FFA101);
+}*/
+
+.managecourse .course_item{
+    border: 1px solid #d4d4d4;
+    width: 156px; 
+    height: 250px;
+    margin: 5px;
+}
+
+.managecourse .course_item .course_book{
+    height: 200px;
+    position:relative
+}
+
+.managecourse .course_item .course_yytm{
+    background-color: rgb(0, 0, 0);
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    opacity:0.6;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    position: absolute;
+    bottom: 6px;
+    color: #fff;
+    width: 143px;
+    left:6px;
+
+}
+
+.managecourse .course_item .course_name{
+}
+
+.managecourse .course_item .course_name span{
+    display: inline-block;
+    margin: 5px;
+}
+
+.managecourse .course_item .course_details{
+    height:188px;
+    cursor:pointer;
+    font-size:18px;
+    display:none;
+}
+
+.managecourse .course_item .course_details span{
+    margin:50% 22%;
+    position:absolute;
+}
+
+.managecourse .course_item .course_book .course_bookimg{
+    width:143px;
+    height:188px;
+    margin:5px 6px
+}
+
+.managecourse .nodata{
+    padding-left:5px;
+    color:gray;
+}
+
+.managecourse .lihover{
+    background-color:rgb(27, 126, 180);
+}
+
+.managecourse .studybtn{
+    width:110px;
+    margin:5px auto 0px auto;
+}
+
+.managecourse .managebtn{
+    padding: 5px 8px;
+    width: 60px;
+}
+
+#master_liManageCourse{
+    background-color:rgb(0,128,0);
+}
+.creteCoursebt {
+    background-color: #09A983;
+    background-image: url("../../Images/icon_course.png");
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    text-indent: 35px;
+    width: 100px;color:white;
+
+      
+}
+    .creteCoursebt:hover {
+         background-color: #09A933;    
+         cursor:pointer; 
+    }

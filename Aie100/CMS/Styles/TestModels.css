@@ -1,0 +1,12 @@
+﻿.tm_lst {
+    border-collapse: collapse;
+}
+
+.tm_lst th {
+    height: 26px;
+}
+
+.tm_lst td {
+    text-align: center;
+    height: 26px;
+}

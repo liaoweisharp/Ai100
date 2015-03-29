@@ -1,0 +1,9 @@
+﻿.q_itemc {border-bottom: 1px dotted #ccc; margin: 10px;padding-top: 10px;padding-bottom: 10px;}
+.q_body{padding-left:15px;}
+.correct_rate{margin:15px 37px;}
+.correct_rate span.t{color:#2A8C25}
+.correct_rate span.r{color:#2A8C25;}
+.objective_detail { margin-left:60px;}
+.subjective_detail { margin-left:37px; }
+.sub_det_op { color:#2177c7; cursor:pointer; width:112px}
+

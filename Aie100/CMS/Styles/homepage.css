@@ -1,0 +1,24 @@
+﻿body{font-family:宋体;color:#fff;background-color:#466d8a;margin:0;}
+#hp_title_bar{background:url(../Images/homepage/title_bg.png) repeat-x;width:100%;height:54px;margin-left:auto;margin-right:auto;}
+#hp_login_img{float:left;background:url(../Images/header/cms_logo_m.png) no-repeat;width:205px;height:54px;margin-left:205px;}
+#hp_login{float:right;height:54px;border:0px solid #fff;margin-right:200px;}
+.hp_t1{font-size:12px}
+.hp_t1 a{color:#fff;font-size:12px; text-decoration:none}
+.hp_t1 a:hover{text-decoration:underline}
+.hp_t2{font-size:12px}
+.feature_bg{background-color:#2ca0db; height:88px}
+.feature_bg ul li.title{padding-top:2px; border:0px solid #f00}
+.institute_bg{background-color:#dcb371;}
+.hp_square{width:90px;height:90px;cursor:pointer;}
+.hp_square ul{list-style-type:none;margin:0px;padding:0px;text-align:center;font-size:12px}
+.hp_square ul li.title{padding-top:3px;}
+.hp_square_disable{width:90px;height:90px;cursor:default; background-color:#cfcfcf}
+.hp_square_disable ul{list-style-type:none;margin:0px;padding:0px;text-align:center;font-size:12px}
+.hp_square_disable ul li.title{padding-top:3px;}
+.book_bg{background-color:#51a45c;}
+.bookcontent_bg{background-color:#c9a58f;}
+.setting_bg{background-color:#474878;}
+.feedback_bg{background-color:#3a5298;}
+.message_bg{background-color:#706140;}
+.user_bg{background-color:#715087;}
+.curriculum_bg{background-color:#2e6382;}

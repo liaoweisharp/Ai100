@@ -1,0 +1,3725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://webservice.acepherics.com" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://domain.acepherics.com" targetNamespace="http://webservice.acepherics.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://domain.acepherics.com">
+      <xsd:complexType name="Institute">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="adress" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="cityId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="flag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="type" nillable="true" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UserExtend">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="adminRole" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="bookId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="courseId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="identityId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="instituteId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="isbn" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="loginState" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="pointingBookId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pointingIsbn" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="roleId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="studyFlag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="systemId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Section">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="courseId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="createDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="flag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="fullName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="openFlag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="passwordFlag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="sectionLimit" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="sectionName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionNumber" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="sectionRoleId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="status" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCourse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Course" nillable="true" type="ns1:Course" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Course">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="bookId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="bookName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="courseName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="courseRoleId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="courseSettingsId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="createDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="endDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="flag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="forTheCrowd" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="instituteId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="instituteName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="introduction" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="learningObjective" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="openFlag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="startDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAssignmentSetting">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="AssignmentSetting" nillable="true" type="ns1:AssignmentSetting" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AssignmentSetting">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="allowDrillImprove" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="allowErrorQuestionImprove" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="showAnswer" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="showDrill" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="showErrorQuestion" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="showHint" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="showKp" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="showSolution" nillable="true" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfInstitute">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Institute" nillable="true" type="ns1:Institute" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfInstituteUsers">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="InstituteUsers" nillable="true" type="ns1:InstituteUsers" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InstituteUsers">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="instituteId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="jionDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="roleId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="statusFlag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="superFlag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Users">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MPhone" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="UId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="bookId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="courseId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="email" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="fullName" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="identityId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="instituteId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="isbn" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pointingBookId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="pointingIsbn" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="qq" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="randomCode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="registerDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="roleId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sex" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="systemId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Assignment">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="assignmentDistributeType" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="assignmentSettingId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="assignmentType" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="courseId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="createDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="dateControl" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="description" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="endDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="flag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="markingModel" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="sequence" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="shorTestTime" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="startDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="structureId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="testId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="testTime" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="timeState" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="title" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="upsetQuestion" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAssignmentDistribute">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="AssignmentDistribute" nillable="true" type="ns1:AssignmentDistribute" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AssignmentDistribute">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="assignmentId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="endDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="startDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="userFlag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfInstituteBook">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="InstituteBook" nillable="true" type="ns1:InstituteBook" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InstituteBook">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="bookId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="instituteId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="price" nillable="true" type="xsd:double" />
+          <xsd:element minOccurs="0" name="studyFlag" nillable="true" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AssignmentReportInstructor">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="current" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="myMarking" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="otherMarking" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="past" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="started" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="upcoming" nillable="true" type="tns:ArrayOfString" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSection">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Section" nillable="true" type="ns1:Section" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AssignmentReportStudent">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="current" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="enhance" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="finishMarking" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="myMarking" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="otherMarking" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="past" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="unfinished" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="upcoming" nillable="true" type="tns:ArrayOfString" />
+          <xsd:element minOccurs="0" name="waitforMarking" nillable="true" type="tns:ArrayOfString" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAssignment">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Assignment" nillable="true" type="ns1:Assignment" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAssignmentReport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="AssignmentReport" nillable="true" type="ns1:AssignmentReport" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AssignmentReport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="adjustScore" nillable="true" type="xsd:double" />
+          <xsd:element minOccurs="0" name="answeredBase" nillable="true" type="xsd:double" />
+          <xsd:element minOccurs="0" name="assignmentId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="improvedScore" nillable="true" type="xsd:double" />
+          <xsd:element minOccurs="0" name="kpScore" nillable="true" type="xsd:double" />
+          <xsd:element minOccurs="0" name="notInvolvedNum" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="saveNum" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="scoreNum" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="submitNum" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="totalScore" nillable="true" type="xsd:double" />
+          <xsd:element minOccurs="0" name="useTime" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="userNum" nillable="true" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfUserUserSection">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="UserUserSection" nillable="true" type="ns1:UserUserSection" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UserUserSection">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="examinerUserId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="testerUserId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfUsers">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Users" nillable="true" type="ns1:Users" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfUserSection">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="UserSection" nillable="true" type="ns1:UserSection" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UserSection">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="flag" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="joinedDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="payStatus" nillable="true" type="xsd:int" />
+          <xsd:element minOccurs="0" name="roleId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sectionId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="userId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="validDays" nillable="true" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservice.acepherics.com">
+      <xsd:element name="instituteManage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Institute" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteManageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:Institute" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersAdmin">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersAdminResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionUpdate">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Section" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionUpdateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteIdsMyByInstructorList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="instituteIdsMyByInstructorListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionRemove">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionRemoveResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseInfoGetByIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseInfoGetByIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfCourse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionRoleIdByUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionRoleIdByUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookDistributionInstituteUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookDistributionInstituteUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentSettingByIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentSettingByIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfAssignmentSetting" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersIdsStdBySectionId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersIdsStdBySectionIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdsByOther">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdsByOtherResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetPastList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetPastListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdsInstructorByInstituteId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdsInstructorByInstituteIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteByIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteByIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfInstitute" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteUsersByIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteUsersByIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfInstituteUsers" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userLoginCheckUsers">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userLoginCheckUsersResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:Users" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentManage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Assignment" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:AssignmentSetting" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:ArrayOfAssignmentDistribute" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentManageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentRemove">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentRemoveResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteRemove">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteRemoveResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteBookByIB">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteBookByIBResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfInstituteBook" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentRInstructorByCourse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentRInstructorByCourseResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:AssignmentReportInstructor" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersRemoveFromInstitute">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersRemoveFromInstituteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userLoginCheck">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userLoginCheckResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionChangeByUserId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in5" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionChangeByUserIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseGetByIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseGetByIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfCourse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentIdsByotherMarking">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="anyType2anyTypeMap">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="entry">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="1" name="key" type="xsd:anyType" />
+                <xsd:element minOccurs="0" maxOccurs="1" name="value" type="xsd:anyType" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="assignmentIdsByotherMarkingResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:anyType2anyTypeMap" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteBookListByInstituteId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteBookListByInstituteIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfInstituteBook" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseSave">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Course" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseSaveResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="adminRegisterToInstitute">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Users" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="adminRegisterToInstituteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userEditPasswordByRandomCode">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userEditPasswordByRandomCodeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookDistributionRemove">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:InstituteBook" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookDistributionRemoveResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersByUserIdSectionId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersByUserIdSectionIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionInfoByIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionInfoByIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfSection" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userLoginAsAdminCheck">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userLoginAsAdminCheckResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionIdsByUserIdCreate">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionIdsByUserIdCreateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersByUsername">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersByUsernameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:Users" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instructorSaveToInstitute">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instructorSaveToInstituteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteIdsMyList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteIdsMyListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userLoginQQ">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userLoginQQResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentRStudent">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentRStudentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:AssignmentReportStudent" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentByIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentByIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfAssignment" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionIdsBySectionName">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionIdsBySectionNameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookIdsByInstituteUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookIdsByInstituteUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseUpdate">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Course" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseUpdateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="iuIdsAdminByInstituteId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="iuIdsAdminByInstituteIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetAllList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetAllListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userSaveRandomCode">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userSaveRandomCodeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetMyCreateList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetMyCreateListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteIdsMyManageList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteIdsMyManageListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetAllListByCourseName">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetAllListByCourseNameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionJoinByNumber">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionJoinByNumberResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersAdminByInstituteId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersAdminByInstituteIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookRemoveDistributionInstituteUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookRemoveDistributionInstituteUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionJoinByCourse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionJoinByCourseResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionBySectionNumber">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionBySectionNumberResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:Section" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionExitByUserId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionExitByUserIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersIdsBySectionId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersIdsBySectionIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionIdsByCourseId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionIdsByCourseIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteIdsAllList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instituteIdsAllListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersInfoEdit">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Users" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersInfoEditResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="adminSupperToInstitute">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Users" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="adminSupperToInstituteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="iuIdsInstructorByInstituteId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="iuIdsInstructorByInstituteIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentReportBySectionAssignmentIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentReportBySectionAssignmentIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfAssignmentReport" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userUserSectionManage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:ArrayOfUserUserSection" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userUserSectionManageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentIdsByStructureId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentIdsByStructureIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionDetailByIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionDetailByIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfSection" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdsBySection">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdsBySectionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseExistByUserId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseExistByUserIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionJoinByNumberPassword">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionJoinByNumberPasswordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersByIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersByIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfUsers" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentRInstructor">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentRInstructorResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:AssignmentReportInstructor" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionIdsByUserNameCreate">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionIdsByUserNameCreateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionPasswordFlag">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionPasswordFlagResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionByMyInCourseIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionByMyInCourseIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfSection" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersByUserIdBookId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersByUserIdBookIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userRegister">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Users" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userRegisterResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instructorRegisterToInstitute">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Users" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="instructorRegisterToInstituteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdsBySectionConditions">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdsBySectionConditionsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookIdsByInstitute">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookIdsByInstituteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersDisableFromInstitute">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersDisableFromInstituteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetCourseName">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetCourseNameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="adminSupperIsExist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="adminSupperIsExistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="uuSectionListBySectionId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="uuSectionListBySectionIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfUserUserSection" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseRemove">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseRemoveResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentReportByOtherAssignmentIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="assignmentReportByOtherAssignmentIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfAssignmentReport" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usFlagUpdate">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usFlagUpdateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetMyList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="courseIdsGetMyListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userEditPasswordByOldPassword">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userEditPasswordByOldPasswordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdsByUsername">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdsByUsernameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:Users" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdSuperAdminByInsttituteId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userIdSuperAdminByInsttituteIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionRoleChangeByUserId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionRoleChangeByUserIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookDistributionInstitute">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:ArrayOfInstituteBook" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bookDistributionInstituteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="uuSectionCompleted">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="uuSectionCompletedResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionByMyInCourse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionByMyInCourseResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfSection" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionIdsByFullNameCreate">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionIdsByFullNameCreateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionSave">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="ns1:Section" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sectionSaveResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:Section" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersExist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usersExistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userSectionByUserIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="ns1:UserExtend" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userSectionByUserIdsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="ns1:ArrayOfUserSection" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="assignmentRemoveResponse">
+    <wsdl:part name="parameters" element="tns:assignmentRemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="userIdsByOtherResponse">
+    <wsdl:part name="parameters" element="tns:userIdsByOtherResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionIdsByCourseIdRequest">
+    <wsdl:part name="parameters" element="tns:sectionIdsByCourseId" />
+  </wsdl:message>
+  <wsdl:message name="sectionInfoByIdsResponse">
+    <wsdl:part name="parameters" element="tns:sectionInfoByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseRemoveRequest">
+    <wsdl:part name="parameters" element="tns:courseRemove" />
+  </wsdl:message>
+  <wsdl:message name="assignmentRInstructorByCourseRequest">
+    <wsdl:part name="parameters" element="tns:assignmentRInstructorByCourse" />
+  </wsdl:message>
+  <wsdl:message name="userLoginQQRequest">
+    <wsdl:part name="parameters" element="tns:userLoginQQ" />
+  </wsdl:message>
+  <wsdl:message name="assignmentIdsByotherMarkingResponse">
+    <wsdl:part name="parameters" element="tns:assignmentIdsByotherMarkingResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionJoinByNumberRequest">
+    <wsdl:part name="parameters" element="tns:sectionJoinByNumber" />
+  </wsdl:message>
+  <wsdl:message name="instituteIdsMyManageListResponse">
+    <wsdl:part name="parameters" element="tns:instituteIdsMyManageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentRStudentRequest">
+    <wsdl:part name="parameters" element="tns:assignmentRStudent" />
+  </wsdl:message>
+  <wsdl:message name="assignmentReportByOtherAssignmentIdsRequest">
+    <wsdl:part name="parameters" element="tns:assignmentReportByOtherAssignmentIds" />
+  </wsdl:message>
+  <wsdl:message name="adminRegisterToInstituteRequest">
+    <wsdl:part name="parameters" element="tns:adminRegisterToInstitute" />
+  </wsdl:message>
+  <wsdl:message name="usersByUserIdBookIdResponse">
+    <wsdl:part name="parameters" element="tns:usersByUserIdBookIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionIdsByUserNameCreateResponse">
+    <wsdl:part name="parameters" element="tns:sectionIdsByUserNameCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="userIdsByUsernameResponse">
+    <wsdl:part name="parameters" element="tns:userIdsByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentSettingByIdsRequest">
+    <wsdl:part name="parameters" element="tns:assignmentSettingByIds" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetCourseNameResponse">
+    <wsdl:part name="parameters" element="tns:courseIdsGetCourseNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionIdsByUserIdCreateResponse">
+    <wsdl:part name="parameters" element="tns:sectionIdsByUserIdCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersInfoEditRequest">
+    <wsdl:part name="parameters" element="tns:usersInfoEdit" />
+  </wsdl:message>
+  <wsdl:message name="instituteUsersByIdsRequest">
+    <wsdl:part name="parameters" element="tns:instituteUsersByIds" />
+  </wsdl:message>
+  <wsdl:message name="courseUpdateRequest">
+    <wsdl:part name="parameters" element="tns:courseUpdate" />
+  </wsdl:message>
+  <wsdl:message name="usersRemoveFromInstituteRequest">
+    <wsdl:part name="parameters" element="tns:usersRemoveFromInstitute" />
+  </wsdl:message>
+  <wsdl:message name="courseGetByIdsRequest">
+    <wsdl:part name="parameters" element="tns:courseGetByIds" />
+  </wsdl:message>
+  <wsdl:message name="userIdSuperAdminByInsttituteIdRequest">
+    <wsdl:part name="parameters" element="tns:userIdSuperAdminByInsttituteId" />
+  </wsdl:message>
+  <wsdl:message name="userIdsByOtherRequest">
+    <wsdl:part name="parameters" element="tns:userIdsByOther" />
+  </wsdl:message>
+  <wsdl:message name="usersExistRequest">
+    <wsdl:part name="parameters" element="tns:usersExist" />
+  </wsdl:message>
+  <wsdl:message name="iuIdsInstructorByInstituteIdResponse">
+    <wsdl:part name="parameters" element="tns:iuIdsInstructorByInstituteIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersByUsernameRequest">
+    <wsdl:part name="parameters" element="tns:usersByUsername" />
+  </wsdl:message>
+  <wsdl:message name="usersDisableFromInstituteRequest">
+    <wsdl:part name="parameters" element="tns:usersDisableFromInstitute" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetMyCreateListResponse">
+    <wsdl:part name="parameters" element="tns:courseIdsGetMyCreateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseRemoveResponse">
+    <wsdl:part name="parameters" element="tns:courseRemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="userLoginCheckRequest">
+    <wsdl:part name="parameters" element="tns:userLoginCheck" />
+  </wsdl:message>
+  <wsdl:message name="usersIdsBySectionIdRequest">
+    <wsdl:part name="parameters" element="tns:usersIdsBySectionId" />
+  </wsdl:message>
+  <wsdl:message name="usersByIdsResponse">
+    <wsdl:part name="parameters" element="tns:usersByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersIdsStdBySectionIdRequest">
+    <wsdl:part name="parameters" element="tns:usersIdsStdBySectionId" />
+  </wsdl:message>
+  <wsdl:message name="sectionJoinByNumberPasswordResponse">
+    <wsdl:part name="parameters" element="tns:sectionJoinByNumberPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteManageResponse">
+    <wsdl:part name="parameters" element="tns:instituteManageResponse" />
+  </wsdl:message>
+  <wsdl:message name="bookIdsByInstituteUserResponse">
+    <wsdl:part name="parameters" element="tns:bookIdsByInstituteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetPastListResponse">
+    <wsdl:part name="parameters" element="tns:courseIdsGetPastListResponse" />
+  </wsdl:message>
+  <wsdl:message name="adminSupperToInstituteResponse">
+    <wsdl:part name="parameters" element="tns:adminSupperToInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="userIdsInstructorByInstituteIdRequest">
+    <wsdl:part name="parameters" element="tns:userIdsInstructorByInstituteId" />
+  </wsdl:message>
+  <wsdl:message name="assignmentRInstructorRequest">
+    <wsdl:part name="parameters" element="tns:assignmentRInstructor" />
+  </wsdl:message>
+  <wsdl:message name="userSaveRandomCodeRequest">
+    <wsdl:part name="parameters" element="tns:userSaveRandomCode" />
+  </wsdl:message>
+  <wsdl:message name="usersByUsernameResponse">
+    <wsdl:part name="parameters" element="tns:usersByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="bookDistributionRemoveRequest">
+    <wsdl:part name="parameters" element="tns:bookDistributionRemove" />
+  </wsdl:message>
+  <wsdl:message name="assignmentIdsByStructureIdResponse">
+    <wsdl:part name="parameters" element="tns:assignmentIdsByStructureIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionPasswordFlagRequest">
+    <wsdl:part name="parameters" element="tns:sectionPasswordFlag" />
+  </wsdl:message>
+  <wsdl:message name="sectionPasswordFlagResponse">
+    <wsdl:part name="parameters" element="tns:sectionPasswordFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="instructorSaveToInstituteRequest">
+    <wsdl:part name="parameters" element="tns:instructorSaveToInstitute" />
+  </wsdl:message>
+  <wsdl:message name="uuSectionCompletedRequest">
+    <wsdl:part name="parameters" element="tns:uuSectionCompleted" />
+  </wsdl:message>
+  <wsdl:message name="iuIdsAdminByInstituteIdRequest">
+    <wsdl:part name="parameters" element="tns:iuIdsAdminByInstituteId" />
+  </wsdl:message>
+  <wsdl:message name="assignmentRStudentResponse">
+    <wsdl:part name="parameters" element="tns:assignmentRStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseSaveRequest">
+    <wsdl:part name="parameters" element="tns:courseSave" />
+  </wsdl:message>
+  <wsdl:message name="usFlagUpdateResponse">
+    <wsdl:part name="parameters" element="tns:usFlagUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentReportBySectionAssignmentIdsResponse">
+    <wsdl:part name="parameters" element="tns:assignmentReportBySectionAssignmentIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="userEditPasswordByRandomCodeResponse">
+    <wsdl:part name="parameters" element="tns:userEditPasswordByRandomCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteRemoveResponse">
+    <wsdl:part name="parameters" element="tns:instituteRemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentManageResponse">
+    <wsdl:part name="parameters" element="tns:assignmentManageResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionChangeByUserIdResponse">
+    <wsdl:part name="parameters" element="tns:sectionChangeByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersAdminByInstituteIdRequest">
+    <wsdl:part name="parameters" element="tns:usersAdminByInstituteId" />
+  </wsdl:message>
+  <wsdl:message name="userLoginCheckUsersResponse">
+    <wsdl:part name="parameters" element="tns:userLoginCheckUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionJoinByCourseRequest">
+    <wsdl:part name="parameters" element="tns:sectionJoinByCourse" />
+  </wsdl:message>
+  <wsdl:message name="sectionByMyInCourseIdsResponse">
+    <wsdl:part name="parameters" element="tns:sectionByMyInCourseIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionExitByUserIdResponse">
+    <wsdl:part name="parameters" element="tns:sectionExitByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionIdsByFullNameCreateRequest">
+    <wsdl:part name="parameters" element="tns:sectionIdsByFullNameCreate" />
+  </wsdl:message>
+  <wsdl:message name="userRegisterRequest">
+    <wsdl:part name="parameters" element="tns:userRegister" />
+  </wsdl:message>
+  <wsdl:message name="instituteBookByIBResponse">
+    <wsdl:part name="parameters" element="tns:instituteBookByIBResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersExistResponse">
+    <wsdl:part name="parameters" element="tns:usersExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="instructorSaveToInstituteResponse">
+    <wsdl:part name="parameters" element="tns:instructorSaveToInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentSettingByIdsResponse">
+    <wsdl:part name="parameters" element="tns:assignmentSettingByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteIdsMyByInstructorListResponse">
+    <wsdl:part name="parameters" element="tns:instituteIdsMyByInstructorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionIdsByFullNameCreateResponse">
+    <wsdl:part name="parameters" element="tns:sectionIdsByFullNameCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionRoleIdByUserResponse">
+    <wsdl:part name="parameters" element="tns:sectionRoleIdByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionRoleChangeByUserIdResponse">
+    <wsdl:part name="parameters" element="tns:sectionRoleChangeByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionRemoveRequest">
+    <wsdl:part name="parameters" element="tns:sectionRemove" />
+  </wsdl:message>
+  <wsdl:message name="bookIdsByInstituteUserRequest">
+    <wsdl:part name="parameters" element="tns:bookIdsByInstituteUser" />
+  </wsdl:message>
+  <wsdl:message name="sectionByMyInCourseRequest">
+    <wsdl:part name="parameters" element="tns:sectionByMyInCourse" />
+  </wsdl:message>
+  <wsdl:message name="usersAdminResponse">
+    <wsdl:part name="parameters" element="tns:usersAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetAllListByCourseNameRequest">
+    <wsdl:part name="parameters" element="tns:courseIdsGetAllListByCourseName" />
+  </wsdl:message>
+  <wsdl:message name="assignmentReportBySectionAssignmentIdsRequest">
+    <wsdl:part name="parameters" element="tns:assignmentReportBySectionAssignmentIds" />
+  </wsdl:message>
+  <wsdl:message name="bookIdsByInstituteResponse">
+    <wsdl:part name="parameters" element="tns:bookIdsByInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionIdsByCourseIdResponse">
+    <wsdl:part name="parameters" element="tns:sectionIdsByCourseIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseInfoGetByIdsResponse">
+    <wsdl:part name="parameters" element="tns:courseInfoGetByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="bookDistributionInstituteUserRequest">
+    <wsdl:part name="parameters" element="tns:bookDistributionInstituteUser" />
+  </wsdl:message>
+  <wsdl:message name="sectionByMyInCourseResponse">
+    <wsdl:part name="parameters" element="tns:sectionByMyInCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteBookByIBRequest">
+    <wsdl:part name="parameters" element="tns:instituteBookByIB" />
+  </wsdl:message>
+  <wsdl:message name="sectionChangeByUserIdRequest">
+    <wsdl:part name="parameters" element="tns:sectionChangeByUserId" />
+  </wsdl:message>
+  <wsdl:message name="userLoginAsAdminCheckResponse">
+    <wsdl:part name="parameters" element="tns:userLoginAsAdminCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="usFlagUpdateRequest">
+    <wsdl:part name="parameters" element="tns:usFlagUpdate" />
+  </wsdl:message>
+  <wsdl:message name="bookDistributionInstituteResponse">
+    <wsdl:part name="parameters" element="tns:bookDistributionInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetMyListRequest">
+    <wsdl:part name="parameters" element="tns:courseIdsGetMyList" />
+  </wsdl:message>
+  <wsdl:message name="sectionExitByUserIdRequest">
+    <wsdl:part name="parameters" element="tns:sectionExitByUserId" />
+  </wsdl:message>
+  <wsdl:message name="sectionIdsByUserNameCreateRequest">
+    <wsdl:part name="parameters" element="tns:sectionIdsByUserNameCreate" />
+  </wsdl:message>
+  <wsdl:message name="adminRegisterToInstituteResponse">
+    <wsdl:part name="parameters" element="tns:adminRegisterToInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="userIdsByUsernameRequest">
+    <wsdl:part name="parameters" element="tns:userIdsByUsername" />
+  </wsdl:message>
+  <wsdl:message name="sectionDetailByIdsResponse">
+    <wsdl:part name="parameters" element="tns:sectionDetailByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteIdsMyListRequest">
+    <wsdl:part name="parameters" element="tns:instituteIdsMyList" />
+  </wsdl:message>
+  <wsdl:message name="userUserSectionManageResponse">
+    <wsdl:part name="parameters" element="tns:userUserSectionManageResponse" />
+  </wsdl:message>
+  <wsdl:message name="userEditPasswordByOldPasswordResponse">
+    <wsdl:part name="parameters" element="tns:userEditPasswordByOldPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionRoleChangeByUserIdRequest">
+    <wsdl:part name="parameters" element="tns:sectionRoleChangeByUserId" />
+  </wsdl:message>
+  <wsdl:message name="courseExistByUserIdResponse">
+    <wsdl:part name="parameters" element="tns:courseExistByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="userSectionByUserIdsRequest">
+    <wsdl:part name="parameters" element="tns:userSectionByUserIds" />
+  </wsdl:message>
+  <wsdl:message name="sectionIdsBySectionNameRequest">
+    <wsdl:part name="parameters" element="tns:sectionIdsBySectionName" />
+  </wsdl:message>
+  <wsdl:message name="sectionSaveResponse">
+    <wsdl:part name="parameters" element="tns:sectionSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseUpdateResponse">
+    <wsdl:part name="parameters" element="tns:courseUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentByIdsRequest">
+    <wsdl:part name="parameters" element="tns:assignmentByIds" />
+  </wsdl:message>
+  <wsdl:message name="courseGetByIdsResponse">
+    <wsdl:part name="parameters" element="tns:courseGetByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="instructorRegisterToInstituteRequest">
+    <wsdl:part name="parameters" element="tns:instructorRegisterToInstitute" />
+  </wsdl:message>
+  <wsdl:message name="bookDistributionInstituteUserResponse">
+    <wsdl:part name="parameters" element="tns:bookDistributionInstituteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteIdsAllListResponse">
+    <wsdl:part name="parameters" element="tns:instituteIdsAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="uuSectionListBySectionIdRequest">
+    <wsdl:part name="parameters" element="tns:uuSectionListBySectionId" />
+  </wsdl:message>
+  <wsdl:message name="instituteIdsMyByInstructorListRequest">
+    <wsdl:part name="parameters" element="tns:instituteIdsMyByInstructorList" />
+  </wsdl:message>
+  <wsdl:message name="sectionByMyInCourseIdsRequest">
+    <wsdl:part name="parameters" element="tns:sectionByMyInCourseIds" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetAllListResponse">
+    <wsdl:part name="parameters" element="tns:courseIdsGetAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetAllListByCourseNameResponse">
+    <wsdl:part name="parameters" element="tns:courseIdsGetAllListByCourseNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="uuSectionListBySectionIdResponse">
+    <wsdl:part name="parameters" element="tns:uuSectionListBySectionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetMyListResponse">
+    <wsdl:part name="parameters" element="tns:courseIdsGetMyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="uuSectionCompletedResponse">
+    <wsdl:part name="parameters" element="tns:uuSectionCompletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetAllListRequest">
+    <wsdl:part name="parameters" element="tns:courseIdsGetAllList" />
+  </wsdl:message>
+  <wsdl:message name="usersByUserIdBookIdRequest">
+    <wsdl:part name="parameters" element="tns:usersByUserIdBookId" />
+  </wsdl:message>
+  <wsdl:message name="usersAdminRequest">
+    <wsdl:part name="parameters" element="tns:usersAdmin" />
+  </wsdl:message>
+  <wsdl:message name="instituteIdsAllListRequest">
+    <wsdl:part name="parameters" element="tns:instituteIdsAllList" />
+  </wsdl:message>
+  <wsdl:message name="userIdSuperAdminByInsttituteIdResponse">
+    <wsdl:part name="parameters" element="tns:userIdSuperAdminByInsttituteIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionBySectionNumberResponse">
+    <wsdl:part name="parameters" element="tns:sectionBySectionNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteUsersByIdsResponse">
+    <wsdl:part name="parameters" element="tns:instituteUsersByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteByIdsResponse">
+    <wsdl:part name="parameters" element="tns:instituteByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersInfoEditResponse">
+    <wsdl:part name="parameters" element="tns:usersInfoEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetPastListRequest">
+    <wsdl:part name="parameters" element="tns:courseIdsGetPastList" />
+  </wsdl:message>
+  <wsdl:message name="iuIdsAdminByInstituteIdResponse">
+    <wsdl:part name="parameters" element="tns:iuIdsAdminByInstituteIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersAdminByInstituteIdResponse">
+    <wsdl:part name="parameters" element="tns:usersAdminByInstituteIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentReportByOtherAssignmentIdsResponse">
+    <wsdl:part name="parameters" element="tns:assignmentReportByOtherAssignmentIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersByUserIdSectionIdRequest">
+    <wsdl:part name="parameters" element="tns:usersByUserIdSectionId" />
+  </wsdl:message>
+  <wsdl:message name="userIdsBySectionConditionsResponse">
+    <wsdl:part name="parameters" element="tns:userIdsBySectionConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionDetailByIdsRequest">
+    <wsdl:part name="parameters" element="tns:sectionDetailByIds" />
+  </wsdl:message>
+  <wsdl:message name="userIdsBySectionResponse">
+    <wsdl:part name="parameters" element="tns:userIdsBySectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="bookRemoveDistributionInstituteUserResponse">
+    <wsdl:part name="parameters" element="tns:bookRemoveDistributionInstituteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionUpdateRequest">
+    <wsdl:part name="parameters" element="tns:sectionUpdate" />
+  </wsdl:message>
+  <wsdl:message name="bookIdsByInstituteRequest">
+    <wsdl:part name="parameters" element="tns:bookIdsByInstitute" />
+  </wsdl:message>
+  <wsdl:message name="courseInfoGetByIdsRequest">
+    <wsdl:part name="parameters" element="tns:courseInfoGetByIds" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetCourseNameRequest">
+    <wsdl:part name="parameters" element="tns:courseIdsGetCourseName" />
+  </wsdl:message>
+  <wsdl:message name="sectionInfoByIdsRequest">
+    <wsdl:part name="parameters" element="tns:sectionInfoByIds" />
+  </wsdl:message>
+  <wsdl:message name="adminSupperToInstituteRequest">
+    <wsdl:part name="parameters" element="tns:adminSupperToInstitute" />
+  </wsdl:message>
+  <wsdl:message name="userSaveRandomCodeResponse">
+    <wsdl:part name="parameters" element="tns:userSaveRandomCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="userLoginQQResponse">
+    <wsdl:part name="parameters" element="tns:userLoginQQResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteByIdsRequest">
+    <wsdl:part name="parameters" element="tns:instituteByIds" />
+  </wsdl:message>
+  <wsdl:message name="userIdsBySectionConditionsRequest">
+    <wsdl:part name="parameters" element="tns:userIdsBySectionConditions" />
+  </wsdl:message>
+  <wsdl:message name="userLoginAsAdminCheckRequest">
+    <wsdl:part name="parameters" element="tns:userLoginAsAdminCheck" />
+  </wsdl:message>
+  <wsdl:message name="userUserSectionManageRequest">
+    <wsdl:part name="parameters" element="tns:userUserSectionManage" />
+  </wsdl:message>
+  <wsdl:message name="assignmentManageRequest">
+    <wsdl:part name="parameters" element="tns:assignmentManage" />
+  </wsdl:message>
+  <wsdl:message name="instituteBookListByInstituteIdRequest">
+    <wsdl:part name="parameters" element="tns:instituteBookListByInstituteId" />
+  </wsdl:message>
+  <wsdl:message name="usersByUserIdSectionIdResponse">
+    <wsdl:part name="parameters" element="tns:usersByUserIdSectionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="userIdsInstructorByInstituteIdResponse">
+    <wsdl:part name="parameters" element="tns:userIdsInstructorByInstituteIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="userLoginCheckUsersRequest">
+    <wsdl:part name="parameters" element="tns:userLoginCheckUsers" />
+  </wsdl:message>
+  <wsdl:message name="courseExistByUserIdRequest">
+    <wsdl:part name="parameters" element="tns:courseExistByUserId" />
+  </wsdl:message>
+  <wsdl:message name="userRegisterResponse">
+    <wsdl:part name="parameters" element="tns:userRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteIdsMyManageListRequest">
+    <wsdl:part name="parameters" element="tns:instituteIdsMyManageList" />
+  </wsdl:message>
+  <wsdl:message name="usersIdsStdBySectionIdResponse">
+    <wsdl:part name="parameters" element="tns:usersIdsStdBySectionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="userSectionByUserIdsResponse">
+    <wsdl:part name="parameters" element="tns:userSectionByUserIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionJoinByNumberPasswordRequest">
+    <wsdl:part name="parameters" element="tns:sectionJoinByNumberPassword" />
+  </wsdl:message>
+  <wsdl:message name="sectionUpdateResponse">
+    <wsdl:part name="parameters" element="tns:sectionUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentRemoveRequest">
+    <wsdl:part name="parameters" element="tns:assignmentRemove" />
+  </wsdl:message>
+  <wsdl:message name="sectionIdsBySectionNameResponse">
+    <wsdl:part name="parameters" element="tns:sectionIdsBySectionNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="bookDistributionInstituteRequest">
+    <wsdl:part name="parameters" element="tns:bookDistributionInstitute" />
+  </wsdl:message>
+  <wsdl:message name="sectionIdsByUserIdCreateRequest">
+    <wsdl:part name="parameters" element="tns:sectionIdsByUserIdCreate" />
+  </wsdl:message>
+  <wsdl:message name="instituteRemoveRequest">
+    <wsdl:part name="parameters" element="tns:instituteRemove" />
+  </wsdl:message>
+  <wsdl:message name="instructorRegisterToInstituteResponse">
+    <wsdl:part name="parameters" element="tns:instructorRegisterToInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseIdsGetMyCreateListRequest">
+    <wsdl:part name="parameters" element="tns:courseIdsGetMyCreateList" />
+  </wsdl:message>
+  <wsdl:message name="sectionRemoveResponse">
+    <wsdl:part name="parameters" element="tns:sectionRemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersByIdsRequest">
+    <wsdl:part name="parameters" element="tns:usersByIds" />
+  </wsdl:message>
+  <wsdl:message name="assignmentRInstructorResponse">
+    <wsdl:part name="parameters" element="tns:assignmentRInstructorResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentIdsByStructureIdRequest">
+    <wsdl:part name="parameters" element="tns:assignmentIdsByStructureId" />
+  </wsdl:message>
+  <wsdl:message name="userEditPasswordByRandomCodeRequest">
+    <wsdl:part name="parameters" element="tns:userEditPasswordByRandomCode" />
+  </wsdl:message>
+  <wsdl:message name="assignmentByIdsResponse">
+    <wsdl:part name="parameters" element="tns:assignmentByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="courseSaveResponse">
+    <wsdl:part name="parameters" element="tns:courseSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentIdsByotherMarkingRequest">
+    <wsdl:part name="parameters" element="tns:assignmentIdsByotherMarking" />
+  </wsdl:message>
+  <wsdl:message name="bookRemoveDistributionInstituteUserRequest">
+    <wsdl:part name="parameters" element="tns:bookRemoveDistributionInstituteUser" />
+  </wsdl:message>
+  <wsdl:message name="usersRemoveFromInstituteResponse">
+    <wsdl:part name="parameters" element="tns:usersRemoveFromInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionJoinByNumberResponse">
+    <wsdl:part name="parameters" element="tns:sectionJoinByNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersDisableFromInstituteResponse">
+    <wsdl:part name="parameters" element="tns:usersDisableFromInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="assignmentRInstructorByCourseResponse">
+    <wsdl:part name="parameters" element="tns:assignmentRInstructorByCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionJoinByCourseResponse">
+    <wsdl:part name="parameters" element="tns:sectionJoinByCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="bookDistributionRemoveResponse">
+    <wsdl:part name="parameters" element="tns:bookDistributionRemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="usersIdsBySectionIdResponse">
+    <wsdl:part name="parameters" element="tns:usersIdsBySectionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionBySectionNumberRequest">
+    <wsdl:part name="parameters" element="tns:sectionBySectionNumber" />
+  </wsdl:message>
+  <wsdl:message name="adminSupperIsExistRequest">
+    <wsdl:part name="parameters" element="tns:adminSupperIsExist" />
+  </wsdl:message>
+  <wsdl:message name="userEditPasswordByOldPasswordRequest">
+    <wsdl:part name="parameters" element="tns:userEditPasswordByOldPassword" />
+  </wsdl:message>
+  <wsdl:message name="instituteIdsMyListResponse">
+    <wsdl:part name="parameters" element="tns:instituteIdsMyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="sectionRoleIdByUserRequest">
+    <wsdl:part name="parameters" element="tns:sectionRoleIdByUser" />
+  </wsdl:message>
+  <wsdl:message name="instituteManageRequest">
+    <wsdl:part name="parameters" element="tns:instituteManage" />
+  </wsdl:message>
+  <wsdl:message name="adminSupperIsExistResponse">
+    <wsdl:part name="parameters" element="tns:adminSupperIsExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="instituteBookListByInstituteIdResponse">
+    <wsdl:part name="parameters" element="tns:instituteBookListByInstituteIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="userLoginCheckResponse">
+    <wsdl:part name="parameters" element="tns:userLoginCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="userIdsBySectionRequest">
+    <wsdl:part name="parameters" element="tns:userIdsBySection" />
+  </wsdl:message>
+  <wsdl:message name="sectionSaveRequest">
+    <wsdl:part name="parameters" element="tns:sectionSave" />
+  </wsdl:message>
+  <wsdl:message name="iuIdsInstructorByInstituteIdRequest">
+    <wsdl:part name="parameters" element="tns:iuIdsInstructorByInstituteId" />
+  </wsdl:message>
+  <wsdl:portType name="ClientSystemWebServicePortType">
+    <wsdl:operation name="instituteManage">
+      <wsdl:input name="instituteManageRequest" message="tns:instituteManageRequest" />
+      <wsdl:output name="instituteManageResponse" message="tns:instituteManageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersAdmin">
+      <wsdl:input name="usersAdminRequest" message="tns:usersAdminRequest" />
+      <wsdl:output name="usersAdminResponse" message="tns:usersAdminResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionUpdate">
+      <wsdl:input name="sectionUpdateRequest" message="tns:sectionUpdateRequest" />
+      <wsdl:output name="sectionUpdateResponse" message="tns:sectionUpdateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instituteIdsMyByInstructorList">
+      <wsdl:input name="instituteIdsMyByInstructorListRequest" message="tns:instituteIdsMyByInstructorListRequest" />
+      <wsdl:output name="instituteIdsMyByInstructorListResponse" message="tns:instituteIdsMyByInstructorListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionRemove">
+      <wsdl:input name="sectionRemoveRequest" message="tns:sectionRemoveRequest" />
+      <wsdl:output name="sectionRemoveResponse" message="tns:sectionRemoveResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseInfoGetByIds">
+      <wsdl:input name="courseInfoGetByIdsRequest" message="tns:courseInfoGetByIdsRequest" />
+      <wsdl:output name="courseInfoGetByIdsResponse" message="tns:courseInfoGetByIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionRoleIdByUser">
+      <wsdl:input name="sectionRoleIdByUserRequest" message="tns:sectionRoleIdByUserRequest" />
+      <wsdl:output name="sectionRoleIdByUserResponse" message="tns:sectionRoleIdByUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="bookDistributionInstituteUser">
+      <wsdl:input name="bookDistributionInstituteUserRequest" message="tns:bookDistributionInstituteUserRequest" />
+      <wsdl:output name="bookDistributionInstituteUserResponse" message="tns:bookDistributionInstituteUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentSettingByIds">
+      <wsdl:input name="assignmentSettingByIdsRequest" message="tns:assignmentSettingByIdsRequest" />
+      <wsdl:output name="assignmentSettingByIdsResponse" message="tns:assignmentSettingByIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersIdsStdBySectionId">
+      <wsdl:input name="usersIdsStdBySectionIdRequest" message="tns:usersIdsStdBySectionIdRequest" />
+      <wsdl:output name="usersIdsStdBySectionIdResponse" message="tns:usersIdsStdBySectionIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userIdsByOther">
+      <wsdl:input name="userIdsByOtherRequest" message="tns:userIdsByOtherRequest" />
+      <wsdl:output name="userIdsByOtherResponse" message="tns:userIdsByOtherResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetPastList">
+      <wsdl:input name="courseIdsGetPastListRequest" message="tns:courseIdsGetPastListRequest" />
+      <wsdl:output name="courseIdsGetPastListResponse" message="tns:courseIdsGetPastListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userIdsInstructorByInstituteId">
+      <wsdl:input name="userIdsInstructorByInstituteIdRequest" message="tns:userIdsInstructorByInstituteIdRequest" />
+      <wsdl:output name="userIdsInstructorByInstituteIdResponse" message="tns:userIdsInstructorByInstituteIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instituteByIds">
+      <wsdl:input name="instituteByIdsRequest" message="tns:instituteByIdsRequest" />
+      <wsdl:output name="instituteByIdsResponse" message="tns:instituteByIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instituteUsersByIds">
+      <wsdl:input name="instituteUsersByIdsRequest" message="tns:instituteUsersByIdsRequest" />
+      <wsdl:output name="instituteUsersByIdsResponse" message="tns:instituteUsersByIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userLoginCheckUsers">
+      <wsdl:input name="userLoginCheckUsersRequest" message="tns:userLoginCheckUsersRequest" />
+      <wsdl:output name="userLoginCheckUsersResponse" message="tns:userLoginCheckUsersResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentManage">
+      <wsdl:input name="assignmentManageRequest" message="tns:assignmentManageRequest" />
+      <wsdl:output name="assignmentManageResponse" message="tns:assignmentManageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentRemove">
+      <wsdl:input name="assignmentRemoveRequest" message="tns:assignmentRemoveRequest" />
+      <wsdl:output name="assignmentRemoveResponse" message="tns:assignmentRemoveResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instituteRemove">
+      <wsdl:input name="instituteRemoveRequest" message="tns:instituteRemoveRequest" />
+      <wsdl:output name="instituteRemoveResponse" message="tns:instituteRemoveResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instituteBookByIB">
+      <wsdl:input name="instituteBookByIBRequest" message="tns:instituteBookByIBRequest" />
+      <wsdl:output name="instituteBookByIBResponse" message="tns:instituteBookByIBResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentRInstructorByCourse">
+      <wsdl:input name="assignmentRInstructorByCourseRequest" message="tns:assignmentRInstructorByCourseRequest" />
+      <wsdl:output name="assignmentRInstructorByCourseResponse" message="tns:assignmentRInstructorByCourseResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersRemoveFromInstitute">
+      <wsdl:input name="usersRemoveFromInstituteRequest" message="tns:usersRemoveFromInstituteRequest" />
+      <wsdl:output name="usersRemoveFromInstituteResponse" message="tns:usersRemoveFromInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userLoginCheck">
+      <wsdl:input name="userLoginCheckRequest" message="tns:userLoginCheckRequest" />
+      <wsdl:output name="userLoginCheckResponse" message="tns:userLoginCheckResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionChangeByUserId">
+      <wsdl:input name="sectionChangeByUserIdRequest" message="tns:sectionChangeByUserIdRequest" />
+      <wsdl:output name="sectionChangeByUserIdResponse" message="tns:sectionChangeByUserIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseGetByIds">
+      <wsdl:input name="courseGetByIdsRequest" message="tns:courseGetByIdsRequest" />
+      <wsdl:output name="courseGetByIdsResponse" message="tns:courseGetByIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentIdsByotherMarking">
+      <wsdl:input name="assignmentIdsByotherMarkingRequest" message="tns:assignmentIdsByotherMarkingRequest" />
+      <wsdl:output name="assignmentIdsByotherMarkingResponse" message="tns:assignmentIdsByotherMarkingResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instituteBookListByInstituteId">
+      <wsdl:input name="instituteBookListByInstituteIdRequest" message="tns:instituteBookListByInstituteIdRequest" />
+      <wsdl:output name="instituteBookListByInstituteIdResponse" message="tns:instituteBookListByInstituteIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseSave">
+      <wsdl:input name="courseSaveRequest" message="tns:courseSaveRequest" />
+      <wsdl:output name="courseSaveResponse" message="tns:courseSaveResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="adminRegisterToInstitute">
+      <wsdl:input name="adminRegisterToInstituteRequest" message="tns:adminRegisterToInstituteRequest" />
+      <wsdl:output name="adminRegisterToInstituteResponse" message="tns:adminRegisterToInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userEditPasswordByRandomCode">
+      <wsdl:input name="userEditPasswordByRandomCodeRequest" message="tns:userEditPasswordByRandomCodeRequest" />
+      <wsdl:output name="userEditPasswordByRandomCodeResponse" message="tns:userEditPasswordByRandomCodeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="bookDistributionRemove">
+      <wsdl:input name="bookDistributionRemoveRequest" message="tns:bookDistributionRemoveRequest" />
+      <wsdl:output name="bookDistributionRemoveResponse" message="tns:bookDistributionRemoveResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersByUserIdSectionId">
+      <wsdl:input name="usersByUserIdSectionIdRequest" message="tns:usersByUserIdSectionIdRequest" />
+      <wsdl:output name="usersByUserIdSectionIdResponse" message="tns:usersByUserIdSectionIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionInfoByIds">
+      <wsdl:input name="sectionInfoByIdsRequest" message="tns:sectionInfoByIdsRequest" />
+      <wsdl:output name="sectionInfoByIdsResponse" message="tns:sectionInfoByIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userLoginAsAdminCheck">
+      <wsdl:input name="userLoginAsAdminCheckRequest" message="tns:userLoginAsAdminCheckRequest" />
+      <wsdl:output name="userLoginAsAdminCheckResponse" message="tns:userLoginAsAdminCheckResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionIdsByUserIdCreate">
+      <wsdl:input name="sectionIdsByUserIdCreateRequest" message="tns:sectionIdsByUserIdCreateRequest" />
+      <wsdl:output name="sectionIdsByUserIdCreateResponse" message="tns:sectionIdsByUserIdCreateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersByUsername">
+      <wsdl:input name="usersByUsernameRequest" message="tns:usersByUsernameRequest" />
+      <wsdl:output name="usersByUsernameResponse" message="tns:usersByUsernameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instructorSaveToInstitute">
+      <wsdl:input name="instructorSaveToInstituteRequest" message="tns:instructorSaveToInstituteRequest" />
+      <wsdl:output name="instructorSaveToInstituteResponse" message="tns:instructorSaveToInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instituteIdsMyList">
+      <wsdl:input name="instituteIdsMyListRequest" message="tns:instituteIdsMyListRequest" />
+      <wsdl:output name="instituteIdsMyListResponse" message="tns:instituteIdsMyListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userLoginQQ">
+      <wsdl:input name="userLoginQQRequest" message="tns:userLoginQQRequest" />
+      <wsdl:output name="userLoginQQResponse" message="tns:userLoginQQResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentRStudent">
+      <wsdl:input name="assignmentRStudentRequest" message="tns:assignmentRStudentRequest" />
+      <wsdl:output name="assignmentRStudentResponse" message="tns:assignmentRStudentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentByIds">
+      <wsdl:input name="assignmentByIdsRequest" message="tns:assignmentByIdsRequest" />
+      <wsdl:output name="assignmentByIdsResponse" message="tns:assignmentByIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionIdsBySectionName">
+      <wsdl:input name="sectionIdsBySectionNameRequest" message="tns:sectionIdsBySectionNameRequest" />
+      <wsdl:output name="sectionIdsBySectionNameResponse" message="tns:sectionIdsBySectionNameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="bookIdsByInstituteUser">
+      <wsdl:input name="bookIdsByInstituteUserRequest" message="tns:bookIdsByInstituteUserRequest" />
+      <wsdl:output name="bookIdsByInstituteUserResponse" message="tns:bookIdsByInstituteUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseUpdate">
+      <wsdl:input name="courseUpdateRequest" message="tns:courseUpdateRequest" />
+      <wsdl:output name="courseUpdateResponse" message="tns:courseUpdateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="iuIdsAdminByInstituteId">
+      <wsdl:input name="iuIdsAdminByInstituteIdRequest" message="tns:iuIdsAdminByInstituteIdRequest" />
+      <wsdl:output name="iuIdsAdminByInstituteIdResponse" message="tns:iuIdsAdminByInstituteIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetAllList">
+      <wsdl:input name="courseIdsGetAllListRequest" message="tns:courseIdsGetAllListRequest" />
+      <wsdl:output name="courseIdsGetAllListResponse" message="tns:courseIdsGetAllListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userSaveRandomCode">
+      <wsdl:input name="userSaveRandomCodeRequest" message="tns:userSaveRandomCodeRequest" />
+      <wsdl:output name="userSaveRandomCodeResponse" message="tns:userSaveRandomCodeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetMyCreateList">
+      <wsdl:input name="courseIdsGetMyCreateListRequest" message="tns:courseIdsGetMyCreateListRequest" />
+      <wsdl:output name="courseIdsGetMyCreateListResponse" message="tns:courseIdsGetMyCreateListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instituteIdsMyManageList">
+      <wsdl:input name="instituteIdsMyManageListRequest" message="tns:instituteIdsMyManageListRequest" />
+      <wsdl:output name="instituteIdsMyManageListResponse" message="tns:instituteIdsMyManageListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetAllListByCourseName">
+      <wsdl:input name="courseIdsGetAllListByCourseNameRequest" message="tns:courseIdsGetAllListByCourseNameRequest" />
+      <wsdl:output name="courseIdsGetAllListByCourseNameResponse" message="tns:courseIdsGetAllListByCourseNameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionJoinByNumber">
+      <wsdl:input name="sectionJoinByNumberRequest" message="tns:sectionJoinByNumberRequest" />
+      <wsdl:output name="sectionJoinByNumberResponse" message="tns:sectionJoinByNumberResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersAdminByInstituteId">
+      <wsdl:input name="usersAdminByInstituteIdRequest" message="tns:usersAdminByInstituteIdRequest" />
+      <wsdl:output name="usersAdminByInstituteIdResponse" message="tns:usersAdminByInstituteIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="bookRemoveDistributionInstituteUser">
+      <wsdl:input name="bookRemoveDistributionInstituteUserRequest" message="tns:bookRemoveDistributionInstituteUserRequest" />
+      <wsdl:output name="bookRemoveDistributionInstituteUserResponse" message="tns:bookRemoveDistributionInstituteUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionJoinByCourse">
+      <wsdl:input name="sectionJoinByCourseRequest" message="tns:sectionJoinByCourseRequest" />
+      <wsdl:output name="sectionJoinByCourseResponse" message="tns:sectionJoinByCourseResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionBySectionNumber">
+      <wsdl:input name="sectionBySectionNumberRequest" message="tns:sectionBySectionNumberRequest" />
+      <wsdl:output name="sectionBySectionNumberResponse" message="tns:sectionBySectionNumberResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionExitByUserId">
+      <wsdl:input name="sectionExitByUserIdRequest" message="tns:sectionExitByUserIdRequest" />
+      <wsdl:output name="sectionExitByUserIdResponse" message="tns:sectionExitByUserIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersIdsBySectionId">
+      <wsdl:input name="usersIdsBySectionIdRequest" message="tns:usersIdsBySectionIdRequest" />
+      <wsdl:output name="usersIdsBySectionIdResponse" message="tns:usersIdsBySectionIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionIdsByCourseId">
+      <wsdl:input name="sectionIdsByCourseIdRequest" message="tns:sectionIdsByCourseIdRequest" />
+      <wsdl:output name="sectionIdsByCourseIdResponse" message="tns:sectionIdsByCourseIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instituteIdsAllList">
+      <wsdl:input name="instituteIdsAllListRequest" message="tns:instituteIdsAllListRequest" />
+      <wsdl:output name="instituteIdsAllListResponse" message="tns:instituteIdsAllListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersInfoEdit">
+      <wsdl:input name="usersInfoEditRequest" message="tns:usersInfoEditRequest" />
+      <wsdl:output name="usersInfoEditResponse" message="tns:usersInfoEditResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="adminSupperToInstitute">
+      <wsdl:input name="adminSupperToInstituteRequest" message="tns:adminSupperToInstituteRequest" />
+      <wsdl:output name="adminSupperToInstituteResponse" message="tns:adminSupperToInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="iuIdsInstructorByInstituteId">
+      <wsdl:input name="iuIdsInstructorByInstituteIdRequest" message="tns:iuIdsInstructorByInstituteIdRequest" />
+      <wsdl:output name="iuIdsInstructorByInstituteIdResponse" message="tns:iuIdsInstructorByInstituteIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentReportBySectionAssignmentIds">
+      <wsdl:input name="assignmentReportBySectionAssignmentIdsRequest" message="tns:assignmentReportBySectionAssignmentIdsRequest" />
+      <wsdl:output name="assignmentReportBySectionAssignmentIdsResponse" message="tns:assignmentReportBySectionAssignmentIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userUserSectionManage">
+      <wsdl:input name="userUserSectionManageRequest" message="tns:userUserSectionManageRequest" />
+      <wsdl:output name="userUserSectionManageResponse" message="tns:userUserSectionManageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentIdsByStructureId">
+      <wsdl:input name="assignmentIdsByStructureIdRequest" message="tns:assignmentIdsByStructureIdRequest" />
+      <wsdl:output name="assignmentIdsByStructureIdResponse" message="tns:assignmentIdsByStructureIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionDetailByIds">
+      <wsdl:input name="sectionDetailByIdsRequest" message="tns:sectionDetailByIdsRequest" />
+      <wsdl:output name="sectionDetailByIdsResponse" message="tns:sectionDetailByIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userIdsBySection">
+      <wsdl:input name="userIdsBySectionRequest" message="tns:userIdsBySectionRequest" />
+      <wsdl:output name="userIdsBySectionResponse" message="tns:userIdsBySectionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseExistByUserId">
+      <wsdl:input name="courseExistByUserIdRequest" message="tns:courseExistByUserIdRequest" />
+      <wsdl:output name="courseExistByUserIdResponse" message="tns:courseExistByUserIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionJoinByNumberPassword">
+      <wsdl:input name="sectionJoinByNumberPasswordRequest" message="tns:sectionJoinByNumberPasswordRequest" />
+      <wsdl:output name="sectionJoinByNumberPasswordResponse" message="tns:sectionJoinByNumberPasswordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersByIds">
+      <wsdl:input name="usersByIdsRequest" message="tns:usersByIdsRequest" />
+      <wsdl:output name="usersByIdsResponse" message="tns:usersByIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentRInstructor">
+      <wsdl:input name="assignmentRInstructorRequest" message="tns:assignmentRInstructorRequest" />
+      <wsdl:output name="assignmentRInstructorResponse" message="tns:assignmentRInstructorResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionIdsByUserNameCreate">
+      <wsdl:input name="sectionIdsByUserNameCreateRequest" message="tns:sectionIdsByUserNameCreateRequest" />
+      <wsdl:output name="sectionIdsByUserNameCreateResponse" message="tns:sectionIdsByUserNameCreateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionPasswordFlag">
+      <wsdl:input name="sectionPasswordFlagRequest" message="tns:sectionPasswordFlagRequest" />
+      <wsdl:output name="sectionPasswordFlagResponse" message="tns:sectionPasswordFlagResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionByMyInCourseIds">
+      <wsdl:input name="sectionByMyInCourseIdsRequest" message="tns:sectionByMyInCourseIdsRequest" />
+      <wsdl:output name="sectionByMyInCourseIdsResponse" message="tns:sectionByMyInCourseIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersByUserIdBookId">
+      <wsdl:input name="usersByUserIdBookIdRequest" message="tns:usersByUserIdBookIdRequest" />
+      <wsdl:output name="usersByUserIdBookIdResponse" message="tns:usersByUserIdBookIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userRegister">
+      <wsdl:input name="userRegisterRequest" message="tns:userRegisterRequest" />
+      <wsdl:output name="userRegisterResponse" message="tns:userRegisterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="instructorRegisterToInstitute">
+      <wsdl:input name="instructorRegisterToInstituteRequest" message="tns:instructorRegisterToInstituteRequest" />
+      <wsdl:output name="instructorRegisterToInstituteResponse" message="tns:instructorRegisterToInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userIdsBySectionConditions">
+      <wsdl:input name="userIdsBySectionConditionsRequest" message="tns:userIdsBySectionConditionsRequest" />
+      <wsdl:output name="userIdsBySectionConditionsResponse" message="tns:userIdsBySectionConditionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="bookIdsByInstitute">
+      <wsdl:input name="bookIdsByInstituteRequest" message="tns:bookIdsByInstituteRequest" />
+      <wsdl:output name="bookIdsByInstituteResponse" message="tns:bookIdsByInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersDisableFromInstitute">
+      <wsdl:input name="usersDisableFromInstituteRequest" message="tns:usersDisableFromInstituteRequest" />
+      <wsdl:output name="usersDisableFromInstituteResponse" message="tns:usersDisableFromInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetCourseName">
+      <wsdl:input name="courseIdsGetCourseNameRequest" message="tns:courseIdsGetCourseNameRequest" />
+      <wsdl:output name="courseIdsGetCourseNameResponse" message="tns:courseIdsGetCourseNameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="adminSupperIsExist">
+      <wsdl:input name="adminSupperIsExistRequest" message="tns:adminSupperIsExistRequest" />
+      <wsdl:output name="adminSupperIsExistResponse" message="tns:adminSupperIsExistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uuSectionListBySectionId">
+      <wsdl:input name="uuSectionListBySectionIdRequest" message="tns:uuSectionListBySectionIdRequest" />
+      <wsdl:output name="uuSectionListBySectionIdResponse" message="tns:uuSectionListBySectionIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseRemove">
+      <wsdl:input name="courseRemoveRequest" message="tns:courseRemoveRequest" />
+      <wsdl:output name="courseRemoveResponse" message="tns:courseRemoveResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="assignmentReportByOtherAssignmentIds">
+      <wsdl:input name="assignmentReportByOtherAssignmentIdsRequest" message="tns:assignmentReportByOtherAssignmentIdsRequest" />
+      <wsdl:output name="assignmentReportByOtherAssignmentIdsResponse" message="tns:assignmentReportByOtherAssignmentIdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usFlagUpdate">
+      <wsdl:input name="usFlagUpdateRequest" message="tns:usFlagUpdateRequest" />
+      <wsdl:output name="usFlagUpdateResponse" message="tns:usFlagUpdateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetMyList">
+      <wsdl:input name="courseIdsGetMyListRequest" message="tns:courseIdsGetMyListRequest" />
+      <wsdl:output name="courseIdsGetMyListResponse" message="tns:courseIdsGetMyListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userEditPasswordByOldPassword">
+      <wsdl:input name="userEditPasswordByOldPasswordRequest" message="tns:userEditPasswordByOldPasswordRequest" />
+      <wsdl:output name="userEditPasswordByOldPasswordResponse" message="tns:userEditPasswordByOldPasswordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userIdsByUsername">
+      <wsdl:input name="userIdsByUsernameRequest" message="tns:userIdsByUsernameRequest" />
+      <wsdl:output name="userIdsByUsernameResponse" message="tns:userIdsByUsernameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userIdSuperAdminByInsttituteId">
+      <wsdl:input name="userIdSuperAdminByInsttituteIdRequest" message="tns:userIdSuperAdminByInsttituteIdRequest" />
+      <wsdl:output name="userIdSuperAdminByInsttituteIdResponse" message="tns:userIdSuperAdminByInsttituteIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionRoleChangeByUserId">
+      <wsdl:input name="sectionRoleChangeByUserIdRequest" message="tns:sectionRoleChangeByUserIdRequest" />
+      <wsdl:output name="sectionRoleChangeByUserIdResponse" message="tns:sectionRoleChangeByUserIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="bookDistributionInstitute">
+      <wsdl:input name="bookDistributionInstituteRequest" message="tns:bookDistributionInstituteRequest" />
+      <wsdl:output name="bookDistributionInstituteResponse" message="tns:bookDistributionInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uuSectionCompleted">
+      <wsdl:input name="uuSectionCompletedRequest" message="tns:uuSectionCompletedRequest" />
+      <wsdl:output name="uuSectionCompletedResponse" message="tns:uuSectionCompletedResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionByMyInCourse">
+      <wsdl:input name="sectionByMyInCourseRequest" message="tns:sectionByMyInCourseRequest" />
+      <wsdl:output name="sectionByMyInCourseResponse" message="tns:sectionByMyInCourseResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionIdsByFullNameCreate">
+      <wsdl:input name="sectionIdsByFullNameCreateRequest" message="tns:sectionIdsByFullNameCreateRequest" />
+      <wsdl:output name="sectionIdsByFullNameCreateResponse" message="tns:sectionIdsByFullNameCreateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sectionSave">
+      <wsdl:input name="sectionSaveRequest" message="tns:sectionSaveRequest" />
+      <wsdl:output name="sectionSaveResponse" message="tns:sectionSaveResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="usersExist">
+      <wsdl:input name="usersExistRequest" message="tns:usersExistRequest" />
+      <wsdl:output name="usersExistResponse" message="tns:usersExistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userSectionByUserIds">
+      <wsdl:input name="userSectionByUserIdsRequest" message="tns:userSectionByUserIdsRequest" />
+      <wsdl:output name="userSectionByUserIdsResponse" message="tns:userSectionByUserIdsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ClientSystemWebServiceHttpBinding" type="tns:ClientSystemWebServicePortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="instituteManage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instituteManageRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instituteManageResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersAdmin">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersAdminRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersAdminResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionUpdate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionUpdateRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionUpdateResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instituteIdsMyByInstructorList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instituteIdsMyByInstructorListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instituteIdsMyByInstructorListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionRemove">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionRemoveRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionRemoveResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseInfoGetByIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseInfoGetByIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseInfoGetByIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionRoleIdByUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionRoleIdByUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionRoleIdByUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookDistributionInstituteUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="bookDistributionInstituteUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="bookDistributionInstituteUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentSettingByIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentSettingByIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentSettingByIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersIdsStdBySectionId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersIdsStdBySectionIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersIdsStdBySectionIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userIdsByOther">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userIdsByOtherRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userIdsByOtherResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetPastList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseIdsGetPastListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseIdsGetPastListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userIdsInstructorByInstituteId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userIdsInstructorByInstituteIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userIdsInstructorByInstituteIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instituteByIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instituteByIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instituteByIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instituteUsersByIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instituteUsersByIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instituteUsersByIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userLoginCheckUsers">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userLoginCheckUsersRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userLoginCheckUsersResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentManage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentManageRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentManageResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentRemove">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentRemoveRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentRemoveResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instituteRemove">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instituteRemoveRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instituteRemoveResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instituteBookByIB">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instituteBookByIBRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instituteBookByIBResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentRInstructorByCourse">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentRInstructorByCourseRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentRInstructorByCourseResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersRemoveFromInstitute">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersRemoveFromInstituteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersRemoveFromInstituteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userLoginCheck">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userLoginCheckRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userLoginCheckResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionChangeByUserId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionChangeByUserIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionChangeByUserIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseGetByIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseGetByIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseGetByIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentIdsByotherMarking">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentIdsByotherMarkingRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentIdsByotherMarkingResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instituteBookListByInstituteId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instituteBookListByInstituteIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instituteBookListByInstituteIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseSave">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseSaveRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseSaveResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adminRegisterToInstitute">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="adminRegisterToInstituteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="adminRegisterToInstituteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userEditPasswordByRandomCode">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userEditPasswordByRandomCodeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userEditPasswordByRandomCodeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookDistributionRemove">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="bookDistributionRemoveRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="bookDistributionRemoveResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersByUserIdSectionId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersByUserIdSectionIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersByUserIdSectionIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionInfoByIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionInfoByIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionInfoByIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userLoginAsAdminCheck">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userLoginAsAdminCheckRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userLoginAsAdminCheckResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionIdsByUserIdCreate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionIdsByUserIdCreateRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionIdsByUserIdCreateResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersByUsername">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersByUsernameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersByUsernameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instructorSaveToInstitute">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instructorSaveToInstituteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instructorSaveToInstituteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instituteIdsMyList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instituteIdsMyListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instituteIdsMyListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userLoginQQ">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userLoginQQRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userLoginQQResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentRStudent">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentRStudentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentRStudentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentByIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentByIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentByIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionIdsBySectionName">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionIdsBySectionNameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionIdsBySectionNameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookIdsByInstituteUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="bookIdsByInstituteUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="bookIdsByInstituteUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseUpdate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseUpdateRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseUpdateResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iuIdsAdminByInstituteId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="iuIdsAdminByInstituteIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="iuIdsAdminByInstituteIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetAllList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseIdsGetAllListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseIdsGetAllListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userSaveRandomCode">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userSaveRandomCodeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userSaveRandomCodeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetMyCreateList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseIdsGetMyCreateListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseIdsGetMyCreateListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instituteIdsMyManageList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instituteIdsMyManageListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instituteIdsMyManageListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetAllListByCourseName">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseIdsGetAllListByCourseNameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseIdsGetAllListByCourseNameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionJoinByNumber">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionJoinByNumberRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionJoinByNumberResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersAdminByInstituteId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersAdminByInstituteIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersAdminByInstituteIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookRemoveDistributionInstituteUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="bookRemoveDistributionInstituteUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="bookRemoveDistributionInstituteUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionJoinByCourse">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionJoinByCourseRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionJoinByCourseResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionBySectionNumber">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionBySectionNumberRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionBySectionNumberResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionExitByUserId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionExitByUserIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionExitByUserIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersIdsBySectionId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersIdsBySectionIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersIdsBySectionIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionIdsByCourseId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionIdsByCourseIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionIdsByCourseIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instituteIdsAllList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instituteIdsAllListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instituteIdsAllListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersInfoEdit">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersInfoEditRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersInfoEditResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adminSupperToInstitute">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="adminSupperToInstituteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="adminSupperToInstituteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iuIdsInstructorByInstituteId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="iuIdsInstructorByInstituteIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="iuIdsInstructorByInstituteIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentReportBySectionAssignmentIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentReportBySectionAssignmentIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentReportBySectionAssignmentIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userUserSectionManage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userUserSectionManageRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userUserSectionManageResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentIdsByStructureId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentIdsByStructureIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentIdsByStructureIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionDetailByIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionDetailByIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionDetailByIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userIdsBySection">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userIdsBySectionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userIdsBySectionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseExistByUserId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseExistByUserIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseExistByUserIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionJoinByNumberPassword">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionJoinByNumberPasswordRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionJoinByNumberPasswordResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersByIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersByIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersByIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentRInstructor">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentRInstructorRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentRInstructorResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionIdsByUserNameCreate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionIdsByUserNameCreateRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionIdsByUserNameCreateResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionPasswordFlag">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionPasswordFlagRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionPasswordFlagResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionByMyInCourseIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionByMyInCourseIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionByMyInCourseIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersByUserIdBookId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersByUserIdBookIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersByUserIdBookIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userRegister">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userRegisterRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userRegisterResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="instructorRegisterToInstitute">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="instructorRegisterToInstituteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="instructorRegisterToInstituteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userIdsBySectionConditions">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userIdsBySectionConditionsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userIdsBySectionConditionsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookIdsByInstitute">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="bookIdsByInstituteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="bookIdsByInstituteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersDisableFromInstitute">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersDisableFromInstituteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersDisableFromInstituteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetCourseName">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseIdsGetCourseNameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseIdsGetCourseNameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adminSupperIsExist">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="adminSupperIsExistRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="adminSupperIsExistResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uuSectionListBySectionId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="uuSectionListBySectionIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="uuSectionListBySectionIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseRemove">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseRemoveRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseRemoveResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignmentReportByOtherAssignmentIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="assignmentReportByOtherAssignmentIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="assignmentReportByOtherAssignmentIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usFlagUpdate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usFlagUpdateRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usFlagUpdateResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="courseIdsGetMyList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="courseIdsGetMyListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="courseIdsGetMyListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userEditPasswordByOldPassword">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userEditPasswordByOldPasswordRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userEditPasswordByOldPasswordResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userIdsByUsername">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userIdsByUsernameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userIdsByUsernameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userIdSuperAdminByInsttituteId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userIdSuperAdminByInsttituteIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userIdSuperAdminByInsttituteIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionRoleChangeByUserId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionRoleChangeByUserIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionRoleChangeByUserIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookDistributionInstitute">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="bookDistributionInstituteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="bookDistributionInstituteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uuSectionCompleted">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="uuSectionCompletedRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="uuSectionCompletedResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionByMyInCourse">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionByMyInCourseRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionByMyInCourseResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionIdsByFullNameCreate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionIdsByFullNameCreateRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionIdsByFullNameCreateResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sectionSave">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sectionSaveRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sectionSaveResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usersExist">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="usersExistRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="usersExistResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userSectionByUserIds">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userSectionByUserIdsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userSectionByUserIdsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClientSystemWebService">
+    <wsdl:port name="ClientSystemWebServiceHttpPort" binding="tns:ClientSystemWebServiceHttpBinding">
+      <wsdlsoap:address location="http://192.168.0.188:8080/acepherics/service/ClientSystemWebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

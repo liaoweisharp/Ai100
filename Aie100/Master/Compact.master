@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Compact.master.cs" Inherits="Master_Compact" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <%--<script src="../Scripts/jquery-1.10.2.min.js?version=1127" type="text/javascript"></script>--%>
+    <link href="../Styles/master.css?version=1127" rel="stylesheet" type="text/css" />
+    <link href="../Styles/Base.css?version=1127" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+        <tr>
+            <td id="tdBox" valign="top">
+                <form id="form1" runat="server">
+                    <div class="conbox top_bg">
+                    </div>
+                    <div class="conbox">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td valign="bottom" style="height: 100px">
+                <div style="margin:0 auto; width:800px; clear:both;">
+                    <div class="conbox">
+                        <div class="login_ft_nr"><p class="copyright">版权所有：爱易佰网络教育科技&nbsp;&nbsp;www.aie100.com&nbsp;&nbsp;川ICP备12029833号</p></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

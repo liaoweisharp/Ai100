@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Master_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .master .master_header{
+            background-color:rgb(83,83,83);
+            color:#fff;
+            padding:10px;
+            text-align:right;
+        }
+
+        .master .master_content{
+            margin:10px 0px;
+        }
+
+        .master .master_footer{
+            text-align:center;
+            font-size:13px;
+        }
+
+        .master .master_header ul{
+            list-style:none
+        }
+
+        .master .master_header ul li{
+            float:left;
+            margin-left:12px;
+        }
+
+        .master .master_header ul li:hover{
+           background-color:rgb(0,128,0);
+           cursor:pointer
+        }
+
+        .master .master_header ul li img{
+            vertical-align:middle;
+            margin-right:5px;
+        }
+
+        .master .master_header ul li div{
+            margin:5px;
+        }
+         .master .master_header ul li div.master_more{
+             position:absolute;
+             background-color:rgb(0,128,0);
+             color:#fff;
+             margin-left:0px;
+             margin-top:0px;
+             display:none
+         }
+        .master .master_header ul li div.master_more div:hover{
+            background-color:rgb(52,73,94);
+            color:#fff;
+        }
+
+    </style>
+    <link href="../Styles/comm.css?version=1127" rel="stylesheet" />
+    <script type="text/javascript" src="<%=ResolveUrl("../Scripts/Pages/Master.js?version=1127")%>"></script>
+    
+    <%--    <script type="text/javascript">
+        $(function () {
+            var $master_divMore = $("div.master_more");
+            var $master_liMore = $("#master_limore");
+
+            $master_divMore.css({ width: $master_divMore.parent().width() + "px" })
+            $master_liMore.click(function () {
+                $master_divMore.slideDown();
+            });
+           
+            $master_liMore.mouseleave(function () {
+                $master_divMore.slideUp();
+            })
+          
+            $("#master_tlcenter").click(function () {
+                var url = $(this).find("span[location]").attr("location");
+                location.href = url;
+            });
+        })
+       
+    </script>--%>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="w1240">
+    <form id="form1" runat="server">
+        <div class="master">
+            <div class="master_header">
+                <div class="f_l">
+                    <img alt="" src="../Images/logo_new.png"/>
+                </div> 
+                 <div class="f_r">
+                     <ul>
+                         <li><div onclick="location.href='../Course/MyCourse.aspx'"><img alt="" src="../Images/mycourse.png" />我的课程</div></li>
+                         <li id="master_litlcenter"><div id="master_tlcenter"><img alt="" src="../Images/studycenter.png" /><span runat="server" id="spTLcenter">...</span></div></li>
+                         <li id="master_liefficiency"><div><img alt="" src="../Images/efficiency.png" /><span runat="server" id="spEfficiency">效率排行榜</span></div> </li>
+                         <%--  <li><div><img alt="" src="../Images/studyrecomd.png" />学习推荐</div></li>
+                         <li><div><img alt="" src="../Images/message.png" />消息</div></li>
+                      <li><div><img alt="" src="../Images/fudaoche.png" />辅导车</div></li>
+                         <li><div><img alt="" src="../Images/fudaoshi.png" />辅导室</div></li>
+                         <li><div><img alt="" src="../Images/favorites.png" />收藏夹</div></li>
+                         <li><div><img alt="" src="../Images/note.png" />笔记本</div></li>--%>
+                         <li id="master_libianshen" runat="server" visible="false"><div><img alt="" src="../Images/bianshen.png" />变身</div></li>
+                         <li id="master_limore">
+                             <div>&nbsp;<img alt="" src="../Images/male.png" style="width:25px;"/>&nbsp;</div>
+                             <div class="master_more" ><div>&nbsp;设置&nbsp;</div><div>&nbsp;帮助&nbsp;</div><div onclick="location.href='../Default.aspx?signout=1'">&nbsp;退出&nbsp;</div></div>
+                         </li>
+                     </ul>
+                    
+                </div>
+                <div class="c_b"></div>
+            </div>
+            <div class="master_content"> 
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="master_footer">
+                版权所有：爱易佰网络教育科技&nbsp;&nbsp;www.aie100.com&nbsp;&nbsp;川ICP备12029833号
+            </div>
+        </div>
+    </form>
+</body>
+</html>

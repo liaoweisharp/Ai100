@@ -1,0 +1,70 @@
+﻿body
+{
+    font-size: 13px;
+}
+.per_contentbox
+{
+    width: 100%;
+    border: 1px solid #bed7f5;
+    border-collapse:collapse
+}
+
+.per_contentbox td
+{
+    border: 1px solid #bed7f5;
+}
+
+.per_userbox
+{
+    width: 100%;
+    border: 1px solid #e6e7e7;
+    border-collapse:collapse
+}
+
+.per_userbox tr.lightblue
+{
+    background-color: #f3f8fe;
+}
+
+.per_userbox tr.hover
+{
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.per_userbox tr.selected
+{
+    background-color: #94c80b;
+    color: #fff;
+    cursor: default;
+}
+
+.per_userbox tr.nodata
+{
+    color: #7d7d7d;
+    text-align: center;
+}
+
+.per_userbox td
+{
+    border: 0px solid #e6e7e7;
+    height: 24px;
+}
+
+.per_title
+{
+    background-color:#eff0f1; 
+    border: 1px solid #e6e7e7;    
+    height:25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.per_title_blue
+{
+    background-color:#e3f6ff; 
+    /*border: 1px solid #e6e7e7;*/    
+    height:25px;
+    font-weight: bold;
+    text-align: center;
+}

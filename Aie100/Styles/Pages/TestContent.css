@@ -1,0 +1,179 @@
+﻿input{
+    border:0px;
+}
+
+.testcontent{
+    margin:0px auto;
+
+}
+
+.testcontent .head{
+    padding:10px 0px;
+    text-align:center;
+    background-color:rgb(42, 140, 37);
+    line-height:35px;
+    color:#fff;
+    top:0px;
+    position:fixed
+}
+
+.testcontent .head .title{
+    font-size:30px;
+    overflow: hidden; 
+    height: 35px;
+}
+
+.testcontent .head .tc_button{
+    border: 0px;
+    /*background: url(../../Images/login_buthhh.png) no-repeat 0 0;*/
+    background-color:rgb(231,232,155);
+    cursor:pointer;
+    height: 30px;
+    width: 75px;
+    font-weight: bold;
+    color: #444444;
+}
+
+.testcontent .head .tc_button_disabled{
+    border: 0px;
+    background-color:rgb(240,240,240);
+    height: 30px;
+    width: 75px;
+    font-weight: bold;
+    color: rgb(109,109,109);
+}
+
+.testcontent .head .tc_button:hover{
+    background-color:rgb(215,232,200);
+    border:2px solid rgb(255,255,153)
+}
+
+.testcontent .head .toolbar{
+    width:335px;
+    margin:5px auto;
+}
+
+
+.testcontent .toolbtn{
+    width:90px;
+    margin:0px 16px;
+}
+
+.testcontent .questions{
+    padding:5px;
+    height:100%;
+    line-height:25px;
+    /*width:750px*/
+}
+.testcontent .right_area{
+    width:250px;
+    float:right;
+    padding:5px;
+    background-color:rgb(215,232,200);
+}
+
+.testcontent .right_area .remaintime{
+    text-align:center;
+}
+.testcontent .right_area .remaintime .timer{
+    border:1px solid #888;
+    padding:5px 10px;
+    width:auto;
+    margin:0px auto;
+    display:inline-block;
+    background-color:rgb(231,232,155);
+    margin:5px;
+}
+
+.testcontent .right_area .mark{
+    text-align:center;
+    margin:5px
+}
+
+.testcontent .right_area .mark_content{
+    display:inline-block;
+}
+
+.testcontent  .mark_bg_finished
+{
+    background: rgb(148, 188, 57);
+    border:1px solid rgb(0,128,0);
+    width:16px;
+    height:16px;
+    margin:0px auto;
+}
+        
+.testcontent .mark_bg_marked
+{
+    background: rgb(255,255,153);
+    border:1px solid rgb(0,128,0);
+    width:16px;
+    height:16px;
+    margin:0px auto;
+}
+        
+.testcontent .mark_bg_current
+{
+    background-color: rgb(59,209,249);
+    border:1px solid rgb(0,128,0);
+    width:16px;
+    height:16px;
+    margin:0px auto;
+}
+.testcontent .mark_bg_unfinished
+{
+    background: #fff;
+    border:1px solid rgb(0,128,0);
+    width:16px;
+    height:16px;
+    margin:0px auto;
+}
+.testcontent .finished_area:hover,.unfinished_area:hover{
+    background-color:rgb(227, 239, 245);
+    cursor:pointer
+
+}
+.testcontent .zg_tester_answer{
+    border:1px solid #f5eeee
+}
+
+
+.testcontent .zg_tester_answer2{
+    border:1px outset #888;
+    margin-bottom:5px;
+    padding:5px
+
+}
+
+.testcontent .zg_tester_answer:hover{
+    background-color:rgb(227, 239, 245);
+    cursor:text;
+   
+}
+
+.testcontent .tr_kgt:hover{
+    background-color:rgb(227, 239, 245);
+}
+
+.aie_editor_mode {
+    display:none
+}
+
+.testcontent .correct_answerinfo{
+    background-color:rgb(227, 239, 245);
+    padding:5px;
+}
+
+
+.testcontent .correct_answerinfo .pfen{
+    margin-left:200px
+}
+
+.testcontent .correct_answerinfo label{
+    cursor:pointer
+}
+
+.testcontent .correct_answerinfo input.score{
+    width:50px;
+    text-align:center;
+}

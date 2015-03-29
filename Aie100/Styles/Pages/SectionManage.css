@@ -1,0 +1,67 @@
+﻿.sectionmanage{}
+
+.sectionmanage table{
+    border-collapse:collapse;
+    width:100%;
+    text-align:center;
+    border:1px solid rgb(174,174,174);
+    line-height:23px;
+}
+
+.sectionmanage table .tr:hover{
+    background-color:rgb(230,230,230);
+
+}
+
+.sectionmanage table .tr0{
+     background-color:rgb(41,115,149);
+    color:#fff;
+    line-height:25px;
+}
+
+.sectionmanage table th,td{
+    border:1px solid rgb(174,174,174);
+}
+
+.sectionmanage table td.action img{
+    margin-left:5px;
+    cursor:pointer
+}
+
+.sectionmanage .w1{
+    width:200px;
+}
+
+.sectionmanage .p_t1{
+    padding-top:5px;
+}
+
+.sectionmanage .v_s_info{
+    width:230px;
+}
+
+.sectionmanage .hr{
+    border-bottom:1px dotted rgb(174,174,174);padding-bottom:5px;clear:both;
+}
+
+.sectionmanage .nodata{
+    padding-left:5px;
+    color:gray;
+}
+
+.sectionmanage .toolbar{
+    padding:12px 10px;
+    background-color:rgb(42,140,37);
+}
+
+.sectionmanage .toolbar .sp_sectionmanage{
+    color:#fff;
+    margin-left:20px;
+    cursor:pointer
+}
+
+.sectionmanage .toolbar .sp_sectionmanage img{
+    height:16px; 
+    vertical-align:middle;
+    margin-left:5px;
+}

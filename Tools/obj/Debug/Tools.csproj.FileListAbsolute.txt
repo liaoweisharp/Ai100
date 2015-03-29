@@ -1,0 +1,14 @@
+D:\myproject\aie100New\Tools\bin\Debug\Tools.dll
+D:\myproject\aie100New\Tools\bin\Debug\Tools.pdb
+D:\myproject\aie100New\Tools\obj\Debug\Tools.dll
+D:\myproject\aie100New\Tools\obj\Debug\Tools.pdb
+D:\myproject\aie100WebService\Tools\bin\Debug\Tools.dll
+D:\myproject\aie100WebService\Tools\bin\Debug\Tools.pdb
+D:\myproject\aie100WebService\Tools\obj\Debug\Tools.dll
+D:\myproject\aie100WebService\Tools\obj\Debug\Tools.pdb
+D:\myproject\Aie100New\Tools\obj\Debug\Tools.csprojResolveAssemblyReference.cache
+D:\Project\Aie100New\Tools\bin\Debug\Tools.dll
+D:\Project\Aie100New\Tools\bin\Debug\Tools.pdb
+D:\Project\Aie100New\Tools\obj\Debug\Tools.dll
+D:\Project\Aie100New\Tools\obj\Debug\Tools.pdb
+D:\Project\Aie100New\Tools\obj\Debug\Tools.csprojResolveAssemblyReference.cache

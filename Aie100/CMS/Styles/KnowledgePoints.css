@@ -1,0 +1,63 @@
+﻿ul{ list-style-type:none; margin:0px; padding:0px;}
+.c_ore{color:#bd752d;}
+.c_blue{color:#005f9c;}
+
+.divLoInfo
+{
+	display:none;
+	position:fixed;
+	top:15%;
+	left:15%;
+	padding:4px;
+	z-index:101;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size:11pt;
+	width:1000px;
+	height:570px;
+	border: 1px solid #B2D0EC;
+	background-color:#fff;
+}
+
+.dvBaseInfo
+{
+    font-size:11pt;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+.dvBaseInfo td.fname
+{
+    width: 160px;
+	text-align: right;
+}
+
+.dvBaseInfo input.inp
+{
+    width: 300px;
+}
+
+.dvBaseInfo select.inp
+{
+    width: 305px;
+}
+
+.dvDescription
+{
+}
+
+.dvDescription .loDetails
+{
+	border: 1px solid #B2D0EC;width:970px;height:330px;cursor:text;	overflow:auto;padding:5px;
+}
+
+.dvDescription .loDetails:hover
+{
+	background-color:rgb(242,240,253);	
+}
+
+.but_blue_60{background:url(../../images/img.gif) no-repeat 0 -150px; width:60px; font-size:11px; color:#4972bd; line-height:22px; height:22px; padding:0; margin:0; border:0; cursor:pointer; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
+.mg_r10{margin-right:10px;}
+
+.ui-widget
+{
+    font-size: 0.8em;
+}

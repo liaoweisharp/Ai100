@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="home.master.cs" Inherits="CMS_Master_home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>爱易佰-内容管理系统</title>
+    <link href="../Styles/cms.css?version=1127" rel="stylesheet" type="text/css" />
+    <link href="../Styles/cms_header.css?version=1127" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src='<%=ResolveUrl("../../Plugins/dynatree/jquery/jquery.min.js?version=1127") %>'></script>  <!--jQuery v1.7.1-->
+    <%--<script type="text/javascript" src='<%=ResolveUrl("../../Scripts/jquery-1.4.1.min.js?version=1127") %>'></script>--%>
+
+    <link href="../../Plugins/jBox/Skins/Default/jbox.css?version=1127" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src='<%=ResolveUrl("../../Plugins/JQuery/plugins/jBox/jquery.jBox-2.3.min.js?version=1127") %>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("../../Plugins/JQuery/plugins/jBox/i18n/jquery.jBox-us-en.js?version=1127") %>'></script>
+    <link href="../../Plugins/showLoading/css/showLoading.css?version=1127" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src='<%=ResolveUrl("../../Plugins/showLoading/js/jquery.showLoading.min.js?version=1127") %>'></script>
+
+    <script type="text/javascript" src='<%=ResolveUrl("../../Scripts/jquery.ajax.js?version=1127") %>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("../../Scripts/comm.js?version=1127") %>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("../../Scripts/String.js?version=1127") %>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("../../Scripts/Array.js?version=1127") %>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("../Scripts/cms_header.js?version=1127") %>'></script>
+    <script type="text/javascript">
+        document.onkeydown = function (e) {
+            e = e || event;
+            if (e.keyCode == 8) {   //屏蔽退格删除键
+                o = e.srcElement || e.target;
+                if (o.type != "text" && o.type != "textarea") {
+                    return false;
+                }
+            }
+        }
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="cms_header">
+        <div id="cms_login_info">
+            <div id="cms_logo"></div>
+            <div id="cms_operate">
+                <table>
+                    <tr>
+                        <td  style="display:none"><img src="./Images/header/home.png" /></td><td class="cms_h_t1"  style="display:none"><a href="HomePage_New.aspx">主页</a></td>
+                        <td style="padding-left:15px"><img src="./Images/homepage/yonghu.png" /></td><td id="spUser" class="cms_h_t1">&nbsp;</td>
+                        <td style="padding-left:15px"><img src="./Images/homepage/quit.png" /></td><td id="spLogout" class="cms_h_t1"><a id="A1" runat="server" href="~/Default.aspx?signout=1">退出</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="cms_mainmenus"></div>
+        <div id="cms_submenus"></div>
+    </div>
+    <div id="dvCmsMain">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

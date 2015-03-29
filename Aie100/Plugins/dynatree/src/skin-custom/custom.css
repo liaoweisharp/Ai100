@@ -1,0 +1,20 @@
+/*******************************************************************************
+ * Sample for a Dynatree custom stylesheet.
+ * This is expected to be included after the standard ui.dynatree.css, thus
+ * overridung the defaults. 
+ */
+.dynatree-has-children span.dynatree-icon
+{
+    background-position: 0 0;
+	background-image: url("page.gif");
+}
+
+.dynatree-ico-cf span.dynatree-icon  /* Collapsed Folder */
+{
+	background-image: url("books_close.gif");
+}
+
+.dynatree-ico-ef span.dynatree-icon  /* Expanded Folder */
+{
+	background-image: url("books_open.gif");
+}

@@ -1,0 +1,1275 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LaTeX Equation Editor for the Internet</title>
+    <meta content="Copyright CodeCogs 2007-2008&#10; Written by Will Bateman.&#10;&#9;&#10; GNU General Public License Agreement&#10; Copyright (C) 2004-2008 CodeCogs, Zyba Ltd, Broadwood, Holford, TA5 1DU, England.&#10; This program is free software; you can redistribute it and/or modify it under&#10; the terms of the GNU General Public License as published by Free Software Foundation, &#10; either version 3 of the License, or (at your option) any later version. &#10; You must retain a copy of this licence in all copies.&#10; &#10; This program is distributed in the hope that it will be useful, but WITHOUT ANY&#10; WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A&#10; PARTICULAR PURPOSE. See the GNU General Public License for more details.&#10; &#10; See the GNU General Public License for more details.&#10; You should have received a copy of the GNU General Public License&#10; along with this program.  If not, see <http://www.gnu.org/licenses/>."
+        name="copyright">
+    <meta content="index, nofollow" name="robots">
+    <meta content="A web-based LaTeX equation editor that generates graphical equations (gif, png, swf, pdf). It also provides the HTML code for directly embedding the equations into any website, forum or blog. Images may also be used directly within your offline documentation. Open source and XHTML compliant."
+        name="description">
+    <meta content="LaTeX, equation editor, open source, equations, mimetex, pdf, gif, png, swf, instantly rendered, preview, free"
+        name="keywords" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+    BODY {
+	    PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif
+    }
+    P {
+	    MARGIN: 2px 0px
+    }
+    #language {
+	    FONT-SIZE: 1px; LEFT: 0px; WIDTH: 32px; LINE-HEIGHT: 1px; POSITION: absolute
+    }
+    #language IMG {
+	    PADDING-RIGHT: 1px; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; MARGIN: 0px; WIDTH: 30px; PADDING-TOP: 1px; HEIGHT: 17px
+    }
+    #hover {
+	    BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #999999 1px solid; DISPLAY: none; PADDING-LEFT: 2px; Z-INDEX: 10; PADDING-BOTTOM: 2px; BORDER-LEFT: #999999 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #999999 1px solid; POSITION: absolute; BACKGROUND-COLOR: #ffffcc
+    }
+    .yellowbox {
+	    BORDER-RIGHT: #dddddd 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #dddddd 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 5px auto; BORDER-LEFT: #dddddd 1px solid; WIDTH: 450px; PADDING-TOP: 5px; BORDER-BOTTOM: #dddddd 1px solid; BACKGROUND-COLOR: #ffffcc
+    }
+    .center {
+	    MARGIN: 0px auto; TEXT-ALIGN: center
+    }
+    .top {
+	    BORDER-RIGHT: #9a9a9a 1px solid; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; MARGIN: 0px auto; WIDTH: 95%; PADDING-TOP: 2px; BACKGROUND-COLOR: #eeeeee
+    }
+    .bottom {
+	    BORDER-BOTTOM: #9a9a9a 1px solid
+    }
+    #toolbar_wrapper {
+	    MARGIN: 0px auto; WIDTH: 530px; TEXT-ALIGN: left
+    }
+    #toolbar {
+	    WIDTH: 530px; PADDING-TOP: 2px; POSITION: absolute
+    }
+    #toolbar_space {
+	    BORDER-RIGHT: #9a9a9a 1px solid; MARGIN: 0px auto; WIDTH: 95%; HEIGHT: 36px; BACKGROUND-COLOR: #eeeeee
+    }
+    .panel {
+	    PADDING-RIGHT: 3px; PADDING-LEFT: 3px; Z-INDEX: 10; FLOAT: left; PADDING-BOTTOM: 0px; OVERFLOW: hidden; PADDING-TOP: 0px; HEIGHT: 24px
+    }
+    .panel2 {
+	    PADDING-RIGHT: 3px; PADDING-LEFT: 3px; Z-INDEX: 10; FLOAT: left; PADDING-BOTTOM: 0px; OVERFLOW: hidden; PADDING-TOP: 0px; HEIGHT: 30px
+    }
+    #latex_formula {
+	    HEIGHT: 100px
+    }
+    #equationcomment {
+	    MARGIN: 10px
+    }
+    #equationview {
+	    MARGIN: 10px
+    }
+    #footer {
+	    WIDTH: 100%; BOTTOM: 2px; POSITION: absolute; TEXT-ALIGN: center
+    }
+    FORM {
+	    BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+    }
+    A {
+	    COLOR: #280092
+    }
+    A:visited {
+	    COLOR: #280092
+    }
+    A:hover {
+	    COLOR: #ff6501; TEXT-DECORATION: underline
+    }
+    A:hover {
+	    COLOR: #ff6501; TEXT-DECORATION: underline
+    }
+    A IMG {
+	    BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+    }
+    SELECT {
+	    BORDER-RIGHT: #8fb6bd 1px solid; BORDER-TOP: #8fb6bd 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #8fb6bd 1px solid; BORDER-BOTTOM: #8fb6bd 1px solid; FONT-FAMILY: "lucida grande", tahoma, verdana, arial, sans-sarif; HEIGHT: 18px; BACKGROUND-COLOR: #ffffff
+    }
+    TEXTAREA {
+	    BORDER-RIGHT: #8fb6bd 1px solid; BORDER-TOP: #8fb6bd 1px solid; BORDER-LEFT: #8fb6bd 1px solid; WIDTH: 95%; BORDER-BOTTOM: #8fb6bd 1px solid
+    }
+    TEXTAREA:unknown {
+	    BACKGROUND-COLOR: #ffffcc
+    }
+    .bluebutton {
+	    BORDER-RIGHT: #0e1f5b 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #d9dfea 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 11px; PADDING-BOTTOM: 1px; MARGIN: 0px; BORDER-LEFT: #d9dfea 1px solid; CURSOR: pointer; COLOR: #ffffff; PADDING-TOP: 1px; BORDER-BOTTOM: #0e1f5b 1px solid; FONT-FAMILY: "lucida grande", tahoma, verdana, arial, sans-serif; TEXT-ALIGN: center
+    }
+    .lightbluebutton {
+	    BORDER-RIGHT: #0e1f5b 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #d9dfea 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 11px; PADDING-BOTTOM: 1px; MARGIN: 0px; BORDER-LEFT: #d9dfea 1px solid; CURSOR: pointer; COLOR: #ffffff; PADDING-TOP: 1px; BORDER-BOTTOM: #0e1f5b 1px solid; FONT-FAMILY: "lucida grande", tahoma, verdana, arial, sans-serif; TEXT-ALIGN: center
+    }
+    .greybutton {
+	    BORDER-RIGHT: #0e1f5b 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #d9dfea 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 11px; PADDING-BOTTOM: 1px; MARGIN: 0px; BORDER-LEFT: #d9dfea 1px solid; CURSOR: pointer; COLOR: #ffffff; PADDING-TOP: 1px; BORDER-BOTTOM: #0e1f5b 1px solid; FONT-FAMILY: "lucida grande", tahoma, verdana, arial, sans-serif; TEXT-ALIGN: center
+    }
+    .lightbluebutton {
+	    BACKGROUND-COLOR: #4068ae
+    }
+    .bluebutton {
+	    BACKGROUND-COLOR: #003794
+    }
+    .greybutton {
+	    BACKGROUND-COLOR: #888888
+    }
+    .orange {
+	    COLOR: #ff6600
+    }
+
+    </style>
+
+    <script type="text/javascript">
+        /**********************************************[eq_fck.js]*********************************************/
+        var oEditor = window.opener;
+        var FCKEquation = null;
+        var eSelected = null;
+
+        // Loads the equations from the fckeditor, or create a default equations for an example
+        function LoadSelected() {
+            // Look for fckeditor
+            if (oEditor && typeof (oEditor.FCKEquation) != 'undefined') {
+                FCKEquation = oEditor.FCKEquation;
+                if (FCKEquation)
+                    eSelected = oEditor.FCKSelection.GetSelectedElement();
+
+                if (eSelected && eSelected.tagName == 'IMG' && eSelected._fckequation) {
+                    var comm = unescape(eSelected._fckequation);
+                    var parts = comm.match(/\\f([\[\$])(.*?)\\f[\]\$]/);
+
+                    document.getElementById('latex_formula').value = parts[2];
+
+                    if (parts[1] == '[')
+                        document.getElementById('eqstyle2').checked = true;
+                    else
+                        document.getElementById('eqstyle1').checked = true;
+                    renderEqn(null);
+                }
+                else {
+                    // Put any default equations in the line below...
+                    document.getElementById('latex_formula').value = '';
+                    eSelected == null;
+                }
+            }
+        }
+
+        /**********************************************[latex_editor.js]*********************************************/
+        var changed = false;
+        var orgtxt = '';
+        //var EQUATION_ENGINE='http://codecogs.izyba.com';
+        var EQUATION_ENGINE = '--';
+
+        //返回参数公式图片的URL
+        function getEmatxURL() {
+            //return "http://24.106.156.66:8086/cgi-bin/ematx.cgi";
+            return "http://www.aie100.com:8080/cgi-bin/ematx.cgi";
+            //return "http://latex.codecogs.com/gif.latex";
+            //return "http://www.forkosh.com/mimetex.cgi";
+
+        }
+
+        // Clears the main editor window
+        function cleartext() {
+            var id = document.getElementById('latex_formula'); id.value = ""; id.focus();
+            changed = false;
+            //document.getElementById('copybutton').className='greybutton'; 
+            document.getElementById('renderbutton').className = 'greybutton';
+            document.getElementById('clipboardbutton').className = 'greybutton';
+        }
+
+        function textchanged() {
+            var txt = getEquationStr();
+            if (txt != orgtxt) {
+                orgtxt = txt;
+                //document.getElementById('copybutton').className='lightbluebutton'; 
+                document.getElementById('clipboardbutton').className = 'lightbluebutton';
+                document.getElementById('renderbutton').className = 'bluebutton';
+                changed = true;
+            }
+        }
+
+        function formatchanged() {
+            var action = false;
+            var format = document.getElementById('format');
+            if (format) {
+                var type = format.value;
+                switch (type) {
+                    case 'gif': action = false; break;
+                    case 'png': action = false; break;
+                    case 'pdf': action = true; break;
+                    case 'swf': action = true; break;
+                }
+            }
+            document.getElementById('dpi').disabled = action;
+            document.getElementById('dpi').readonly = action;
+            changed = true;
+            renderEqn();
+        }
+
+        // Tries to inserts text at the cursor position of text area
+        //  wind = document                <- when inserting text into the current equation editor box  
+        //  wind = window.opener.document  <- when inserting text into a parent window box
+        function addText(wind, textbox, txt) {
+            myField = wind.getElementById(textbox);
+            // IE 
+            if (wind.selection) {
+                myField.focus();
+                sel = wind.selection.createRange();
+                sel.text = txt;
+            }
+            // MOZILLA
+            else {
+                var scrolly = myField.scrollTop;
+                if (myField.selectionStart || myField.selectionStart == '0') {
+                    var startPos = myField.selectionStart;
+                    var endPos = myField.selectionEnd;
+                    var cursorPos = startPos + txt.length;
+                    myField.value = myField.value.substring(0, startPos) + txt
+					+ myField.value.substring(endPos, myField.value.length);
+                    pos = txt.length + endPos - startPos;
+
+                    myField.selectionStart = cursorPos;
+                    myField.selectionEnd = cursorPos;
+
+                    myField.focus();
+                    myField.setSelectionRange(startPos + pos, startPos + pos);
+                }
+                else myField.value += txt;
+
+                myField.scrollTop = scrolly;
+            }
+        }
+
+        function insertText(txt, pos, inspos) {
+            var insert_pos = (inspos == null) ? pos : inspos;
+            textchanged()
+
+            // pos = optional parameter defining where in inserted text to put the caret
+            // if undefined put at end of inserted text
+            // if pos=1000 then using style options and move to just before final }
+            // startPos = final position of caret in complete text
+            if (pos == 1000) { pos = txt.length - 1 };
+            if (pos == undefined) { txt += ' '; pos = txt.length; }; // always insert a space after
+
+            // my textarea is called latex_formula
+            myField = document.getElementById('latex_formula');
+            if (document.selection) {
+                // IE
+                myField.focus();
+                var sel = document.selection.createRange();
+                // find current caret position
+                var i = myField.value.length + 1;
+                theCaret = sel.duplicate();
+                while (theCaret.parentElement() == myField
+		&& theCaret.move("character", 1) == 1) --i;
+
+                // take account of line feeds
+                var startPos = i - myField.value.split('\n').length + 1;
+
+                if ((txt.substring(1, 5) == "left" || txt.substring(insert_pos - 1, insert_pos) == '{') && sel.text.length) {
+                    // allow highlighted text to be bracketed
+                    if (txt.substring(1, 5) == "left") ins_point = 7;
+                    else ins_point = insert_pos;
+
+                    if (inspos == null) pos = txt.length + sel.text.length + 1;
+                    else if (inspos < pos) pos += sel.text.length;
+
+                    sel.text = txt.substring(0, ins_point) + sel.text + txt.substr(ins_point);
+                } else { sel.text = txt; }
+                // put caret in correct position to start editing
+                var range = myField.createTextRange();
+                range.collapse(true);
+                range.moveEnd('character', startPos + pos);
+                range.moveStart('character', startPos + pos);
+                range.select();
+            }
+            else {
+                // MOZILLA
+                if (myField.selectionStart || myField.selectionStart == '0') {
+                    var startPos = myField.selectionStart;
+                    var endPos = myField.selectionEnd;
+                    var cursorPos = startPos + txt.length;
+                    if ((txt.substring(1, 5) == "left" || txt.substr(insert_pos - 1, 1) == '{') && endPos > startPos) {
+                        // allow highlighted text to be bracketed
+
+                        if (txt.substring(1, 5) == "left") ins_point = 7;
+                        else ins_point = insert_pos;
+
+                        if (inspos == null) pos = txt.length + endPos - startPos + 1;
+                        else if (inspos < pos) pos += endPos - startPos;
+
+                        txt = txt.substring(0, ins_point) + myField.value.substring(startPos, endPos) + txt.substr(ins_point);
+                    }
+                    myField.value = myField.value.substring(0, startPos) + txt + myField.value.substring(endPos, myField.value.length);
+
+                    myField.selectionStart = cursorPos;
+                    myField.selectionEnd = cursorPos;
+
+                    // put caret in correct position to start editing
+                    myField.focus();
+                    myField.setSelectionRange(startPos + pos, startPos + pos);
+                }
+                else myField.value += txt;
+            }
+            myField.focus();
+        }
+
+        /* ----------- Handle rendering example equation --------------------------- */
+
+        // Returns the complete string that describes this particular equation with font sizes etc.
+        function getEquationStr() {
+            var val = document.getElementById('latex_formula').value;
+            val = val.replace(/^\s+|\s+$/g, "");
+            val = val.replace(/\s+/g, " ");
+
+            var size = document.getElementById('fontsize');
+            if (size) {
+                var txt = size.options[size.selectedIndex].value;
+                if (txt != '') val = txt + ' ' + val;
+            }
+
+            //if(document.getElementById('compressed').checked) val='\\inline '+val; 
+
+            if (document.getElementById('dpi')) {
+                var dpi = document.getElementById('dpi').value;
+                if (dpi != '100') val = '\\' + dpi + 'dpi ' + val;
+            }
+
+            if (document.getElementById('bg')) { var bg = document.getElementById('bg').value; if (bg != 'transparent') val = '\\bg_' + bg + ' ' + val; }
+            return val;
+        }
+
+
+
+        /* Turns off the wait message, once equation is loaded */
+        var initmessage = true;
+        function processEquationChange() {
+            if (initmessage) initmessage = false;
+            else { var div = document.getElementById('equationcomment'); div.innerHTML = ""; }
+        }
+
+        // Triggers the rendering of the equations within the iframe
+        function renderEqn(callback) {
+            if (!changed) return;
+
+            /* First check we have a matching set of brackets */
+            var val = document.getElementById('latex_formula').value;
+            val = val.replace(/^\s+|\s+$/g, "");
+            if (val.length == 0) return;
+            var bracket = 0;
+            for (i = 0; i < val.length; i++) {
+                switch (val[i]) {
+                    case '{': bracket++; break;
+                    case '}': bracket--; break;
+                }
+            }
+
+            if (bracket == 0) {
+                /* Set render button to grey, since we're now rendering.. */
+                document.getElementById('renderbutton').className = 'greybutton';
+
+                var val = document.getElementById('latex_formula').value;
+
+                /* Add to history */
+                var sel = document.getElementById('history');
+                var j = sel.length;
+                sel.length = j + 1;
+                sel.options[j].text = val.substr(0, 15);
+                sel.options[j].value = val;
+                sel.options[j].title = val;
+
+                var img = document.getElementById('equationview');
+                val = getEquationStr();
+                sval = val.replace(/"/g, '\\"');
+
+                // Figure out the format
+                if (document.getElementById('format')) {
+                    var format_index = document.getElementById('format').selectedIndex;
+                    var format = document.getElementById('format').options[format_index].value;
+                } else { var format_index = 0; var format = 'gif'; }
+
+                switch (format_index) {
+                    case 0: // gif
+                    case 1: // png
+                        {
+                            var div = document.getElementById('equationcomment');
+                            div.innerHTML = "Rendering Equation <img src=\"../editor/imgs/latex/wait.gif\" width=\"13\" height =\"13\"/>";
+                            img.onload = processEquationChange;
+                            //img.src=EQUATION_ENGINE+'/'+format+'.latex?' + val;
+                            var strSrc = EQUATION_ENGINE + '/' + format + '.latex?' + val;
+                            strSrc = getEmatxURL() + '?' + strSrc.substring(strSrc.indexOf("?") + 1)
+                            img.src = strSrc;
+                            changed = false;
+                        } break;
+                    case 2: // pdf
+                        {
+                            //				img.onload = '';
+                            //				img.src='../editor/imgs/latex/pdf.jpg';
+                            //				document.getElementById('download').src='http://www.codecogs.com/pdf.latex?'+val;
+                            //				var div = document.getElementById('equationcomment');
+                            //				div.innerHTML = '<br/><a target="download" href="http://www.codecogs.com/pdf.latex?'+sval+'"><strong>Click here if the PDF does not downloading.</strong></a>';	
+                        } break;
+                    case 3: // swf
+                        {
+                            //				img.onload ='';
+                            //				img.src='../editor/imgs/latex/spacer.gif';
+                            //				var div = document.getElementById('equationcomment');
+                            //				AC_FL_RunContent('codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0','width', '600','height', '100','src', ('http://www.codecogs.com/swf.latex?'+val),'quality','high','pluginspage','http://www.macromedia.com/go/getflashplayer','align','top','scale','showall','wmode','window','devicefont','false','bgcolor','#ffffff','menu','true','allowFullScreen','true',
+                            //'movie', (EQUATION_ENGINE+'/swf.latex?'+val) ); 
+                            //			  changed=false;
+                        } break;
+                }
+            }
+            else {
+                var div = document.getElementById('equationcomment');
+                if (bracket < 0) div.innerHTML = "<br/><span class=\"orange\">You have more <strong>closed '}' brackets</strong> than open '{' brackets</span>";
+                else div.innerHTML = "<br/><span class=\"orange\">You have more <strong>open '{' brackets</strong> than closed '}' brackets</span>";
+            }
+        }
+
+
+        /* We don't want to render with every keystroke, so we delay this part 
+        This function will be called with each keystroke
+        - n is a tens of second unit
+        */
+        var auton = 0;
+        function renderCountdown() {
+            if (auton > 0)
+            { auton--; setTimeout('renderCountdown()', 100); }
+            else renderEqn(null);
+        }
+
+
+        function autorenderEqn(n) {
+            if (auton > 0 && n > 0) auton = n;
+            else { auton = n; renderCountdown(); }
+        }
+
+        /* The following code adds a favorite to the favorite drop down. 
+        To achieve this, we must update the users cookies */
+
+        function addfavorite(dropdown) {
+            text = document.getElementById('latex_formula').value;
+            var sel = document.getElementById(dropdown);
+            var num = sel.selectedIndex
+            if (num == 0 || !confirm("Click Yes to replace the current equation or 'Cancel' to add a new equation")) {
+                var name = prompt('Please enter a short name for this equation:', '')
+                if (name == null || name == '') name = text.substr(0, 15);
+                /* Add to favorite */
+                var j = sel.length;
+                sel.length = j + 1;
+                sel.options[j].text = name;
+                sel.options[j].value = text;
+                sel.options[j].title = text;
+                /* Make sure cookie name is unique to website */
+                document.cookie = "eq_" + escape(name.replace(/\+/g, "&plus;").replace(/\s/g, "&space;")) + "=" + escape(text.replace(/\+/g, "&plus;")) + "; path=/";
+            }
+            else {
+                sel.options[num].value = text;
+                sel.options[num].title = text;
+                /* Make sure cookie name is unique to website */
+                document.cookie = "eq_" + escape(name.replace(/\+/g, "&plus;").replace(/\s/g, "&space;")) + "=" + escape(text.replace(/\+/g, "&plus;")) + "; path=/";
+            }
+        }
+
+        function deletefavorite(dropdown) {
+            var sel = document.getElementById(dropdown);
+            var num = sel.selectedIndex
+            if (num > 0) {
+                name = sel.options[num].text;
+
+                var mydate = new Date();
+                mydate.setTime(mydate.getTime() - 1);
+                document.cookie = "eq_" + escape(name.replace(/\+/g, "&plus;").replace(/\s/g, "&space;")) + "=; expires=" + mydate.toGMTString() + "; path=/";
+                sel.options[num] = null;
+            }
+        }
+
+
+        /* Help to generate a Matrix */
+        // generate a set of aligned equations - thornahawk
+        // isNumbered: switches between numbered and not numbered equations
+        function makeEquationsMatrix(type, isNumbered, isConditional) {
+            if (isNumbered == undefined) isNumbered = false;
+            if (isConditional == undefined) isNumbered = false;
+
+            var eqns = "\\begin{" + type + ((isNumbered) ? "" : "*") + "}";
+            var eqi = "\n &" + ((isNumbered) ? " " : "= ") + ((isConditional) ? "\\text{ if } x=  " : "");
+            var eqEnd = "\n\\end{" + type + ((isNumbered) ? "" : "*") + "}";
+            var i = 0;
+
+            var dim = prompt('Enter the number of lines:', '');
+
+            if (dim != '' && dim != null) {
+                n = parseInt(dim);
+                if (!isNaN(n)) {
+                    for (i = 1; i <= n - 1; i++) eqns = eqns + (eqi + "\\\\ ");
+                    eqns = (eqns + eqi) + eqEnd;
+                    insertText(eqns, type.length + ((isNumbered) ? 0 : 1) + 9);
+                }
+            }
+        }
+
+        // generate an array of specified dimensions - thornahawk
+        // type: sets the type of array, e.g. pmatrix
+        function makeArrayMatrix(type, start, end) {
+            var matr = start + '\\begin{' + type + 'matrix}';
+            var row = "\n";
+            var mend = "\n\\end{" + type + "matrix}" + end;
+            var i = 0;
+            var dim = prompt('Enter the array dimensions separated by a comma (e.g. "2,3" for 2 rows and 3 columns):', '')
+
+            if (dim != '' && dim != null) {
+                dim = dim.split(',');
+                m = parseInt(dim[0]);
+                n = parseInt(dim[1]);
+
+                if (!isNaN(m) && !isNaN(n)) {
+                    for (i = 2; i <= n; i++) row = row + ' & ';
+                    for (i = 1; i <= m - 1; i++) matr = matr + row + '\\\\ ';
+
+                    matr = matr + row + mend;
+                    insertText(matr, type.length + start.length + 15);
+                }
+            }
+        }
+
+        function hover(elm, e) {
+            div = document.getElementById('hover');
+            //div.innerHTML='<img src="http://www.codecogs.com/gif.latex?\\200dpi '+elm.title+'"/>';
+            div.innerHTML = '<img src="' + getEmatxURL() + '?' + elm.title + '"/>';
+
+            if (document.all) { div.style.top = (event.clientY - 10) + 'px'; div.style.left = (event.clientX + 20) + 'px'; }
+            else { if (!e) var e = window.event; div.style.top = (e.pageY - 10) + 'px'; div.style.left = (e.pageX + 20) + 'px'; }
+            div.style.display = 'none'; // 'block';
+            elm.onmouseout = function () { document.getElementById('hover').style.display = 'none'; }
+        }
+
+
+        /* This script and many more are available free online at
+        The JavaScript Source!! http://javascript.internet.com
+        Created by: Turnea Iulian :: http://www.eurografic.ro */
+        function iObject() { this.i; return this; }
+
+        var myObject = new iObject();
+        myObject.i = 0;
+        var myObject2 = new iObject();
+        myObject2.i = 0;
+        store_text = new Array();
+
+        //store_text[0] store initial textarea value
+        store_text[0] = "";
+
+        function countclik(tag) {
+            var x = tag.value;
+            if (myObject.i == 0 || store_text[myObject.i] != x) {
+                myObject.i++;
+                var y = myObject.i;
+                store_text[y] = x;
+            }
+            myObject2.i = 0;
+            document.getElementById('redobutton').src = "../editor/imgs/latex/redo-x.gif";
+            document.getElementById('undobutton').src = "../editor/imgs/latex/undo.gif";
+        }
+
+        function undo(box) {
+            tag = document.getElementById(box);
+            if ((myObject2.i) < (myObject.i)) {
+                myObject2.i++;
+                if (myObject2.i == myObject.i) {
+                    document.getElementById('undobutton').src = "../editor/imgs/latex/undo-x.gif";
+                }
+                document.getElementById('redobutton').src = "../editor/imgs/latex/redo.gif";
+            } else {
+                alert("完成撤销操作");
+            }
+            var z = store_text.length;
+            z = z - myObject2.i;
+            if (store_text[z]) { tag.value = store_text[z]; }
+            else { tag.value = store_text[0]; }
+            tag.focus();
+        }
+
+        function redo(box) {
+            tag = document.getElementById(box);
+            if ((myObject2.i) > 1) {
+                myObject2.i--;
+                if (myObject2.i == 1) {
+                    document.getElementById('redobutton').src = "../editor/imgs/latex/redo-x.gif";
+                }
+                document.getElementById('undobutton').src = "../editor/imgs/latex/undo.gif";
+            } else {
+                alert("完成重做操作");
+            }
+            var z = store_text.length;
+            z = z - myObject2.i;
+            if (store_text[z]) { tag.value = store_text[z]; }
+            else { tag.value = store_text[0]; }
+            tag.focus();
+        }
+
+        function insertExpression() {
+            self.parent.parent.document.getElementById("hf_mathlatex").value = document.getElementById("equationview").outerHTML;
+            self.parent.parent.document.getElementById("btnInsertExpression").click();
+        }
+
+        function updateOpener(target, type) {
+            if (target != '') { // *** Traditional mode with plane HTML text box ***
+                var text;
+                if (type == 'phpBB') { // Create LaTeX string for insertion into phpBB forum
+                    text = getEquationStr();
+                    text = '[tex]' + text + '[/tex]\n';
+                }
+                else if (type == 'html') { // Create <img> tag for insertion into html
+                    text = getEquationStr();
+                    text = '<img src="' + EQUATION_ENGINE + '/gif.latex?' + escape(text) + '" />';
+                }
+                else { // Create LaTeX string for insertion into CodeCogs of DOxygen C/C++ markup language
+                    // Note size and 
+                    text = document.getElementById('latex_formula').value;
+                    var size = document.getElementById('fontsize');
+                    if (size && size.selectedIndex != 2)
+                        text = size.options[size.selectedIndex].value + ' ' + text;
+
+                    if (document.getElementById('inline').checked) {
+                        if (!document.getElementById('compressed').checked) text = '\\displaystyle ' + text;
+                        text = '$' + text + '$ ';
+                    }
+                    else {
+                        if (document.getElementById('compressed').checked) text = '\\inline ' + text;
+                        text = '\\[' + text + '\\]\n';
+                    }
+                }
+                addText(window.opener.document, target, text);
+            }
+            else { // *** Advanced mode with FCKEditor *** 
+                var text = document.getElementById('latex_formula').value;
+                var size = document.getElementById('fontsize');
+                if (size && size.selectedIndex != 2)
+                    text = size.options[size.selectedIndex].value + ' ' + text;
+
+                if (text.length == 0) {
+                    alert(FCKLang.EquationErrNoEqn);
+                    return false;
+                }
+
+                if (document.getElementById('inline').checked) {
+                    if (!document.getElementById('compressed').checked)
+                        text = '\\displaystyle ' + text;
+                    text = '\\f$' + text + '\\f$ ';
+                }
+                else {
+                    if (document.getElementById('compressed').checked)
+                        text = '\\inline ' + text;
+                    text = '\\f[' + text + '\\f]\n';
+                }
+
+                if (eSelected && eSelected._fckequation == text)
+                    return true;
+
+                FCKEquation.Add(text);
+            }
+            window.blur();
+            return true;
+        }
+
+        if (navigator.userAgent.indexOf("Firefox") > 0) {
+
+            if (window.HTMLElement) {
+                HTMLElement.prototype.__defineSetter__("outerHTML", function (sHTML) {
+                    var r = this.ownerDocument.createRange();
+                    r.setStartBefore(this);
+                    var df = r.createContextualFragment(sHTML);
+                    this.parentNode.replaceChild(df, this);
+                    return sHTML;
+                });
+
+                HTMLElement.prototype.__defineGetter__("outerHTML", function () {
+                    var attr;
+                    var attrs = this.attributes;
+                    var str = "<" + this.tagName.toLowerCase();
+                    for (var i = 0; i < attrs.length; i++) {
+                        attr = attrs[i];
+                        if (attr.specified)
+                            str += " " + attr.name + '="' + attr.value + '"';
+                    }
+                    if (!this.canHaveChildren)
+                        return str + ">";
+                    return str + ">" + this.innerHTML + "</" + this.tagName.toLowerCase() + ">";
+                });
+
+                HTMLElement.prototype.__defineGetter__("canHaveChildren", function () {
+                    switch (this.tagName.toLowerCase()) {
+                        case "area":
+                        case "base":
+                        case "basefont":
+                        case "col":
+                        case "frame":
+                        case "hr":
+                        case "img":
+                        case "br":
+                        case "input":
+                        case "isindex":
+                        case "link":
+                        case "meta":
+                        case "param":
+                            return false;
+                    }
+                    return true;
+
+                });
+            }
+        }
+
+        /**********************************************[clipboard.js]*********************************************/
+        function copy(text2copy) {
+            if (window.clipboardData) {
+                window.clipboardData.setData("Text", text2copy);
+            } else {
+                var flashcopier = 'flashcopier';
+                if (!document.getElementById(flashcopier)) {
+                    var divholder = document.createElement('div');
+                    divholder.id = flashcopier;
+                    document.body.appendChild(divholder);
+                }
+                document.getElementById(flashcopier).innerHTML = '';
+                var divinfo = '<embed src="scripts/_clipboard.swf" FlashVars="clipboard=' + escape(text2copy) + '" width="0" height="0" type="application/x-shockwave-flash"></embed>';
+                document.getElementById(flashcopier).innerHTML = divinfo;
+            }
+        }
+    </script>
+
+<!--    <script type="text/javascript">        AC_FL_RunContent = 0;</script>-->
+
+<!--    <script type="text/javascript">
+        // Send the equation to the opening window.
+        var cctarget = '';
+        var cctype = 'latex';
+</script>-->
+    <meta content="MSHTML 6.00.2900.3354" name="GENERATOR">
+</head>
+<body style="background: #eee" onload="LoadSelected();">
+    <div id="hover">
+    </div>
+    <div class="center">
+        <div class="top">
+            <select title="Spaces" onchange="insertText(this.options[this.selectedIndex].value); this.selectedIndex=0;"
+                style="display: none">
+                <option style="color: #8080ff" value="" selected>空白...</option>
+                <option value="\,">thin</option>
+                <option value="\:">medium</option>
+                <option value="\;">thick</option>
+                <option value="\!">negative</option>
+            </select>
+            <select title="Style" onchange="insertText(this.options[this.selectedIndex].value, 1000); this.selectedIndex=0;"
+                style="display: none">
+                <option style="color: #8080ff" value="" selected>样式...</option>
+                <optgroup label="Equation Only">
+                    <option title="\mathbb{}" value="\mathbb{}">Blackboard</option>
+                    <option title="\mathbf{}" value="\mathbf{}">Bold</option>
+                    <option title="\boldsymbol{}" value="\boldsymbol{}">Bold Greek</option>
+                    <option title="\mathit{}" value="\mathit{}">Italic</option>
+                    <option title="\mathrm{}" value="\mathrm{}">Roman</option>
+                    <option title="\mathfrak{}" value="\mathfrak{}">Fraktur</option>
+                </optgroup>
+                <optgroup label="Text Only">
+                    <option title="\texttt{}" value="\texttt{}">Typewriter</option>
+                    <option title="\textup{}" value="\textup{}">Upright</option>
+                    <option title="\textbf{}" value="\textbf{}">Bold</option>
+                    <option title="\textit{}" value="\textit{}">Italic</option>
+                    <option title="\textrm{}" value="\textrm{}">Roman</option>
+                    <option title="\textsl{}" value="\textsl{}">Slanted</option>
+                    <option title="\textsc{}" value="\textsc{}">SMALL CAPS</option>
+                    <option title="\emph{}" value="\emph{}">Emphasis</option>
+                </optgroup>
+            </select>
+            <select title="Functions" onchange="insertText(this.options[this.selectedIndex].value); this.selectedIndex=0;">
+                <option style="color: #8080ff" value="" selected>函数…</option>
+                <option value="\arg">arg</option>
+                <option value="\deg">degree</option>
+                <option value="\det">det</option>
+                <option value="\dim">dim</option>
+                <option value="\gcd">gcd</option>
+                <option value="\hom">hom</option>
+                <option value="\ker">ker</option>
+                <option value="\partial">partial</option>
+                <option value="\Pr">Pr</option>
+                <option value="\sup">sup</option>
+                <optgroup label="Logs">
+                    <option value="\exp">exp</option>
+                    <option value="\lg">lg</option>
+                    <option value="\ln">ln</option>
+                    <option value="\log">log</option>
+                    <option value="\log_{e}">log e</option>
+                    <option value="\log_{10}">log 10</option>
+                </optgroup>
+                <optgroup label="Limits">
+                    <option value="\lim">limit</option>
+                    <option value="\liminf">liminf</option>
+                    <option value="\limsup">limsup</option>
+                    <option value="\max">maximum</option>
+                    <option value="\min">minimum</option>
+                    <option value="\infty">infinite</option>
+                </optgroup>
+                <optgroup label="Trig">
+                    <option value="\sin">sin</option>
+                    <option value="\cos">cos</option>
+                    <option value="\tan">tan</option>
+                    <option value="\sin^{-1}">sin-1</option>
+                    <option value="\cos^{-1}">cos-1</option>
+                    <option value="\tan^{-1}">tan-1</option>
+                    <option value="\csc">csc</option>
+                    <option value="\sec">sec</option>
+                    <option value="\cot">cot</option>
+                    <option value="\sinh">sinh</option>
+                    <option value="\cosh">cosh</option>
+                    <option value="\tanh">tanh</option>
+                    <option value="\coth">coth</option>
+                    <option value="\sinh^{-1}">sinh-1</option>
+                    <option value="\cosh^{-1}">cosh-1</option>
+                    <option value="\tanh^{-1}">tanh-1</option>
+                </optgroup>
+                <optgroup label="Complex">
+                    <option value="\Re">Real</option>
+                    <option value="\Im">Imaginary</option>
+                    <option value="\imath">i</option>
+                    <option value="\jmath">j</option>
+                </optgroup>
+            </select>
+            <select title="Foreign Characters" onchange="insertText(this.options[this.selectedIndex].value); this.selectedIndex=0;">
+                <option style="color: #8080ff" value="" selected>特殊符号...</option>
+                <option value="\oe">œ</option>
+                <option value="\OE">Œ</option>
+                <option value="\ae">æ</option>
+                <option value="\AE">Æ</option>
+                <option value="\aa">å</option>
+                <option value="\AA">Å</option>
+                <option value="\ss">ß</option>
+                <option value="\S">(§) section</option>
+                <option value="\P">(¶) paragraph</option>
+                <option value="\o">o</option>
+                <option value="\O">O</option>
+                <option value="\l">l</option>
+                <option value="\L">L</option>
+                <option value="\dag">dagger</option>
+                <option value="\ddag">double dagger</option>
+                <option value="\copyright">©</option>
+                <option value="\pounds">£</option>
+            </select>
+            <select title="Symbols" onchange="insertText(this.options[this.selectedIndex].value); this.selectedIndex=0;">
+                <option style="color: #8080ff" value="" selected>符号...</option>
+                <option title="\pm" value="\pm">(±) plus or minus</option>
+                <option title="\mp" value="\mp">minus or plus</option>
+                <option value="\times">(×) times</option>
+                <option title="\div" value="\div">(÷) divided by</option>
+                <option title="\ast" value="\ast">(∗) asterisk</option>
+                <option value="\star">(*) star</option>
+                <option title="\circ" value="\circ">circle</option>
+                <option title="^{\circ}" value="^{\circ}">degree symbol</option>
+                <option value="\bullet">(•) bullet</option>
+                <option value="\cdot">(·) center dot</option>
+                <option value="\uplus">u plus</option>
+                <option value="\sqcap">square cap</option>
+                <option value="\sqcup">square cup</option>
+                <option value="\vee">(∨) vee</option>
+                <option value="\wedge">(∧) wedge</option>
+                <option value="\diamond">(◊) diamond</option>
+                <option value="\bigtriangleup">big triangle up</option>
+                <option value="\bigtriangledown">big triangle down</option>
+                <option value="\triangleleft">triangle left</option>
+                <option value="\triangleright">triangle right</option>
+                <option value="\lhd">large triangle left</option>
+                <option value="\rhd">large triangle right</option>
+                <option value="\oplus">(⊕) circle plus</option>
+                <option value="\ominus">circle minus</option>
+                <option value="\otimes">(⊗) circle times</option>
+                <option value="\oslash">circle slash</option>
+                <option value="\odot">circle dot</option>
+                <option value="\bigcirc">big circle</option>
+                <option value="\dagger">(†) dagger</option>
+                <option value="\ddagger">(‡) double dagger</option>
+                <option value="\amalg">coproduct</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;<a style="display: none" href="http://en.wikipedia.org/wiki/Help:Formula"
+                target="_blank"><img height="13" alt="help" src="imgs/latex/i.gif" width="13" align="bottom"
+                    border="0"></a>
+        </div>
+        <div class="top">
+            <img id="undobutton" title="undo" style="vertical-align: bottom" onclick="undo('latex_formula');"
+                height="13" alt="undo" src="imgs/latex/undo-x.gif" width="20">
+            <img id="redobutton" title="redo" style="vertical-align: bottom; margin-right: 20px"
+                onclick="redo('latex_formula');" height="13" alt="redo" src="imgs/latex/redo-x.gif"
+                width="20">
+            <select id="fontsize" title="字体大小" onchange="textchanged();" name="fontsize">
+                <option value="\tiny">(8pt) 微小</option>
+                <option value="\small">(10pt) 小</option>
+                <option value="" selected>(12pt) 正常</option>
+                <option value="\large">(14pt) 大</option>
+                <option value="\huge">(20pt) 更大</option>
+            </select>
+            <select title="颜色" onchange="insertText(this.options[this.selectedIndex].value, this.options[this.selectedIndex].value.length-1); this.selectedIndex=0">
+                <option style="color: #8080ff" value="" selected>颜色...</option>
+                <option style="color: red" value="{\color{red} }">红</option>
+                <option style="color: green" value="{\color{green} }">绿</option>
+                <option style="color: blue" value="{\color{blue} }">蓝</option>
+            </select>
+            <select id="history" title="最近输入的表达式历史记录" onchange="insertText(this.options[this.selectedIndex].value); this.selectedIndex=0;"
+                name="history">
+                <option style="color: #8080ff" value="" selected>历史...</option>
+            </select>
+            <select id="favorites" title="收藏的所创建的表达式动态列表" onchange="insertText(this.options[this.selectedIndex].value);"
+                name="favorites">
+                <option style="color: #8080ff" value="" selected>收藏...</option>
+            </select>&nbsp;<img title="添加当前表达式到收藏" onclick="addfavorite('favorites');" height="12"
+                alt="plus" src="imgs/latex/add.gif" width="11">&nbsp;<img title="删除所选择的表达式" onclick="deletefavorite('favorites')"
+                    height="12" alt="minus" src="imgs/latex/sub.gif" width="11">
+        </div>
+        <div id="toolbar_wrapper">
+            <div id="toolbar">
+                <div class="panel" id="panel1" onmouseover="this.style.overflow='visible'" onmouseout="this.style.overflow='hidden'">
+                    <!-- 
+Copyright (C) 2004-2007 CodeCogs, Zyba Ltd, Broadwood, Holford, TA5 1DU, England.
+-->
+                    <img height="102" alt="Operators Panel" src="imgs/latex/operators_panel.gif" width="133"
+                        usemap="#operators_map" border="0">
+                    <map id="operators_map" name="operators_map">
+                        <area onmouseover="hover(this, event)" title="\frac{a}{b}" onclick="insertText('\\frac{}{}',6);"
+                            shape="RECT" alt="\frac{a}{b}" coords="0,0,25,24">
+                        <area onmouseover="hover(this, event)" title="a^b" onclick="insertText('^{}',2)"
+                            shape="RECT" alt="a^b" coords="0,26,25,50">
+                        <area onmouseover="hover(this, event)" title="a_b" onclick="insertText('_{}',2)"
+                            shape="RECT" alt="a_b" coords="0,52,25,76">
+                        <area onmouseover="hover(this, event)" title="\frac{\partial }{\partial x}" onclick="insertText('\\frac{\\partial }{\\partial x}',15)"
+                            shape="RECT" alt="\frac{\\partial }{\\partial x}" coords="0,78,25,102">
+                        <area onmouseover="hover(this, event)" title="\int" onclick="insertText('\\int')"
+                            shape="RECT" alt="\int" coords="27,0,52,24">
+                        <area onmouseover="hover(this, event)" title="\int_a^b" onclick="insertText('\\int_{}^{}{}',6,11)"
+                            shape="RECT" alt="\int_a^b" coords="27,26,52,50">
+                        <area onmouseover="hover(this, event)" title="\oint_a^b" onclick="insertText('\\oint_{}^{}{}',7,12)"
+                            shape="RECT" alt="\oint_a^b" coords="27,52,52,76">
+                        <area onmouseover="hover(this, event)" title="\lim_{x \rightarrow 0}" onclick="insertText('\\lim_{}',6)"
+                            shape="RECT" alt="\lim_{x \rightarrow 0}" coords="27,78,52,102">
+                        <area onmouseover="hover(this, event)" title="\prod" onclick="insertText('\\prod{}',6)"
+                            shape="RECT" alt="\prod" coords="54,0,79,24">
+                        <area onmouseover="hover(this, event)" title="\prod_a^b" onclick="insertText('\\prod_{}^{}{}',7,12)"
+                            shape="RECT" alt="\prod_a^b" coords="54,26,79,50">
+                        <area onmouseover="hover(this, event)" title="\coprod" onclick="insertText('\\coprod{}',8)"
+                            shape="RECT" alt="\coprod" coords="54,52,79,76">
+                        <area onmouseover="hover(this, event)" title="\coprod_a^b" onclick="insertText('\\coprod_{}^{}{}',9,14)"
+                            shape="RECT" alt="\coprod_a^b" coords="54,78,79,102">
+                        <area onmouseover="hover(this, event)" title="\bigcap" onclick="insertText('\\bigcap{}',8)"
+                            shape="RECT" alt="\bigcap" coords="81,0,106,24">
+                        <area onmouseover="hover(this, event)" title="\bigcap_a^b" onclick="insertText('\\bigcap_{}^{}{}',9,14)"
+                            shape="RECT" alt="\bigcap_a^b" coords="81,26,106,50">
+                        <area onmouseover="hover(this, event)" title="\bigcup" onclick="insertText('\\bigcup{}',8)"
+                            shape="RECT" alt="\bigcup" coords="81,52,106,76">
+                        <area onmouseover="hover(this, event)" title="\bigcup_a^b" onclick="insertText('\\bigcup_{}^{}{}',9,14)"
+                            shape="RECT" alt="\bigcup_a^b" coords="81,78,106,102">
+                        <area onmouseover="hover(this, event)" title="\sum" onclick="insertText('\\sum{}',5)"
+                            shape="RECT" alt="\sum" coords="108,0,133,24">
+                        <area onmouseover="hover(this, event)" title="\sum_a^b" onclick="insertText('\\sum_{}^{}{}',6,11)"
+                            shape="RECT" alt="\sum_a^b" coords="108,26,133,50">
+                        <area onmouseover="hover(this, event)" title="\sqrt{x}" onclick="insertText('\\sqrt{}',6)"
+                            shape="RECT" alt="\sqrt{x}" coords="108,52,133,76">
+                        <area onmouseover="hover(this, event)" title="\sqrt[n]{x}" onclick="insertText('\\sqrt[]{}',6)"
+                            shape="RECT" alt="\sqrt[n]{x}" coords="108,78,133,102">
+                    </map>
+                </div>
+                <div class="panel" id="panel2" onmouseover="this.style.overflow='visible'" onmouseout="this.style.overflow='hidden'">
+                    <!-- 
+Copyright (C) 2004-2007 CodeCogs, Zyba Ltd, Broadwood, Holford, TA5 1DU, England.
+-->
+                    <img height="128" alt="Brackets Panel" src="imgs/latex/brackets_panel.gif" width="25" usemap="#brackets_map"
+                        border="0">
+                    <map id="brackets_map" name="brackets_map">
+                        <area title="\left( \right)" onclick="insertText('\\left( \\right)',6)" shape="RECT"
+                            alt="\left( \right)" coords="0,0,25,24">
+                        <area title="\left[ \right]" onclick="insertText('\\left[ \\right]',6)" shape="RECT"
+                            alt="\left[ \right]" coords="0,26,25,50">
+                        <area title="\left| \right|" onclick="insertText('\\left| \\right|',6)" shape="RECT"
+                            alt="\left| \right|" coords="0,52,25,76">
+                        <area title="\left< \right>" onclick="insertText('\\left< \\right>',6)" shape="RECT"
+                            alt="\left< \right>" coords="0,78,25,102">
+                        <area title="\left\{ \right\}" onclick="insertText('\\left\\{ \\right\\}',7)" shape="RECT"
+                            alt="\left\{ \right\}" coords="0,104,25,128">
+                    </map>
+                </div>
+                <div class="panel2" id="panel3" onmouseover="this.style.overflow='visible'" onmouseout="this.style.overflow='hidden'">
+                    <!-- 
+Copyright (C) 2004-2007 CodeCogs, Zyba Ltd, Broadwood, Holford, TA5 1DU, England.
+-->
+                    <img height="112" alt="Greek Letters Panel" src="imgs/latex/greekletters_panel.gif" width="94"
+                        usemap="#greekletters_map" border="0">
+                    <map id="greekletters_map" name="greekletters_map">
+                        <area onmouseover="hover(this, event)" title="\alpha" onclick="insertText('\\alpha')"
+                            shape="RECT" alt="\alpha" coords="0,0,14,14">
+                        <area onmouseover="hover(this, event)" title="\beta" onclick="insertText('\\beta')"
+                            shape="RECT" alt="\beta" coords="16,0,30,14">
+                        <area onmouseover="hover(this, event)" title="\gamma" onclick="insertText('\\gamma')"
+                            shape="RECT" alt="\gamma" coords="32,0,46,14">
+                        <area onmouseover="hover(this, event)" title="\delta" onclick="insertText('\\delta')"
+                            shape="RECT" alt="\delta" coords="48,0,62,14">
+                        <area onmouseover="hover(this, event)" title="\epsilon" onclick="insertText('\\epsilon')"
+                            shape="RECT" alt="\epsilon" coords="64,0,78,14">
+                        <area onmouseover="hover(this, event)" title="\varepsilon" onclick="insertText('\\varepsilon')"
+                            shape="RECT" alt="\varepsilon" coords="80,0,94,14">
+                        <area onmouseover="hover(this, event)" title="\zeta" onclick="insertText('\\zeta')"
+                            shape="RECT" alt="\zeta" coords="0,16,14,30">
+                        <area onmouseover="hover(this, event)" title="\eta" onclick="insertText('\\eta')"
+                            shape="RECT" alt="\eta" coords="16,16,30,30">
+                        <area onmouseover="hover(this, event)" title="\theta" onclick="insertText('\\theta')"
+                            shape="RECT" alt="\theta" coords="32,16,46,30">
+                        <area onmouseover="hover(this, event)" title="\vartheta" onclick="insertText('\\vartheta')"
+                            shape="RECT" alt="\vartheta" coords="48,16,62,30">
+                        <area onmouseover="hover(this, event)" title="\iota" onclick="insertText('\\iota')"
+                            shape="RECT" alt="\iota" coords="64,16,78,30">
+                        <area onmouseover="hover(this, event)" title="\kappa" onclick="insertText('\\kappa')"
+                            shape="RECT" alt="\kappa" coords="80,16,94,30">
+                        <area onmouseover="hover(this, event)" title="\lambda" onclick="insertText('\\lambda')"
+                            shape="RECT" alt="\lambda" coords="0,32,14,46">
+                        <area onmouseover="hover(this, event)" title="\mu" onclick="insertText('\\mu')" shape="RECT"
+                            alt="\mu" coords="16,32,30,46">
+                        <area onmouseover="hover(this, event)" title="\nu" onclick="insertText('\\nu')" shape="RECT"
+                            alt="\nu" coords="32,32,46,46">
+                        <area onmouseover="hover(this, event)" title="\xi" onclick="insertText('\\xi')" shape="RECT"
+                            alt="\xi" coords="48,32,62,46">
+                        <area onmouseover="hover(this, event)" title="\pi" onclick="insertText('\\pi')" shape="RECT"
+                            alt="\pi" coords="64,32,78,46">
+                        <area onmouseover="hover(this, event)" title="\varpi" onclick="insertText('\\varpi')"
+                            shape="RECT" alt="\varpi" coords="80,32,94,46">
+                        <area onmouseover="hover(this, event)" title="\rho" onclick="insertText('\\rho')"
+                            shape="RECT" alt="\rho" coords="0,48,14,62">
+                        <area onmouseover="hover(this, event)" title="\varrho" onclick="insertText('\\varrho')"
+                            shape="RECT" alt="\varrho" coords="16,48,30,62">
+                        <area onmouseover="hover(this, event)" title="\sigma" onclick="insertText('\\sigma')"
+                            shape="RECT" alt="\sigma" coords="32,48,46,62">
+                        <area onmouseover="hover(this, event)" title="\varsigma" onclick="insertText('\\varsigma')"
+                            shape="RECT" alt="\varsigma" coords="48,48,62,62">
+                        <area onmouseover="hover(this, event)" title="\tau" onclick="insertText('\\tau')"
+                            shape="RECT" alt="\tau" coords="64,48,78,62">
+                        <area onmouseover="hover(this, event)" title="\upsilon" onclick="insertText('\\upsilon')"
+                            shape="RECT" alt="\upsilon" coords="80,48,94,62">
+                        <area onmouseover="hover(this, event)" title="\phi" onclick="insertText('\\phi')"
+                            shape="RECT" alt="\phi" coords="0,64,14,78">
+                        <area onmouseover="hover(this, event)" title="\varphi" onclick="insertText('\\varphi')"
+                            shape="RECT" alt="\varphi" coords="16,64,30,78">
+                        <area onmouseover="hover(this, event)" title="\chi" onclick="insertText('\\chi')"
+                            shape="RECT" alt="\chi" coords="32,64,46,78">
+                        <area onmouseover="hover(this, event)" title="\psi" onclick="insertText('\\psi')"
+                            shape="RECT" alt="\psi" coords="48,64,62,78">
+                        <area onmouseover="hover(this, event)" title="\omega" onclick="insertText('\\omega')"
+                            shape="RECT" alt="\omega" coords="64,64,78,78">
+                        <area onmouseover="hover(this, event)" title="\Gamma" onclick="insertText('\\Gamma')"
+                            shape="RECT" alt="\Gamma" coords="0,82,14,96">
+                        <area onmouseover="hover(this, event)" title="\Delta" onclick="insertText('\\Delta')"
+                            shape="RECT" alt="\Delta" coords="16,82,30,96">
+                        <area onmouseover="hover(this, event)" title="\Theta" onclick="insertText('\\Theta')"
+                            shape="RECT" alt="\Theta" coords="32,82,46,96">
+                        <area onmouseover="hover(this, event)" title="\Lambda" onclick="insertText('\\Lambda')"
+                            shape="RECT" alt="\Lambda" coords="48,82,62,96">
+                        <area onmouseover="hover(this, event)" title="\Xi" onclick="insertText('\\Xi')" shape="RECT"
+                            alt="\Xi" coords="64,82,78,96">
+                        <area onmouseover="hover(this, event)" title="\Pi" onclick="insertText('\\Pi')" shape="RECT"
+                            alt="\Pi" coords="80,82,94,96">
+                        <area onmouseover="hover(this, event)" title="\Sigma" onclick="insertText('\\Sigma')"
+                            shape="RECT" alt="\Sigma" coords="0,98,14,112">
+                        <area onmouseover="hover(this, event)" title="\Upsilon" onclick="insertText('\\Upsilon')"
+                            shape="RECT" alt="\Upsilon" coords="16,98,30,112">
+                        <area onmouseover="hover(this, event)" title="\Phi" onclick="insertText('\\Phi')"
+                            shape="RECT" alt="\Phi" coords="32,98,46,112">
+                        <area onmouseover="hover(this, event)" title="\Psi" onclick="insertText('\\Psi')"
+                            shape="RECT" alt="\Psi" coords="48,98,62,112">
+                        <area onmouseover="hover(this, event)" title="\Omega" onclick="insertText('\\Omega')"
+                            shape="RECT" alt="\Omega" coords="64,98,78,112">
+                    </map>
+                </div>
+                <div class="panel2" id="panel4" onmouseover="this.style.overflow='visible'" onmouseout="this.style.overflow='hidden'">
+                    <!-- 
+Copyright (C) 2004-2007 CodeCogs, Zyba Ltd, Broadwood, Holford, TA5 1DU, England.
+-->
+                    <img height="190" alt="Relations Panel" src="imgs/latex/relations_panel.gif" width="46"
+                        usemap="#relations_map" border="0">
+                    <map id="relations_map" name="relations_map">
+                        <area onmouseover="hover(this, event)" title="\leq" onclick="insertText('\\leq')"
+                            shape="RECT" alt="\leq" coords="0,0,14,14">
+                        <area onmouseover="hover(this, event)" title="\prec" onclick="insertText('\\prec')"
+                            shape="RECT" alt="\prec" coords="0,16,14,30">
+                        <area onmouseover="hover(this, event)" title="\preceq" onclick="insertText('\\preceq')"
+                            shape="RECT" alt="\preceq" coords="0,32,14,46">
+                        <area onmouseover="hover(this, event)" title="\ll" onclick="insertText('\\ll')" shape="RECT"
+                            alt="\ll" coords="0,48,14,62">
+                        <area onmouseover="hover(this, event)" title="\subset" onclick="insertText('\\subset')"
+                            shape="RECT" alt="\subset" coords="0,64,14,78">
+                        <area onmouseover="hover(this, event)" title="\subseteq" onclick="insertText('\\subseteq')"
+                            shape="RECT" alt="\subseteq" coords="0,80,14,94">
+                        <area onmouseover="hover(this, event)" title="\sqsubset" onclick="insertText('\\sqsubset')"
+                            shape="RECT" alt="\sqsubset" coords="0,96,14,110">
+                        <area onmouseover="hover(this, event)" title="\sqsubseteq" onclick="insertText('\\sqsubseteq')"
+                            shape="RECT" alt="\sqsubseteq" coords="0,112,14,126">
+                        <area onmouseover="hover(this, event)" title="\in" onclick="insertText('\\in')" shape="RECT"
+                            alt="\in" coords="0,128,14,142">
+                        <area onmouseover="hover(this, event)" title="\vdash" onclick="insertText('\\vdash')"
+                            shape="RECT" alt="\vdash" coords="0,144,14,158">
+                        <area onmouseover="hover(this, event)" title="\models" onclick="insertText('\\models')"
+                            shape="RECT" alt="\models" coords="0,160,14,174">
+                        <area onmouseover="hover(this, event)" title="\bowtie" onclick="insertText('\\bowtie')"
+                            shape="RECT" alt="\bowtie" coords="0,176,14,190">
+                        <area onmouseover="hover(this, event)" title="\geq" onclick="insertText('\\geq')"
+                            shape="RECT" alt="\geq" coords="16,0,30,14">
+                        <area onmouseover="hover(this, event)" title="\succ" onclick="insertText('\\succ')"
+                            shape="RECT" alt="\succ" coords="16,16,30,30">
+                        <area onmouseover="hover(this, event)" title="\succeq" onclick="insertText('\\succeq')"
+                            shape="RECT" alt="\succeq" coords="16,32,30,46">
+                        <area onmouseover="hover(this, event)" title="\gg" onclick="insertText('\\gg')" shape="RECT"
+                            alt="\gg" coords="16,48,30,62">
+                        <area onmouseover="hover(this, event)" title="\supset" onclick="insertText('\\supset')"
+                            shape="RECT" alt="\supset" coords="16,64,30,78">
+                        <area onmouseover="hover(this, event)" title="\supseteq" onclick="insertText('\\supseteq')"
+                            shape="RECT" alt="\supseteq" coords="16,80,30,94">
+                        <area onmouseover="hover(this, event)" title="\sqsupset" onclick="insertText('\\sqsupset')"
+                            shape="RECT" alt="\sqsupset" coords="16,96,30,110">
+                        <area onmouseover="hover(this, event)" title="\sqsupseteq" onclick="insertText('\\sqsupseteq')"
+                            shape="RECT" alt="\sqsupseteq" coords="16,112,30,126">
+                        <area onmouseover="hover(this, event)" title="\ni" onclick="insertText('\\ni')" shape="RECT"
+                            alt="\ni" coords="16,128,30,142">
+                        <area onmouseover="hover(this, event)" title="\dashv" onclick="insertText('\\dashv')"
+                            shape="RECT" alt="\dashv" coords="16,144,30,158">
+                        <area onmouseover="hover(this, event)" title="\perp" onclick="insertText('\\perp')"
+                            shape="RECT" alt="\perp" coords="16,160,30,174">
+                        <area onmouseover="hover(this, event)" title="\Join" onclick="insertText('\\Join')"
+                            shape="RECT" alt="\Join" coords="16,176,30,190">
+                        <area onmouseover="hover(this, event)" title="\neq" onclick="insertText('\\neq')"
+                            shape="RECT" alt="\neq" coords="32,0,46,14">
+                        <area onmouseover="hover(this, event)" title="\equiv" onclick="insertText('\\equiv')"
+                            shape="RECT" alt="\equiv" coords="32,16,46,30">
+                        <area onmouseover="hover(this, event)" title="\doteq" onclick="insertText('\\doteq')"
+                            shape="RECT" alt="\doteq" coords="32,32,46,46">
+                        <area onmouseover="hover(this, event)" title="\sim" onclick="insertText('\\sim')"
+                            shape="RECT" alt="\sim" coords="32,48,46,62">
+                        <area onmouseover="hover(this, event)" title="\approx" onclick="insertText('\\approx')"
+                            shape="RECT" alt="\approx" coords="32,64,46,78">
+                        <area onmouseover="hover(this, event)" title="\simeq" onclick="insertText('\\simeq')"
+                            shape="RECT" alt="\simeq" coords="32,80,46,94">
+                        <area onmouseover="hover(this, event)" title="\cong" onclick="insertText('\\cong')"
+                            shape="RECT" alt="\cong" coords="32,96,46,110">
+                        <area onmouseover="hover(this, event)" title="\asymp" onclick="insertText('\\asymp')"
+                            shape="RECT" alt="\asymp" coords="32,112,46,126">
+                        <area onmouseover="hover(this, event)" title="\propto" onclick="insertText('\\propto')"
+                            shape="RECT" alt="\propto" coords="32,128,46,142">
+                        <area onmouseover="hover(this, event)" title="\mid" onclick="insertText('\\mid')"
+                            shape="RECT" alt="\mid" coords="32,144,46,158">
+                        <area onmouseover="hover(this, event)" title="\parallel" onclick="insertText('\\parallel')"
+                            shape="RECT" alt="\parallel" coords="32,160,46,174">
+                    </map>
+                </div>
+                <div class="panel2" id="panel5" onmouseover="this.style.overflow='visible'" onmouseout="this.style.overflow='hidden'">
+                    <!-- 
+Copyright (C) 2004-2007 CodeCogs, Zyba Ltd, Broadwood, Holford, TA5 1DU, England.
+-->
+                    <img height="46" alt="Accents Panel" src="imgs/latex/arrows_panel.gif" width="52" usemap="#arrows_map"
+                        border="0">
+                    <map id="arrows_map" name="arrows_map">
+                        <area onmouseover="hover(this, event)" title="\leftarrow" onclick="insertText('\\leftarrow')"
+                            shape="RECT" coords="0,0,25,14">
+                        <area onmouseover="hover(this, event)" title="\Leftarrow" onclick="insertText('\\Leftarrow')"
+                            shape="RECT" coords="0,16,25,30">
+                        <area onmouseover="hover(this, event)" title="\rightarrow" onclick="insertText('\\rightarrow')"
+                            shape="RECT" coords="27,0,52,14">
+                        <area onmouseover="hover(this, event)" title="\Rightarrow" onclick="insertText('\\Rightarrow')"
+                            shape="RECT" coords="27,16,52,30">
+                        <area onmouseover="hover(this, event)" title="\leftrightarrow" onclick="insertText('\\leftrightarrow')"
+                            shape="RECT" coords="0,32,25,46">
+                        <area onmouseover="hover(this, event)" title="\Leftrightarrow" onclick="insertText('\\Leftrightarrow')"
+                            shape="RECT" coords="27,32,52,46">
+                    </map>
+                </div>
+                <div class="panel2" id="panel6" onmouseover="this.style.overflow='visible'" onmouseout="this.style.overflow='hidden'">
+                    <!--Copyright (C) 2004-2007 CodeCogs, Zyba Ltd, Broadwood, Holford, TA5 1DU, England. -->
+                    <img height="78" alt="Accents Panel" src="imgs/latex/accents_panel.gif" width="30" usemap="#accents_map"
+                        border="0">
+                    <map id="accents_map" name="accents_map">
+                        <area onmouseover="hover(this, event)" title="\hat{a}" onclick="insertText('\\hat{}',5)"
+                            shape="RECT" alt="\hat{a}" coords="0,0,14,14">
+                        <area onmouseover="hover(this, event)" title="\check{a}" onclick="insertText('\\check{}',7)"
+                            shape="RECT" alt="\check{a}" coords="0,16,14,30">
+                        <area onmouseover="hover(this, event)" title="\tilde{a}" onclick="insertText('\\tilde{}',7)"
+                            shape="RECT" alt="\tilde{a}" coords="0,32,14,46">
+                        <area onmouseover="hover(this, event)" title="\acute{a}" onclick="insertText('\\acute{}',7)"
+                            shape="RECT" alt="\acute{a}" coords="0,48,14,62">
+                        <area onmouseover="hover(this, event)" title="\grave{a}" onclick="insertText('\\grave{}',7)"
+                            shape="RECT" alt="\grave{a}" coords="0,64,14,78">
+                        <area onmouseover="hover(this, event)" title="\dot{a}" onclick="insertText('\\dot{}',5)"
+                            shape="RECT" alt="\dot{a}" coords="16,0,30,14">
+                        <area onmouseover="hover(this, event)" title="\ddot{a}" onclick="insertText('\\ddot{}',6)"
+                            shape="RECT" alt="\ddot{a}" coords="16,16,30,30">
+                        <area onmouseover="hover(this, event)" title="\breve{a}" onclick="insertText('\\breve{}',7)"
+                            shape="RECT" alt="\breve{a}" coords="16,32,30,46">
+                        <area onmouseover="hover(this, event)" title="\bar{a}" onclick="insertText('\\bar{}',5)"
+                            shape="RECT" alt="\bar{a}" coords="16,48,30,62">
+                        <area onmouseover="hover(this, event)" title="\vec{a}" onclick="insertText('\\vec{}',5)"
+                            shape="RECT" alt="\vec{a}" coords="16,64,30,78">
+                    </map>
+                </div>
+                <div class="panel" id="panel7" onmouseover="this.style.overflow='visible'" onmouseout="this.style.overflow='hidden'">
+                    <!-- 
+Copyright (C) 2004-2007 CodeCogs, Zyba Ltd, Broadwood, Holford, TA5 1DU, England.
+-->
+                    <img height="128" alt="Matrix Panel" src="imgs/latex/matrix_panel.gif" width="79" usemap="#matrix_map"
+                        border="0">
+                    <map id="matrix_map" name="matrix_map">
+                        <area title="\begin{matrix} ... \end{matrix}" onclick="makeArrayMatrix('','','')"
+                            shape="RECT" alt="\begin{matrix} ... \end{matrix}" coords="0,0,25,24">
+                        <area title="\begin{pmatrix} ... \end{pmatrix}" onclick="makeArrayMatrix('p','','')"
+                            shape="RECT" alt="\begin{pmatrix} ... \end{pmatrix}" coords="0,26,25,50">
+                        <area title="\begin{vmatrix} ... \end{vmatrix}" onclick="makeArrayMatrix('v','','')"
+                            shape="RECT" alt="\begin{vmatrix} ... \end{vmatrix}" coords="0,52,25,76">
+                        <area title="\begin{Vmatrix} ... \end{Vmatrix}" onclick="makeArrayMatrix('V','','')"
+                            shape="RECT" alt="\begin{Vmatrix} ... \end{Vmatrix}" coords="0,78,25,102">
+                        <area title="\left.\begin{matrix}... \end{matrix}\right|" onclick="makeArrayMatrix('','\\left.','\\right|')"
+                            shape="RECT" alt="\left.\begin{matrix}... \end{matrix}\right|" coords="0,104,25,128">
+                        <area title="\begin{bmatrix} ... \end{bmatrix}" onclick="makeArrayMatrix('b','','')"
+                            shape="RECT" alt="\being{bmatrix} ... \end{bmatrix}" coords="27,0,52,24">
+                        <area title="\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)" onclick="makeArrayMatrix('small','\\bigl(','\\bigr)')"
+                            shape="RECT" alt="\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)" coords="27,26,52,50">
+                        <area title="\begin{Bmatrix} ... \end{Bmatrix}" onclick="makeArrayMatrix('B','','')"
+                            shape="RECT" alt="\begin{Bmatrix} ... \end{Bmatrix}" coords="27,52,52,76">
+                        <area title="\left\{\begin{matrix} ... \end{matrix}\right." onclick="makeArrayMatrix('','\\left\\{','\\right.')"
+                            shape="RECT" alt="\begin{Bmatrix} ... \end{matrix}" coords="27,78,52,102">
+                        <area title="\left.\begin{matrix} ... \end{Bmatrix}\right\}" onclick="makeArrayMatrix('','\\left.','\\right\\}')"
+                            shape="RECT" alt="\begin{matrix} ... \end{Bmatrix}" coords="27,104,52,128">
+                        <area title="\begin{cases} ... \end{cases}" onclick="makeEquationsMatrix('cases', true, true)"
+                            shape="RECT" alt="\begin{cases} ... \end{cases}" coords="54,0,79,24">
+                        <area title="\begin{align} ... \end{align}" onclick="makeEquationsMatrix('align', false)"
+                            shape="RECT" alt="\begin{align} ... \end{align}" coords="54,26,79,50">
+                    </map>
+                </div>
+            </div>
+        </div>
+        <div class="bottom" id="toolbar_space">
+        </div>
+        <textarea id="latex_formula" onkeydown="countclik(this);" onkeyup="textchanged(); autorenderEqn(10)"
+            name="latex_formula" rows="8" cols="80"></textarea>
+        <div>
+            <input class="lightbluebutton" title="清除内容" onclick="cleartext()" type="button"
+                value="清除">
+            <input class="greybutton" id="renderbutton" title="显示数学公式" onclick="renderEqn(null)"
+                type="button" value="显示数学公式">
+            <!--<input class=greybutton id=copybutton onclick=updateOpener(cctarget,cctype); type=button value="Copy to document"> -->
+            <input class="greybutton" id="clipboardbutton" onclick="copy(document.getElementById('latex_formula').value);"
+                type="button" value="复制到剪贴板">
+         <!--   <input class="greybutton" id="insertbutton" onclick="insertExpression()" type="button"
+                value="Insert Expression">-->
+ <!--           <input class="greybutton" id="Button1" onclick="self.parent.parent.document.getElementById('div_mathlatex').style.display='none'"
+                type="button" value="取消">-->
+        </div>
+        <div id="equationcomment">
+            <strong>预览</strong></div>
+        <img id="equationview" name="equationview" />
+        <script type="text/javascript">
+            var el = document.getElementById('equationview');
+            el.onload = processEquationChange;
+            el.src = "../editor/imgs/latex/spacer.gif";
+</script>
+    </div>
+    <iframe id="download" name="download" src="about:blank" frameborder="0" height="0">
+    </iframe>
+    <input type="button" id="btnTextareaObj" onclick="countclik(this);textchanged(); autorenderEqn(10)"
+        style="display: none" />
+</body>
+</html>

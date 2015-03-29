@@ -1,0 +1,10 @@
+D:\myproject\Aie100New\Wbm.QzoneV2API\bin\Debug\Wbm.QzoneV2API.dll
+D:\myproject\Aie100New\Wbm.QzoneV2API\bin\Debug\Wbm.QzoneV2API.pdb
+D:\myproject\Aie100New\Wbm.QzoneV2API\obj\Debug\Wbm.QzoneV2API.dll
+D:\myproject\Aie100New\Wbm.QzoneV2API\obj\Debug\Wbm.QzoneV2API.pdb
+D:\myproject\Aie100New\Wbm.QzoneV2API\obj\Debug\Wbm.QzoneV2API.csprojResolveAssemblyReference.cache
+D:\Project\Aie100New\Wbm.QzoneV2API\bin\Debug\Wbm.QzoneV2API.dll
+D:\Project\Aie100New\Wbm.QzoneV2API\bin\Debug\Wbm.QzoneV2API.pdb
+D:\Project\Aie100New\Wbm.QzoneV2API\obj\Debug\Wbm.QzoneV2API.dll
+D:\Project\Aie100New\Wbm.QzoneV2API\obj\Debug\Wbm.QzoneV2API.pdb
+D:\Project\Aie100New\Wbm.QzoneV2API\obj\Debug\Wbm.QzoneV2API.csprojResolveAssemblyReference.cache

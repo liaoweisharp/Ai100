@@ -1,0 +1,396 @@
+﻿body 
+{}
+
+.Tb
+{
+    width:100%;
+    border:solid 1px #BED7F5
+}
+
+.TbTd1
+{
+    width:130px;
+    vertical-align:top    
+}
+
+.TbTd2
+{
+    width:auto;
+    vertical-align:top;
+    border-left:solid 1px #BED7F5    
+}
+
+.MultipleChoices_TABLE
+{
+    border:solid 1px #BED7F5;    
+}
+
+.MultipleChoices_TD1
+{
+    cursor:default;
+    border-style:none;
+    border-bottom:solid 1px #BED7F5;
+    border-right:dotted 1px #BED7F5;
+    vertical-align:top;
+    width:50px;
+}
+
+.MultipleChoices_TD2
+{
+    cursor:text;
+    border-style:none;
+    border-bottom:solid 1px #BED7F5;
+    width:auto;
+    padding:0px;
+}
+
+.MultipleChoices_TD3
+{
+    cursor:default;
+    border-style:none;
+    border-bottom:solid 1px #BED7F5;
+    border-left:dotted 1px #BED7F5;
+    vertical-align:top;
+    width:90px;
+    text-align:center;
+}
+
+.td2_MultipleChoicesContent
+{
+	margin:0px;
+}
+
+.td3_MultipleChoicesTool
+{
+    height:0px;    
+}
+
+.td3_MultipleChoicesToolSub
+{
+    display:none;    
+}
+
+#divQuestionManage1 .divBookList
+{
+    text-align:center;
+    border:solid 1px #C0C0C0;
+    padding:5px;
+    background-color:#E8E8E8;
+    display:none;
+}
+
+#divQuestionManage1 .tableOrderCell
+{
+   width :4%;
+   text-align:center;
+}
+
+#divQuestionManage1 .tableExpendCell
+{
+   width :3%;
+   text-align:center;
+}
+
+#divQuestionManage1 .tableSelectCell
+{
+   width:5%;
+   text-align:center;
+}
+
+#divQuestionManage1 .tableUnitCell
+{
+   width:4%;
+   text-align:center;
+}
+
+#divQuestionManage1 .tableAnswerTypeCell
+{
+    width:10%;
+    text-align:center;
+}
+
+#divQuestionManage1 .tableQuestionNameCell
+{
+    width:58%;
+    text-align:left;
+}
+
+#divQuestionManage1 .tableIsAlgorithmCell
+{
+    width:10%;
+    text-align:center;
+}
+#divQuestionManage1 .tableClearCacheCell
+{
+    width:6%;
+    text-align:center;
+}
+#divQuestionManage2 .td1
+{
+    font-weight:bold;
+    vertical-align:bottom;
+    width:150px;
+}
+
+#divQuestionManage2 .td2
+{
+    vertical-align:bottom;
+    text-align:left;
+    width:auto;
+}
+
+#divQuestionManage2 .trlineHeignt
+{
+    height:20px;    
+}
+
+#divQuestionManage2 .tabHeader
+{
+   font-weight:bolder;
+   font-size:13px;
+   /*color:#526b84;   */
+}
+
+#divQuestionManage2 .tableCheckBoxCell
+{
+    width:5%;
+    text-align:left;
+}
+
+#divQuestionManage2 .tableUnitCell
+{
+    width:10%;
+    text-align:left;
+}
+
+#divQuestionManage2 .tableKnowlegePointCell
+{
+    width:auto;
+    text-align:left;
+}
+
+#div_bookStructureChange
+{
+    position:absolute;
+    top:30px;
+    background-color:rgb(240,240,240);
+    margin-left:250px;
+    display:none;    
+    width:auto;
+    height:auto;
+    padding:20px;
+}
+
+#divStep2 .eqcontent
+{
+    border:solid 1px #F0F0F0;
+    background-color:#F0F0F0;
+}
+
+#divStep2 .eqcontent:focus
+{
+    /*background-color:#F0F0F0;*/
+}
+
+#divStep2 .eqcontent:hover
+{
+   /*background-color:#F0F0F0;*/
+   cursor:text;
+}
+
+.KP_Tb_TD1
+{
+	width:50%;
+	border-right:dotted 1px #BED7F5;
+	vertical-align:top;	
+}
+
+.KP_Tb_TD2
+{
+	width:50%;
+	vertical-align:top;
+	background-color:#F0F0F0;	
+}
+
+#divQuestionLos .QuestionLos_TD1
+{
+	text-align:left;
+	padding-left:0px;
+	width:8%;
+}
+
+#divQuestionLos .QuestionLos_TD2
+{
+	text-align:left;
+	padding-left:0px;
+	width:54%;
+}
+
+#divQuestionLos .QuestionLos_TD3
+{
+	text-align:left;
+	padding-left:0px;
+	width:18%;
+}
+
+#divQuestionLos .QuestionLos_TD4
+{
+	text-align:left;
+	padding-left:0px;
+	width:15%;
+}
+#divQuestionLos .QuestionLos_TD5
+{
+	text-align:center;
+	padding-left:0px;
+	width:5%;
+}
+
+#divPreviewErrorInfo
+{
+    border:solid 1px #BED7F5;
+    padding:5px;
+}
+
+#divQuestionPreviewTool
+{
+    margin-top:2px;
+    text-align:center;
+    padding:5px;
+    /*border-top:solid 1px #BED7F5;    */
+}
+
+#divAlgorithmInfo
+{
+    border:solid 1px gray;
+    display:none;
+    width:920px;
+    margin-top:10px;
+    background-color:rgb(217,217,255);
+    padding:5px;
+    text-align:center;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#999999,direction=135,strength=6);
+}
+
+#tableAlgorithmInfo,#tableAlgorithmSeedInfo
+{
+    border:solid 1px #dddddd;  
+    background-color:#ffffff;
+    width:920px;
+}
+
+
+
+#divAlgorithmInfo .divAlgorithmInfoHeader
+{
+    font-weight:bold;
+    padding:5px;
+    padding-left:0px;
+    background-color:rgb(20,220,180);;
+    /*background-image:url(../../CMS/Images/wunderbar_rest.gif);
+    background-repeat:repeat-x;*/
+}
+
+#divAlgorithmInfo .tdAlgorithmName
+{
+    width:40px;
+    padding-left:0px;
+    vertical-align:middle;
+    text-align:left;
+    border-right:dotted 1px #BED7F5;
+    border-bottom:solid 1px #BED7F5;
+}
+
+#divAlgorithmInfo .tdAlgorithmContent
+{
+    width:680px;
+    vertical-align:middle;
+    text-align:left;
+    border-right:dotted 1px #BED7F5;
+    border-bottom:solid 1px #BED7F5;
+    padding:0px;
+}
+
+#divAlgorithmInfo .tdAlgorithmPreView
+{
+    width:100px;
+    padding-left:0px;
+    vertical-align:middle;
+    text-align:left;
+    border-right:dotted 1px #BED7F5;
+    border-bottom:solid 1px #BED7F5;
+}
+
+#divAlgorithmInfo .tdAlgorithmTool
+{
+    width:100px;
+    vertical-align:middle;
+    border-bottom:solid 1px #BED7F5;
+    cursor:text;
+    padding:0px;
+    text-align:center;
+}
+
+#divAlgorithmInfo .divAlgorithmContent
+{
+    cursor:text;    
+    height:100%;
+    margin:0px;
+    padding-left:0px;
+}
+
+#divQuestionPreview .pSHHeader1
+{
+    width:10px;border-top:solid 1px gray;
+}
+
+#divQuestionPreview .pSHHeader2
+{
+    width:auto;color:red;border-top:solid 1px gray;
+}
+
+.actionParentMenu div
+{
+	line-height:20px;
+	vertical-align:middle;
+}
+
+.actionParentMenu div:hover
+{
+	background-color:#888888;
+	color:#fff;
+}
+
+.diff_view
+{
+    width:32px;
+}
+        
+.diff_view div.val
+{
+    color:#00f;
+    text-align:center;
+    cursor:pointer;
+    border:1px dashed transparent;
+}
+.diff_view div.options 
+{
+    position:absolute;   
+    margin-top: -1px;
+    width:30px;
+    border:1px solid #ccc;
+    background-color:#fff;
+    text-align:center;
+    cursor:default;
+    display:none;
+}
+.diff_view div.options div
+{
+    height:22px;
+}
+        
+.diff_view div.options div:hover
+{
+    color:#fff;
+    background-color:#316ac5
+}

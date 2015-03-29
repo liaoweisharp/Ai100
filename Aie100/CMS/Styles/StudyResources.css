@@ -1,0 +1,135 @@
+﻿body 
+{
+	background-color: #fff
+}
+
+#divStudyResources
+{
+	/*display:none;	*/
+}
+
+#divStudyResourceInfo1 .table2
+{
+	width:100%;
+    border:solid 1px #BED7F5;
+    margin:0px;
+    vertical-align:top;
+    /*margin-top:5px;*/
+    display:none;
+}
+
+#divStudyResourceInfo1 .table2Td1
+{
+	width:25%;	
+	vertical-align:top;
+	border-right:solid 1px #BED7F5;
+
+} 
+
+#divStudyResourceInfo1 .table2Td2
+{
+	width:75%;	
+	vertical-align:top;    
+	/*padding:5px 2px;*/
+} 
+
+#divStudyMaterialsInfoHeader
+{
+	text-align:center;
+	font-weight:bold;	
+}
+#span_Finish{display:none}
+#divStudyResourceList
+{
+	display:none;	
+}
+
+#divStudyResourceList .noreferenceinfo
+{
+    color:Gray;
+    font-size:11px;
+}
+
+/*#divStudyResourceInfo2
+{
+	display:block;
+	position:fixed;
+	top:17%;
+	left:20%;
+	z-index:101;
+	font-size:11pt;
+	width:740px;
+	height:auto;
+	display:none;
+}*/
+
+#divStudyResourceInfo2 .txtArea
+{
+	width:400px;
+    height:90px;
+}
+
+#divStudyResourceInfo2 .tagText
+{
+	width:140px;
+}
+
+#txtReferenceTiltle
+{
+	width:400px;	
+	margin-left:2px;
+}
+
+#divStudyResourceInfo2 .table3Td2
+{
+	padding-left:8px;
+}
+
+#divStudyResourceInfo2 .table4
+{
+   width:auto;
+   height:auto;
+   margin:8px 0px;
+   line-height:40px;
+}
+
+#divStudyResourceInfo2 .table4Td1
+{
+	text-align:right;
+}
+
+#divStudyResourceInfo2 .table4Td2
+{
+	text-align:left;
+}
+
+#divStudyResourceInfo2 .selectTag
+{
+	width:180px;
+	margin-left:2px;
+}
+
+#divStudyResourceInfo2 .buttonTool
+{
+	text-align:right;
+	padding:2px 5px;
+}
+
+
+#divStudyResourceInfo2 .content
+{
+
+	height:330px;
+	width:100%;	
+	background:#ffffff;
+	/*border:inset 1px rgb(214,213,217);*/
+	cursor:text;
+}
+
+#divStudyResourceContentContainer
+{	
+	margin-top:3px;
+	background:rgb(242,240,253);
+	border:solid 1px rgb(214,213,217);
+}
+

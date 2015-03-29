@@ -1,0 +1,115 @@
+﻿.ms_list {
+    border: 0 solid #ccc;
+    width: 410px;
+    float: left;
+}
+
+    .ms_list table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .ms_list table th {
+            border: 1px solid #ccc;
+            text-align: left;
+            padding-left: 6px;
+            height: 25px;
+            background-color: #eff0f1;
+            width: 50%;
+        }
+
+        .ms_list table td {
+            border: 1px solid #ccc;
+            padding-left: 6px;
+            height: 25px;
+        }
+
+.ms_setting {
+    border: 0 solid #ccc;
+    width: 580px;
+    float: right;
+}
+
+.examiner_list {
+    border: 0px solid #E6E7E7;
+    border-collapse: collapse;
+    width: 100%;
+}
+.examiner_list tr.lightblue {
+    background-color: #F3F8FE;
+}
+.examiner_list tr.hover {
+    background-color: #F4F4F4;
+    cursor: pointer;
+}
+.examiner_list tr.selected {
+    background-color: #94C80B;
+    color: #FFFFFF;
+    cursor: default;
+}
+.examiner_list tr.nodata {
+    color: #7D7D7D;
+    text-align: center;
+}
+.examiner_list th {
+    padding-left: 6px;
+    height: 25px;
+    background-color: #eff0f1;
+}
+.examiner_list td {
+    height: 24px;
+    padding-left: 6px;
+}
+
+
+.student_list{
+    border: 0px solid #E6E7E7;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.student_list tr.lightblue {
+    background-color: #F3F8FE;
+}
+.student_list tr.hover {
+    background-color: #F4F4F4;
+}
+.student_list tr.nodata {
+    color: #7D7D7D;
+    text-align: center;
+}
+.student_list th {
+    padding-left: 6px;
+    height: 25px;
+    background-color: #eff0f1;
+}
+.student_list td {
+    height: 24px;
+    padding-left: 6px;
+}
+
+
+.col_title {
+    height: 30px;
+    padding-left: 4px;
+}
+
+.user_options {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+}
+
+    .user_options td {
+        height: 28px;
+        padding: 0px 5px;
+        font-size: 11pt;
+    }
+
+    .user_options tr:hover {
+        background-color: #f4f4f4;
+    }
+
+    .user_options tr.lightblue {
+        background-color: #f3f8fe;
+    }

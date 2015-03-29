@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="JEWS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="JEWS_EngineClient_ClientSystemWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.188:8080/acepherics/service/ClientSystemWebService</Value>
+    </Setting>
+    <Setting Name="JEWS_EngineReport_ReportWrapperWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.188:8080/acepherics/service/ReportWrapperWebService</Value>
+    </Setting>
+    <Setting Name="JEWS_EngineSubmissionTest_SubmissionWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.188:8080/acepherics/service/SubmissionWebService</Value>
+    </Setting>
+    <Setting Name="JEWS_EngineClient1_ClientSystemWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.188:8080/acepherics/service/ClientSystemWebService</Value>
+    </Setting>
+    <Setting Name="JEWS_EngineStudyGuide_ClientSystemWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.188:8080/acepherics/service/StudyGuideWrapperWebService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,35 @@
+﻿.stud_list {
+    border-collapse: collapse;
+    width: 100%;
+    line-height: 25px;
+}
+
+    .stud_list th {
+        background-color: #EFF0F1;
+        border: 1px solid #ccc;
+        padding-left: 6px;
+        /*text-align: left;*/
+    }
+
+    .stud_list td {
+        border: 1px solid #ccc;
+        padding-left: 6px;
+    }
+
+.u_valid {
+    color: #2177c7;
+    cursor: pointer;
+}
+
+    .u_valid:hover {
+        text-decoration: underline;
+    }
+
+.u_invalid {
+    color: #eb2319;
+    cursor: pointer;
+}
+
+    .u_invalid:hover {
+        text-decoration: underline;
+    }

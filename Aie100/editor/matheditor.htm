@@ -1,0 +1,1668 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="../Scripts/jquery-1.10.2.min.js?version=1127"></script>
+    <script type="text/javascript" src="../Plugins/jBox/jquery.jBox-2.3.min.js?version=1127"></script>
+    <link href="../Plugins/jBox/Skins/Default/jbox.css?version=1127" rel="stylesheet" />
+    <link href="mathquill-0.9.2/mathquill.css?version=1127" rel="stylesheet" type="text/css" />
+    <script src="mathquill-0.9.2/mathquill.min.js?version=1127" type="text/javascript"></script>
+    <style type="text/css">
+        body
+        {
+            margin: 0px;
+        }
+        .matheditor
+        {
+            width: 600px;
+            height:380px;
+            font-size: 13px;
+            margin: 0px auto;
+        }
+        .matheditor .border
+        {
+            /* border: 1px solid rgb(227,227,227);*/
+        }
+        
+        .matheditor .tabs
+        {
+            background-color: #D8D2D1;
+            color: #fff;
+            width: 100%;
+            border-bottom: 1px solid #FFFFFF;
+            display: inline-block; /* clear: both; padding-left:640px*/
+            padding:2px;
+        }
+        
+        .matheditor .tabs table
+        {
+            /*float: right;*/
+        }
+        
+        .matheditor .tabs td:hover
+        {
+            cursor: pointer;
+        }
+        
+        .matheditor .tabs .selected
+        {
+            background-color: #9D9D9D;
+        }
+        
+        .matheditor .tabs .unselected
+        {
+            background-color: #D8D2D1;
+            color:#000;
+           border:1px dotted #F9F9F9;
+        }
+        
+        .matheditor .content td
+        {
+            vertical-align: top;
+        }
+        
+        .matheditor .content .formula-struct
+        {
+            background-image: url(imgs/latex/formula-bar-bg_cefcdb21.png);
+            background-repeat: repeat-x;
+        }
+        
+        .matheditor .content .tb-formula-struct
+        {
+            margin: 5px;
+        }
+        
+        .matheditor .content .tb-formula-struct td
+        {
+            background: url(imgs/latex/formula-struct-bg_ea586f30.png) no-repeat scroll 0 0 transparent;
+            height: 73px;
+            cursor: pointer;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td1
+        {
+            width: 45px;
+            background-position: -0px 0px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td1:hover
+        {
+            background-position: -0px -73px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td2
+        {
+            width: 45px;
+            background-position: -45px 0px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td2:hover
+        {
+            background-position: -45px -73px;
+        }
+        .matheditor .content .tb-formula-struct .fs-td3
+        {
+            width: 45px;
+            background-position: -90px 0px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td3:hover
+        {
+            background-position: -90px -73px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td4
+        {
+            width: 45px;
+            background-position: -135px 0px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td4:hover
+        {
+            background-position: -135px -73px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td5
+        {
+            width: 67px;
+            background-position: -180px 0px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td5:hover
+        {
+            background-position: -180px -73px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td6
+        {
+            width: 45px;
+            background-position: -247px 0px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td6:hover
+        {
+            background-position: -247px -73px;
+        }
+        .matheditor .content .tb-formula-struct .fs-td7
+        {
+            width: 45px;
+            background-position: -292px 0px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td7:hover
+        {
+            background-position: -292px -73px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td8
+        {
+            width: 55px;
+            background-position: -337px 0px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td8:hover
+        {
+            background-position: -337px -73px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td9
+        {
+            width: 67px;
+            background-position: -392px 0px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td9:hover
+        {
+            background-position: -392px -73px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td10
+        {
+            width: 45px;
+            background-position: -459px 0px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td10:hover
+        {
+            background-position: -459px -73px;
+        }
+        
+        .matheditor .content .tb-formula-struct .fs-td11
+        {
+            width: 45px;
+            background-position: -504px 0px;
+        }
+        
+        .matheditor .cy-sign .tb-cy-sign-info td
+        {
+            background: url(imgs/latex/formulaSybom_5a20c9be.png) no-repeat scroll 0 0 transparent;
+            height: 24px;
+            width: 24px;
+            cursor: pointer;
+        }
+        
+        .matheditor .cy-sign
+        {
+            background-color: rgb(227,227,227); /*border-left:1px solid #fff;*/
+        }
+        
+        .matheditor .source-edit
+        {
+            padding: 5px;
+            display: none;
+        }
+        
+        .matheditor .edit-area
+        {
+            display: block;
+            height: 178px;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #88C4E6;
+            cursor: text;
+            font-size: 18px;
+        }
+        
+        .matheditor .preview-area
+        {
+            height: 73px;
+            padding: 5px;
+            /*margin-top: 5px;*/
+            border: 1px dotted #88C4E6;
+            text-align: center;
+            line-height:25px;
+
+        }
+        .matheditor .content .tb-formula-struct .fs-td11:hover
+        {
+            background-position: -504px -73px;
+        }
+        
+        .matheditor .td-right-sign
+        {
+            background-color: rgb(227,227,227); /*width: 160px;*/
+        }
+        
+        .matheditor .td-right-sign .sign-info
+        {
+            height: 320px;
+        }
+        
+        .matheditor .td-right-sign .sign-tab
+        {
+            background-color: rgb(76,76,77);
+            margin-bottom: 0px;
+        }
+        
+        .matheditor .td-right-sign .tb-sign-tab td
+        {
+            background-color: rgb(250,165,15);
+            color: #fff;
+        }
+        
+        .matheditor .disabledLatex
+        {
+            background-color: #E6E6E6;
+            display: none;
+            height: 97%;
+            left: 0;
+            opacity: 0.65;
+            filter: alpha(opacity=65);
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        .matheditor li
+        {
+            float: left;
+            list-style: none outside none;
+        }
+        .matheditor .struct-pupop *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .matheditor .struct-lay
+        {
+            background-color: #FFFFFF;
+            display: none;
+            left: 0;
+            position: absolute;
+            top: 0;
+            z-index: 10;
+        }
+        .matheditor .struct-pupop
+        {
+            border: 1px solid #C4C4C4;
+            height: 204px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            width: 310px;
+        }
+        .matheditor .struct-pupop li
+        {
+            background-image: url("imgs/latex/formula-symbol-all_8ecbac56.png");
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .matheditor .struct-pupop div
+        {
+            clear: both;
+        }
+        .matheditor .struct-pupop h5
+        {
+            background-color: #F5F5F5;
+            color: #666666;
+            font-family: '宋体';
+            font-size: 12px;
+            height: 24px;
+            line-height: 24px;
+            margin-bottom: 8px;
+            padding-left: 7px;
+        }
+        .matheditor .struct-pupop ul
+        {
+            padding-left: 7px;
+        }
+        .matheditor .struct-pupop li
+        {
+            margin-bottom: 8px;
+            margin-left: 7px;
+        }
+        .matheditor .struct-pupop li a
+        {
+            border: 1px solid #CDCDCD;
+            display: inline-block;
+            height: 66px;
+            width: 59px;
+        }
+        .matheditor .struct-pupop li a:hover
+        {
+            border: 1px solid #B2D2E6;
+        }
+    </style>
+    <script type="text/javascript">
+        var latexUrl = "http://www.aie100.com:8080/cgi-bin/ematx.cgi?";
+        $(function () {
+            $(document).click(function () {
+                $("#txtareaLatex").focus();
+            });
+
+            var $tds = $("table.tb-formula-struct tr td");
+            $tds.click(function (evt) {
+                $("div.struct-lay").hide();
+                var $this = $(this);
+                if ($.browser.msie) {
+                    $tds.css("background-position-y", "0px");
+                    $this.css("background-position-y", "-146px")
+                } else {
+                    var bpArr = $this.css("background-position").split(" ");
+                    $tds.css("background-position", "");
+                    $this.css("background-position", bpArr[0] + " " + "-146px");
+                }
+
+                var $css = $this.attr("class");
+                var index = parseInt($css.substr(5)) - 1;
+                //$("div.struct-lay:eq(" + index + ")").css({ left: evt.clientX + "px" }).show();
+                $("div.struct-lay:eq(" + index + ")").slideDown(0);
+            });
+
+            $(document).click(function (evt) {
+                if (evt.target.className.indexOf("fs-td") == -1) {
+
+                    if ($.browser.msie) {
+                        $tds.css("background-position-y", "0px");
+                    } else {
+                        $tds.css("background-position", "");
+                    }
+                    $("div.struct-lay").hide();
+                }
+            });
+
+            $("div.struct-lay div.struct-pupop li a[data-latex]").click(function () {
+                if ($("#tab_design").attr("class") == "selected") {
+                    $('#edit-area').mathquill('write', $(this).attr("data-latex"));
+                } else {
+                    insertLatex($(this).attr("data-latex"));
+                    $("#imgPreview").attr("src", latexUrl + $("#txtareaLatex").val());
+                }
+            });
+
+
+            $("div.content div.cy-sign table.tb-cy-sign-info td").click(function () {
+                if ($("#tab_design").attr("class") == "selected") {
+                    $('#edit-area').mathquill('write', $(this).attr("data-latex"));
+                } else {
+                    insertLatex($(this).attr("data-latex"));
+                    $("#imgPreview").attr("src", latexUrl + $("#txtareaLatex").val());
+                }
+            });
+
+            $("#tab_design").click(function () {
+                if ($(this).attr("class") == "selected") {
+                    return;
+                }
+
+                if ($.trim($("#txtareaLatex").val()) != "" && $('<span>' + $("#txtareaLatex").val() + '</span>').mathquill().mathquill('latex') == "") {
+                    $.jBox.tip("源码编辑含有可视化编辑不支持的函数");
+                    return;
+                }
+                $(this).removeClass().addClass("selected");
+                $("#tab_source").removeClass().addClass("unselected");
+                $("div.source-edit").hide();
+                $("div.design-area").show();
+                $("div.struct-lay div.struct-pupop span.disabledLatex").css({ "display": "inline" });
+                $('#edit-area').mathquill('latex', "");
+                $('#edit-area').mathquill('write', $("#txtareaLatex").val());
+            });
+
+            $("#tab_source").click(function () {
+                if ($(this).attr("class") == "selected") {
+                    return;
+                }
+                $(this).removeClass().addClass("selected");
+                $("#tab_design").removeClass().addClass("unselected");
+                $("div.design-area").hide();
+                $("div.source-edit").show();
+                //alert($('#edit-area').mathquill('latex'));
+                $("div.struct-lay div.struct-pupop span.disabledLatex").css({ "display": "none" });
+                var latexStr = $('#edit-area').mathquill('latex');
+                $("#txtareaLatex").val(latexStr);
+                //preview
+                if (latexStr == "") {
+                    $("#imgPreview").attr("src", "imgs/latex/picture_empty.png");
+                } else {
+                    $("#imgPreview").attr("src", latexUrl + latexStr);
+                }
+            });
+
+            $("#txtareaLatex").keyup(function () {
+                if ($.trim($(this).val()) == "") {
+                    $("#imgPreview").attr("src", "imgs/latex/picture_empty.png");
+                } else {
+                    $("#imgPreview").attr("src", latexUrl + $(this).val());
+                }
+            });
+
+            setLatexValue(parent.emath_latexValue);
+        });
+
+        function setLatexValue(str) {
+        
+            $("#tab_source").trigger("click");
+            $("#txtareaLatex").val(str);
+            $("#imgPreview").attr("src", latexUrl + $("#txtareaLatex").val());
+            $("#tab_design").trigger("click");
+        }
+
+        function getLatexValue() {
+            if ($("#tab_design").attr("class") == "selected") {
+                return latexUrl + $('#edit-area').mathquill('latex');
+            } else {
+                return latexUrl + $("#txtareaLatex").val();
+            }
+        }
+
+        function insertLatex(tag) {
+             var txtarea = document.getElementById("txtareaLatex");
+            //IE 
+            if (document.selection) {
+                var theSelection = document.selection.createRange().text;
+                if (!theSelection) { theSelection = tag }
+                txtarea.focus();
+                if (theSelection.charAt(theSelection.length - 1) == " ") {
+                    theSelection = theSelection.substring(0, theSelection.length - 1);
+                    document.selection.createRange().text = theSelection + " ";
+                } else {
+                    document.selection.createRange().text = theSelection;
+                }
+                // Mozilla 
+            } else if (txtarea.selectionStart || txtarea.selectionStart == '0') {
+                var startPos = txtarea.selectionStart;
+                var endPos = txtarea.selectionEnd;
+                var myText = (txtarea.value).substring(startPos, endPos);
+                if (!myText) { myText = tag; }
+                if (myText.charAt(myText.length - 1) == " ") { // exclude ending space char, if any 
+                    subst = myText.substring(0, (myText.length - 1)) + " ";
+                } else {
+                    subst = myText;
+                }
+                txtarea.value = txtarea.value.substring(0, startPos) + subst + txtarea.value.substring(endPos, txtarea.value.length);
+                txtarea.focus();
+                var cPos = startPos + (myText.length);
+                txtarea.selectionStart = cPos;
+                txtarea.selectionEnd = cPos;
+                // All others 
+            } else {
+                txtarea.value += tag;
+                txtarea.focus();
+            }
+            if (txtarea.createTextRange) txtarea.caretPos = document.selection.createRange().duplicate();
+        }
+
+    </script>
+</head>
+<body>
+    <div class="matheditor">
+        <div class="border">
+            <div class="tabs">
+                <table width="auto" cellpadding="6" cellspacing="0" border="0">
+                    <tr>
+                        <td id="tab_design" class="selected">
+                            &nbsp;可视化编辑&nbsp;
+                        </td>
+                        <td id="tab_source" class="unselected">
+                            &nbsp;源码编辑&nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content">
+                <div class="cy-sign">
+                    <center>
+                        <table class="tb-cy-sign-info" border="0" width="auto" cellpadding="0" cellspacing="5">
+                            <tr>
+                                <td data-latex="\pm" style="background-position: -0px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\infty" style="background-position: -30px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="=" style="background-position: -60px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\ne" style="background-position: -90px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\sim" style="background-position: -120px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\times" style="background-position: -150px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\div" style="background-position: -180px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="!" style="background-position: -210px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\propto" style="background-position: -240px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="<" style="background-position: -270px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex=">" style="background-position: -330px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\gg" style="background-position: -360px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\le" style="background-position: -390px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\ge" style="background-position: -420px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\mp" style="background-position: -450px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\cong" style="background-position: -480px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\approx" style="background-position: -510px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\equiv" style="background-position: -540px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\forall" style="background-position: -570px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\partial" style="background-position: -630px 0;">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-latex="\cup" style="background-position: -750px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\cap" style="background-position: -780px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\emptyset" style="background-position: -810px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\%" style="background-position: -840px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\circ" style="background-position: -870px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\Delta" style="background-position: -960px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\nabla" style="background-position: -990px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\exists" style="background-position: -1020px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\in" style="background-position: -1080px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\ni" style="background-position: -1110px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\leftarrow" style="background-position: -1140px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\uparrow" style="background-position: -1170px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\rightarrow" style="background-position: -1200px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\downarrow" style="background-position: -1230px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\leftrightarrow" style="background-position: -1260px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\therefore" style="background-position: -1290px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="+" style="background-position: -1320px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="-" style="background-position: -1350px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\neg" style="background-position: -1380px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\alpha" style="background-position: -1410px 0;">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-latex="\beta" style="background-position: -1440px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\gamma" style="background-position: -1470px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\delta" style="background-position: -1500px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\varepsilon" style="background-position: -1530px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\epsilon" style="background-position: -1560px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\theta" style="background-position: -1590px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\vartheta" style="background-position: -1620px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\mu" style="background-position: -1650px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\pi" style="background-position: -1680px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\rho" style="background-position: -1710px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\sigma" style="background-position: -1740px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\tau" style="background-position: -1770px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\varphi" style="background-position: -1800px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\omega" style="background-position: -1830px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\ast" style="background-position: -1860px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\bullet" style="background-position: -1890px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\vdots" style="background-position: -1920px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\cdots" style="background-position: -1950px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\ddots" style="background-position: -1980px 0;">
+                                    &nbsp;
+                                </td>
+                                <td data-latex="\aleph" style="background-position: -2040px 0;">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                </div>
+                <div class="formula-struct">
+                    <center>
+                        <table class="tb-formula-struct" width="auto" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td class="fs-td1">
+                                </td>
+                                <td class="fs-td2">
+                                </td>
+                                <td class="fs-td3">
+                                </td>
+                                <td class="fs-td4">
+                                </td>
+                                <td class="fs-td5">
+                                </td>
+                                <td class="fs-td6">
+                                </td>
+                                <td class="fs-td7">
+                                </td>
+                                <td class="fs-td8">
+                                </td>
+                                <td class="fs-td9">
+                                </td>
+                                <td class="fs-td10">
+                                </td>
+                                <td class="fs-td11">
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <div class="struct-lay" style="left: 25px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    分数</h5>
+                                <ul>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all_8ecbac56.png); background-repeat: no-repeat;
+                                        position: relative; background-position: -4px -8px;"><a title="\frac{}{}" data-latex="\frac{}{}"
+                                            href="javascript:void(0)"></a></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all_8ecbac56.png); background-repeat: no-repeat;
+                                        position: relative; background-position: -84px -8px;"><a title="^{}/_{}" data-latex="^{}/_{}"
+                                            href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    常用分数</h5>
+                                <ul>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all_8ecbac56.png); background-repeat: no-repeat;
+                                        position: relative; background-position: -4px -104px;"><a title="\frac{dy}{dx}" data-latex="\frac{dy}{dx}"
+                                            href="javascript:void(0)"></a></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all_8ecbac56.png); background-repeat: no-repeat;
+                                        position: relative; background-position: -84px -104px;"><a title="\frac{ \Delta y}{ \Delta x}"
+                                            data-latex="\frac{ \Delta y}{ \Delta x}" href="javascript:void(0)"></a></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all_8ecbac56.png); background-repeat: no-repeat;
+                                        position: relative; background-position: -164px -104px;"><a title="\frac{\partial y}{\partial x}"
+                                            data-latex="\frac{\partial y}{\partial x}" href="javascript:void(0)"></a>
+                                    </li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all_8ecbac56.png); background-repeat: no-repeat;
+                                        position: relative; background-position: -244px -104px;"><a title="\frac{\delta y}{\delta x}"
+                                            data-latex="\frac{\delta y}{\delta x}" href="javascript:void(0)"></a></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all_8ecbac56.png); background-repeat: no-repeat;
+                                        position: relative; background-position: -324px -104px;"><a title="\frac{\pi}{2}"
+                                            data-latex="\frac{\pi}{2}" href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="struct-lay" style="left: 70px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    下标和上标</h5>
+                                <ul>
+                                    <li style="background-position: -4px -200px;"><a title="x^{}" data-latex="x^{}" href="javascript:void(0)">
+                                    </a></li>
+                                    <li style="background-position: -84px -200px;"><a title="x_{}" data-latex="x_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -200px;"><a title="x^{}_{}" data-latex="x^{}_{}"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    常用的下标和上标</h5>
+                                <ul>
+                                    <li style="background-position: -4px -296px;"><a title="x_{y^2}" data-latex="x_{y^2}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -296px;"><a title="e^{-iwt}" data-latex="e^{-iwt}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -296px;"><a title="x^{2}" data-latex="x^{2}"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="struct-lay" style="left: 115px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    根式</h5>
+                                <ul>
+                                    <li style="background-position: -4px -392px;"><a title="\sqrt{}" data-latex="\sqrt{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -392px;"><a title="\sqrt[]{}" data-latex="\sqrt[]{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -392px;"><a title="\sqrt[2]{}" data-latex="\sqrt[2]{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -244px -392px;"><a title="\sqrt[3]{}" data-latex="\sqrt[3]{}"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    常用根式</h5>
+                                <ul>
+                                    <li style="background-position: -10px -493px;"><a title="\frac{-b\pm\sqrt{b^2-4ac}}{2a}"
+                                        data-latex="\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="width: 130px" href="javascript:void(0)">
+                                    </a></li>
+                                    <li style="background-position: -170px -493px;"><a title="\sqrt{a^2+b^2}" data-latex="\sqrt{a^2+b^2}"
+                                        style="width: 130px" href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="struct-lay" style="left: 160px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    积分</h5>
+                                <ul>
+                                    <li style="background-position: -4px -584px;"><a title="\int" data-latex="\int" href="javascript:void(0)">
+                                    </a></li>
+                                    <li style="background-position: -84px -584px;"><a title="\int_{}^{}" data-latex="\int_{}^{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -584px;"><a title="\int\limits_{}^{}" data-latex="\int\limits_{}^{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -244px -584px;"><a title="\iint" data-latex="\iint"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -324px -584px;"><a title="\iint_{}^{}" data-latex="\iint_{}^{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -404px -584px;"><a title="\iint\limits_{}^{}" data-latex="\iint\limits_{}^{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -484px -584px;"><a title="\iiint" data-latex="\iiint"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -564px -584px;"><a title="\iiint_{}^{}" data-latex="\iiint_{}^{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -644px -584px;"><a title="\iiint\limits_{}^{}" data-latex="\iiint\limits_{}^{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    围道积分</h5>
+                                <ul>
+                                    <li style="background-position: -4px -680px;"><a title="\oint" data-latex="\oint"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -680px;"><a title="\oint_{}^{}" data-latex="\oint_{}^{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -680px;"><a title="\oint\limits_{}^{}" data-latex="\oint\limits_{}^{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    微分</h5>
+                                <ul>
+                                    <li style="background-position: -4px -776px;"><a title="dx" data-latex="dx" href="javascript:void(0)">
+                                    </a></li>
+                                    <li style="background-position: -84px -776px;"><a title="dy" data-latex="dy" href="javascript:void(0)">
+                                    </a></li>
+                                    <li style="background-position: -164px -776px;"><a title="d\theta" data-latex="d\theta"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="struct-lay" style="left: 205px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    求和</h5>
+                                <ul>
+                                    <li style="background-position: -4px -872px;"><a title="\sum" data-latex="\sum" href="javascript:void(0)">
+                                    </a></li>
+                                    <li style="background-position: -84px -872px;"><a title="\sum^{}_{}" data-latex="\sum^{}_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -872px;"><a title="\sum\nolimits^{}_{}" data-latex="\sum\nolimits^{}_{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -244px -872px;"><a title="\sum_{}" data-latex="\sum_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -324px -872px;"><a title="\sum\nolimits_{}" data-latex="\sum\nolimits_{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    乘积和副积</h5>
+                                <ul>
+                                    <li style="background-position: -4px -968px;"><a title="\prod" data-latex="\prod"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -968px;"><a title="\prod_{}^{}" data-latex="\prod_{}^{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -968px;"><a title="\prod\nolimits_{}^{}" data-latex="\prod\nolimits_{}^{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -244px -968px;"><a title="\prod_{}" data-latex="\prod_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -324px -968px;"><a title="\prod\nolimits_{}" data-latex="\prod\nolimits_{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -404px -968px;"><a title="\coprod" data-latex="\coprod"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -484px -968px;"><a title="\coprod_{}^{}" data-latex="\coprod_{}^{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -564px -968px;"><a title="\coprod\nolimits_{}^{}"
+                                        data-latex="\coprod\nolimits_{}^{}" href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                    <li style="background-position: -644px -968px;"><a title="\coprod_{}" data-latex="\coprod_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -724px -968px;"><a title="\coprod\nolimits_{}" data-latex="\coprod\nolimits_{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    并集和交集</h5>
+                                <ul>
+                                    <li style="background-position: -4px -1064px;"><a title="\bigcup" data-latex="\bigcup"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -1064px;"><a title="\bigcup_{}^{}" data-latex="\bigcup_{}^{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -1064px;"><a title="\bigcup\nolimits_{}^{}"
+                                        data-latex="\bigcup\nolimits_{}^{}" href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                    <li style="background-position: -244px -1064px;"><a title="\bigcup_{}" data-latex="\bigcup_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -324px -1064px;"><a title="\bigcup\nolimits_{}" data-latex="\bigcup\nolimits_{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -404px -1064px;"><a title="\bigcap" data-latex="\bigcap"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -484px -1064px;"><a title="\bigcap_{}^{}" data-latex="\bigcap_{}^{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -564px -1064px;"><a title="\bigcap\nolimits_{}^{}"
+                                        data-latex="\bigcap\nolimits_{}^{}" href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                    <li style="background-position: -644px -1064px;"><a title="\bigcap_{}" data-latex="\bigcap_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -724px -1064px;"><a title="\bigcap\nolimits_{}" data-latex="\bigcap\nolimits_{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    其他大型运算符</h5>
+                                <ul>
+                                    <li style="background-position: -4px -1160px;"><a title="\bigvee" data-latex="\bigvee"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -1160px;"><a title="\bigvee_{}^{}" data-latex="\bigvee_{}^{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -1160px;"><a title="\bigvee\nolimits_{}^{}"
+                                        data-latex="\bigvee\nolimits_{}^{}" href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                    <li style="background-position: -244px -1160px;"><a title="\bigvee_{}" data-latex="\bigvee_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -324px -1160px;"><a title="\bigvee\nolimits_{}" data-latex="\bigvee\nolimits_{}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -404px -1160px;"><a title="\bigwedge" data-latex="\bigwedge"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -484px -1160px;"><a title="\bigwedge_{}^{}" data-latex="\bigwedge_{}^{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -564px -1160px;"><a title="\bigwedge\nolimits_{}^{}"
+                                        data-latex="\bigwedge\nolimits_{}^{}" href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                    <li style="background-position: -644px -1160px;"><a title="\bigwedge_{}" data-latex="\bigwedge_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -724px -1160px;"><a title="\bigwedge\nolimits_{}"
+                                        data-latex="\bigwedge\nolimits_{}" href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    常用大型运算符</h5>
+                                <ul>
+                                    <li style="background-position: -4px -1261px;"><a title="\sum_k\left( ^{n}_{k}\right)"
+                                        data-latex="\sum_k\left( ^{n}_{k}\right)" style="width: 59px" href="javascript:void(0)">
+                                    </a></li>
+                                    <li style="background-position: -84px  -1261px;"><a title="\sum^n_{i=0}{}" data-latex="\sum^n_{i=0}{}"
+                                        style="width: 59px" href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -1261px;"><a title="\sum_{^{0\le i\le m}_{0&lt;j&lt;n}}P\left(i,j\right)"
+                                        data-latex="\sum_{^{0\le i\le m}_{0&lt;j&lt;n}}P\left(i,j\right)" style="width: 130px"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -321px -1261px;"><a title="\prod_{k=1}^nA_k" data-latex="\prod_{k=1}^nA_k"
+                                        style="width: 59px" href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -402px -1261px;"><a title="\bigcup_{n=1}^m\left(X_n\cap Y_n\right)"
+                                        data-latex="\bigcup_{n=1}^m\left(X_n\cap Y_n\right)" style="width: 130px" href="javascript:void(0)">
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="struct-lay" style="left: 272px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    方括号</h5>
+                                <ul>
+                                    <li style="background-position: -4px -1352px;"><a title="\left ( {} \right )" data-latex="\left ( {} \right )"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -1352px;"><a title="\left [ {} \right ]" data-latex="\left [ {} \right ]"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -1352px;"><a title="\left \{ {} \right \}"
+                                        data-latex="\left \{ {} \right \}" href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -244px -1352px;"><a title="\left \langle {} \right \rangle"
+                                        data-latex="\left \langle {} \right \rangle" href="javascript:void(0)"></a><span
+                                            class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-position: -324px -1352px;"><a title="\lfloor {} \rfloor" data-latex="\lfloor {} \rfloor"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -404px -1352px;"><a title="\lceil {} \rceil" data-latex="\lceil {} \rceil"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -484px -1352px;"><a title="\left | {} \right |" data-latex="\left | {} \right |"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -564px -1352px;"><a title="\left \| {} \right \|"
+                                        data-latex="\left \| {} \right \|" href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                    <li style="background-position: -644px -1352px;"><a title="[[" data-latex="[[" href="javascript:void(0)">
+                                    </a></li>
+                                    <li style="background-position: -724px -1352px;"><a title="]]" data-latex="]]" href="javascript:void(0)">
+                                    </a></li>
+                                    <li style="background-position: -804px -1352px;"><a title="][" data-latex="][" href="javascript:void(0)">
+                                    </a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    带分割符的方括号</h5>
+                                <ul>
+                                    <li style="background-position: -4px -1448px;"><a title="\left ( | \right )" data-latex="\left ( | \right )"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -1448px;"><a title="\left \{ | \right \}" data-latex="\left \{ | \right \}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -1448px;"><a title="\left \langle | \right \rangle"
+                                        data-latex="\left \langle | \right \rangle" href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                    <li style="background-position: -244px -1448px;"><a title="\left \langle {} | {} | {} \right \rangle"
+                                        data-latex="\left \langle {} | {} | {} \right \rangle" href="javascript:void(0)">
+                                    </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    单方括号</h5>
+                                <ul>
+                                    <li style="background-position: -4px -1544px;"><a title="\left ( \right." data-latex="\left ( \right."
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -84px -1544px;"><a title="\left. \right )" data-latex="\left. \right )"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -164px -1544px;"><a title="\left [ {} \right." data-latex="\left [ {} \right."
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -244px -1544px;"><a title="\left. {} \right]" data-latex="\left. {} \right]"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -324px -1544px;"><a title="\left \{  \right." data-latex="\left \{  \right."
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -404px -1544px;"><a title="\left.  \right \}" data-latex="\left.  \right \}"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -484px -1544px;"><a title="\langle" data-latex="\langle"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -564px -1544px;"><a title="\rangle" data-latex="\rangle"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -644px -1544px;"><a title="\lfloor" data-latex="\lfloor"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -724px -1544px;"><a title="\rfloor" data-latex="\rfloor"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -804px -1544px;"><a title="\lceil" data-latex="\lceil"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -884px -1544px;"><a title="\rceil" data-latex="\rceil"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -964px -1544px;"><a title="\left |{}  \right." data-latex="\left |{}  \right."
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -1044px -1544px;"><a title="\left. {}\right |" data-latex="\left. {}\right |"
+                                        href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -1124px -1544px;"><a title="\left \|{}  \right."
+                                        data-latex="\left \|{}  \right." href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                    <li style="background-position: -1204px -1544px;"><a title="\left. {} \right \|"
+                                        data-latex="\left. {} \right \|" href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    事例和堆栈</h5>
+                                <ul>
+                                    <li style="background-position: -4px -1640px;"><a title="\left \{ _{}^{} \right."
+                                        data-latex="\left \{ _{}^{} \right." href="javascript:void(0)"></a><span class="disabledLatex"
+                                            style="display: inline;"></span></li>
+                                    <li style="background-position: -164px -1640px;"><a title="\ ^{}_{}" data-latex="\ ^{}_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -244px -1640px;"><a title="\binom{}{}" data-latex="\binom{}{}"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    常用方括号</h5>
+                                <ul>
+                                    <li style="background-position: -4px -1741px;"><a title="f(x) = \left\{ \begin{array}{r@{\quad\quad}1}-x &amp; x&lt;0 \\ x &amp; x&gt;0 \ \end{array} \right. "
+                                        data-latex="f(x) = \left\{ \begin{array}{r@{\quad\quad}1}-x &amp; x&lt;0 \\ x &amp; x&gt;0 \ \end{array} \right. "
+                                        style="width: 140px" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-position: -166px -1741px;"><a title="(^{n}_{k})" data-latex="(^{n}_{k})"
+                                        style="width: 59px" href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -245px -1741px;"><a title="\langle^{n}_{k}\rangle"
+                                        data-latex="\langle^{n}_{k}\rangle" style="width: 59px" href="javascript:void(0)">
+                                    </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="struct-lay" style="left: 280px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    三角函数</h5>
+                                <ul>
+                                    <li style="background-position: -4px -1832px;"><a title="\sin" data-latex="\sin"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -1832px;"><a title="\cos" data-latex="\cos"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -1832px;"><a title="\tan" data-latex="\tan"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -244px -1832px;"><a title="\csc" data-latex="\csc"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -324px -1832px;"><a title="\sec" data-latex="\sec"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -404px -1832px;"><a title="\cot" data-latex="\cot"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    反函数</h5>
+                                <ul>
+                                    <li style="background-position: -4px -1928px;"><a title="\sin^{-1}" data-latex="\sin^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -1928px;"><a title="\cos^{-1}" data-latex="\cos^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -1928px;"><a title="\tan^{-1}" data-latex="\tan^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -244px -1928px;"><a title="\csc^{-1}" data-latex="\csc^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -324px -1928px;"><a title="\sec^{-1}" data-latex="\sec^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -404px -1928px;"><a title="\cot^{-1}" data-latex="\cot^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    双曲函数</h5>
+                                <ul>
+                                    <li style="background-position: -4px -2024px;"><a title="\sinh" data-latex="\sinh"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -2024px;"><a title="\cosh" data-latex="\cosh"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -2024px;"><a title="\tanh" data-latex="\tanh"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -244px -2024px;"><a title="csch" data-latex="csch"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -324px -2024px;"><a title="sech" data-latex="sech"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -404px -2024px;"><a title="\coth" data-latex="\coth"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    反双曲函数</h5>
+                                <ul>
+                                    <li style="background-position: -4px -2120px;"><a title="\sinh^{-1}" data-latex="\sinh^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -2120px;"><a title="\cosh^{-1}" data-latex="\cosh^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -2120px;"><a title="\tanh^{-1}" data-latex="\tanh^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -244px -2120px;"><a title="csch^{-1}" data-latex="csch^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -324px -2120px;"><a title="sech^{-1}" data-latex="sech^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -404px -2120px;"><a title="\coth^{-1}" data-latex="\coth^{-1}"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    常用函数</h5>
+                                <ul>
+                                    <li style="background-position: -4px -2221px;"><a title="\sin\theta" data-latex="\sin\theta"
+                                        style="width: 59px" href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -82px -2221px;"><a title="\cos2x" data-latex="\cos2x"
+                                        style="width: 59px" href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -170px -2221px;"><a title="\tan\theta=\frac{\sin\theta}{\cos\theta}"
+                                        data-latex="\tan\theta=\frac{\sin\theta}{\cos\theta}" style="width: 130px" href="javascript:void(0)">
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="struct-lay" style="left: 280px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    导数符号</h5>
+                                <ul>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -1px -0;">
+                                        <a title="\dot{}" data-latex="\dot{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -57px -0;">
+                                        <a title="\ddot{}" data-latex="\ddot{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -114px -0;">
+                                        <a title="\dddot{}" data-latex="\dddot{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -171px -0;">
+                                        <a title="\hat{}" data-latex="\hat{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -226px -0;">
+                                        <a title="\check{}" data-latex="\check{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -281px -0;">
+                                        <a title="\acute{}" data-latex="\acute{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -338px -0;">
+                                        <a title="\grave{}" data-latex="\grave{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -393px -0;">
+                                        <a title="\breve{}" data-latex="\breve{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -450px -0;">
+                                        <a title="\tilde{}" data-latex="\tilde{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -505px -0;">
+                                        <a title="\bar{}" data-latex="\bar{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                    <li style="background-image: url(imgs/latex/derivative-1.png); background-position: -1065px -0;">
+                                        <a title="\vec{}" data-latex="\vec{}" style="width: 42px" href="javascript:void(0)">
+                                        </a><span class="disabledLatex" style="display: inline;"></span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    顶线和底线</h5>
+                                <ul>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -1px -72px;">
+                                        <a title="\overline{}" data-latex="\overline{}" style="width: 42px" href="javascript:void(0)">
+                                        </a></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -57px -72px;">
+                                        <a title="\underline{}" data-latex="\underline{}" style="width: 42px" href="javascript:void(0)">
+                                        </a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    常用的导数对象</h5>
+                                <ul>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -1px -144px;">
+                                        <a title="\overline{A}" data-latex="\overline{A}" style="width: 42px" href="javascript:void(0)">
+                                        </a></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -57px -144px;">
+                                        <a title="\overline{ABC}" data-latex="\overline{ABC}" style="width: 42px" href="javascript:void(0)">
+                                        </a></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -114px -144px;">
+                                        <a title="\overline{x \oplus y}" data-latex="\overline{x \oplus y}" style="width: 90px"
+                                            href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="struct-lay" style="left: 242px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    函数</h5>
+                                <ul>
+                                    <li style="background-position: -4px -2312px;"><a title="\log_{}" data-latex="\log_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -2312px;"><a title="\log" data-latex="\log"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -2312px;"><a title="\lim_{}" data-latex="\lim_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -244px -2312px;"><a title="\min_{}" data-latex="\min_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -324px -2312px;"><a title="\max_{}" data-latex="\max_{}"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -404px -2312px;"><a title="\ln" data-latex="\ln"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    常用函数</h5>
+                                <ul>
+                                    <li style="background-position: -12px -2413px;"><a title="\lim_{n\rightarrow \infty} \left ( {1+ \frac{1}{n}} \right )^{n}"
+                                        data-latex="\lim_{n\rightarrow \infty} \left ( {1+ \frac{1}{n}} \right )^{n}"
+                                        style="width: 90px" href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -130px -2413px;"><a title="\max_{0 \le x \le 1}xe^{-x^2}"
+                                        data-latex="\max_{0 \le x \le 1}xe^{-x^2}" style="width: 90px" href="javascript:void(0)">
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="struct-lay" style="left: 280px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    基本运算符</h5>
+                                <ul>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -1px -216px;">
+                                        <a title=":=" data-latex=":=" style="width: 42px" href="javascript:void(0)"></a>
+                                    </li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -57px -216px;">
+                                        <a title="==" data-latex="==" style="width: 42px" href="javascript:void(0)"></a>
+                                    </li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -113px -216px;">
+                                        <a title="+=" data-latex="+=" style="width: 42px" href="javascript:void(0)"></a>
+                                    </li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -170px -216px;">
+                                        <a title="-=" data-latex="-=" style="width: 42px" href="javascript:void(0)"></a>
+                                    </li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -226px -216px;">
+                                        <a title="\overset{\underset{\mathrm{def}}{}}{=}" data-latex="\overset{\underset{\mathrm{def}}{}}{=}"
+                                            style="width: 42px" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                            </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -282px -216px;">
+                                        <a title="\overset{\underset{\mathrm{m}}{}}{=}" data-latex="\overset{\underset{\mathrm{m}}{}}{=}"
+                                            style="width: 42px" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                            </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -338px -216px;">
+                                        <a title="\overset{\underset{\mathrm{\Delta}}{}}{=}" data-latex="\overset{\underset{\mathrm{\Delta}}{}}{=}"
+                                            style="width: 42px" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                            </span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    运算符结构</h5>
+                                <ul>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -1px -288px;">
+                                        <a title="\underset{}{\leftarrow}" data-latex="\underset{}{\leftarrow}" style="width: 42px"
+                                            href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -58px -288px;">
+                                        <a title="\underset{}{\rightarrow}" data-latex="\underset{}{\rightarrow}" style="width: 42px"
+                                            href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -113px -288px;">
+                                        <a title="\overset{}{\leftarrow}" data-latex="\overset{}{\leftarrow}" style="width: 42px"
+                                            href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -170px -288px;">
+                                        <a title="\overset{}{\rightarrow}" data-latex="\overset{}{\rightarrow}" style="width: 42px"
+                                            href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -225px -288px;">
+                                        <a title="\underset{}{\Leftarrow}" data-latex="\underset{}{\Leftarrow}" style="width: 42px"
+                                            href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -282px -288px;">
+                                        <a title="\underset{}{\Rightarrow}" data-latex="\underset{}{\Rightarrow}" style="width: 42px"
+                                            href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -338px -288px;">
+                                        <a title="\overset{}{\Leftarrow}" data-latex="\overset{}{\Leftarrow}" style="width: 42px"
+                                            href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -394px -288px;">
+                                        <a title="\overset{}{\Rightarrow}" data-latex="\overset{}{\Rightarrow}" style="width: 42px"
+                                            href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                        </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -449px -288px;">
+                                        <a title="\underset{}{\leftrightarrow }" data-latex="\underset{}{\leftrightarrow }"
+                                            style="width: 42px" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                            </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -505px -288px;">
+                                        <a title="\overset{}{\leftrightarrow }" data-latex="\overset{}{\leftrightarrow }"
+                                            style="width: 42px" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                            </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -561px -288px;">
+                                        <a title="\underset{}{\Leftrightarrow }" data-latex="\underset{}{\Leftrightarrow }"
+                                            style="width: 42px" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                            </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -617px -288px;">
+                                        <a title="\overset{}{\Leftrightarrow }" data-latex="\overset{}{\Leftrightarrow }"
+                                            style="width: 42px" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                            </span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    常用运算符结构</h5>
+                                <ul>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -3px -360px;">
+                                        <a title="\overset{yields}{\rightarrow}" data-latex="\overset{yields}{\rightarrow}"
+                                            style="width: 80px" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                            </span></li>
+                                    <li style="background-image: url(imgs/latex/formula-symbol-all-72.png); background-position: -105px -360px;">
+                                        <a title="\overset{\Delta}{\rightarrow}" data-latex="\overset{\Delta}{\rightarrow}"
+                                            style="width: 42px" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+                                            </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="struct-lay" style="left: 280px; top: 195px;">
+                        <div class="struct-pupop">
+                            <div>
+                                <h5>
+                                    空矩阵</h5>
+                                <ul>
+                                    <li style="background-position: -4px -2504px;"><a title="\begin{matrix}
+  &amp;  
+\end{matrix}" data-latex="\begin{matrix}
+  &amp;  
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -84px -2504px;"><a title="\begin{matrix}
+  \\ 
+ 
+\end{matrix}" data-latex="\begin{matrix}
+  \\ 
+ 
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -164px -2504px;"><a title="\begin{matrix}
+ &amp;  &amp; 
+\end{matrix}" data-latex="\begin{matrix}
+ &amp;  &amp; 
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -244px -2504px;"><a title="\begin{matrix}
+ \\ 
+ \\ 
+ 
+\end{matrix}" data-latex="\begin{matrix}
+ \\ 
+ \\ 
+ 
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -324px -2504px;"><a title="\begin{matrix}
+ &amp; \\ 
+  &amp;  
+\end{matrix}" data-latex="\begin{matrix}
+ &amp; \\ 
+  &amp;  
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -404px -2504px;"><a title="\begin{matrix}
+ &amp; &amp; \\
+  &amp; &amp;  
+\end{matrix}" data-latex="\begin{matrix}
+ &amp; &amp; \\
+  &amp; &amp;  
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -484px -2504px;"><a title="\begin{matrix}
+ &amp; \\
+  &amp; \\
+ &amp;  
+\end{matrix}" data-latex="\begin{matrix}
+ &amp; \\
+  &amp; \\
+ &amp;  
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -564px -2504px;"><a title="\begin{matrix}
+ &amp; &amp; \\
+  &amp;  &amp; \\
+ &amp;  &amp;  
+\end{matrix}" data-latex="\begin{matrix}
+ &amp; &amp; \\
+  &amp;  &amp; \\
+ &amp;  &amp;  
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    点</h5>
+                                <ul>
+                                    <li style="background-position: -4px -2600px;"><a title="\cdots" data-latex="\cdots"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -84px -2600px;"><a title="\ldots" data-latex="\ldots"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -164px -2600px;"><a title="\vdots" data-latex="\vdots"
+                                        href="javascript:void(0)"></a></li>
+                                    <li style="background-position: -244px -2600px;"><a title="\ddots" data-latex="\ddots"
+                                        href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    单位矩阵</h5>
+                                <ul>
+                                    <li style="background-position: -4px -2696px;"><a title="\begin{matrix}
+ 1 &amp; 0 \\
+ 0 &amp; 1 
+\end{matrix}" data-latex="\begin{matrix}
+ 1 &amp; 0 \\
+ 0 &amp; 1 
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -84px -2696px;"><a title="\begin{matrix}
+ 1 &amp;  \\
+  &amp; 1 
+\end{matrix}" data-latex="\begin{matrix}
+ 1 &amp;  \\
+  &amp; 1 
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -164px -2696px;"><a title="\begin{matrix}
+ 1 &amp; 0 &amp; 0 \\
+ 0  &amp; 1 &amp; 0 \\
+ 0 &amp; 0 &amp; 1 
+\end{matrix}" data-latex="\begin{matrix}
+ 1 &amp; 0 &amp; 0 \\
+ 0  &amp; 1 &amp; 0 \\
+ 0 &amp; 0 &amp; 1 
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -244px -2696px;"><a title="\begin{matrix}
+ 1 &amp;  &amp;  \\
+   &amp; 1 &amp;  \\
+  &amp;  &amp; 1 
+\end{matrix}" data-latex="\begin{matrix}
+ 1 &amp;  &amp;  \\
+   &amp; 1 &amp;  \\
+  &amp;  &amp; 1 
+\end{matrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    括号矩阵</h5>
+                                <ul>
+                                    <li style="background-position: -4px -2792px;"><a title="\begin{pmatrix}
+ &amp; \\
+ &amp; 
+\end{pmatrix}" data-latex="\begin{pmatrix}
+ &amp; \\
+ &amp; 
+\end{pmatrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -84px -2792px;"><a title="\begin{bmatrix}
+ &amp; \\
+ &amp; 
+\end{bmatrix}" data-latex="\begin{bmatrix}
+ &amp; \\
+ &amp; 
+\end{bmatrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -164px -2792px;"><a title="\begin{vmatrix}
+ &amp; \\
+ &amp; 
+\end{vmatrix}" data-latex="\begin{vmatrix}
+ &amp; \\
+ &amp; 
+\end{vmatrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                    <li style="background-position: -244px -2792px;"><a title="\begin{Vmatrix}
+ &amp; \\
+ &amp; 
+\end{Vmatrix}" data-latex="\begin{Vmatrix}
+ &amp; \\
+ &amp; 
+\end{Vmatrix}" href="javascript:void(0)"></a><span class="disabledLatex" style="display: inline;">
+</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>
+                                    稀疏矩阵</h5>
+                                <ul>
+                                    <li style="background-position: -9px -2893px;"><a title="\begin{pmatrix}
+  &amp; \cdots &amp;   \\ 
+  \vdots &amp; \ddots &amp; \vdots \\ 
+  &amp; \cdots &amp;  
+\end{pmatrix}" data-latex="\begin{pmatrix}
+  &amp; \cdots &amp;   \\ 
+  \vdots &amp; \ddots &amp; \vdots \\ 
+  &amp; \cdots &amp;  
+\end{pmatrix}" style="width: 130px" href="javascript:void(0)"></a><span class="disabledLatex"
+    style="display: inline;"></span></li>
+                                    <li style="background-position: -170px -2893px;"><a title="\begin{bmatrix}
+  &amp; \cdots &amp;   \\ 
+  \vdots &amp; \ddots &amp; \vdots \\ 
+  &amp; \cdots &amp;  
+\end{bmatrix}" data-latex="\begin{bmatrix}
+  &amp; \cdots &amp;   \\ 
+  \vdots &amp; \ddots &amp; \vdots \\ 
+  &amp; \cdots &amp;  
+\end{bmatrix}" style="width: 130px" href="javascript:void(0)"></a><span class="disabledLatex"
+    style="display: inline;"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-area">
+                    <span id="edit-area" class="mathquill-editable edit-area"></span>
+                </div>
+                <div class="source-edit">
+                    <div>
+                        <center>
+                            <textarea id="txtareaLatex" cols="" rows="" style="padding:5px;width: 578px; height: 80px; border: 1px solid #88C4E6"></textarea>
+                        </center>
+                    </div>
+                    <div style="height:5px;"></div>
+                    <div class="preview-area">
+                        <div><img id="imgPreview" alt="" src="imgs/latex/picture_empty.png" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
